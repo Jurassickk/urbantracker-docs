@@ -34,19 +34,25 @@ Su propósito es optimizar la eficiencia operativa del transporte y ofrecer a lo
 
 ### 📡 Backend (API)
 Para desplegar el backend, consulte el siguiente repositorio:  
-🔗 [Repositorio Backend](https://github.com/AFSB114/UrbanTracker/tree/main)
+🔗 [Repositorio Backend](https://github.com/brayan-carvajal/urbantracker-api)
 
 ---
 
 ### 🖥️ Frontend (Web)
 Para desplegar la versión web, consulte el siguiente repositorio:  
-🔗 [Repositorio Frontend Web](https://github.com/AFSB114/UrbanTracker/tree/main)
+🔗 [Repositorio Frontend Web](https://github.com/brayan-carvajal/urbantracker-portal)
 
 ---
 
 ### 📱 Frontend (Aplicación Móvil)
 Para desplegar la aplicación móvil, consulte el siguiente repositorio:  
-🔗 [Repositorio Frontend App](https://github.com/AFSB114/UrbanTracker/tree/main)
+🔗 [Repositorio Frontend App](https://github.com/brayan-carvajal/urbantracker-app)
+
+---
+
+### 🛢 Base de Datos (BD)
+Para desplegar la base de datos, consulte el siguiente repositorio:  
+🔗 [Repositorio Base de Datos](https://github.com/brayan-carvajal/urbantracker-db)
 
 ---
 
