@@ -56,6 +56,12 @@ Para desplegar la base de datos, consulte el siguiente repositorio:
 
 ---
 
+### 🚌 Repositorio Base 
+Para más información, consulte el siguiente repositorio:  
+🔗 [Repositorio Base](https://github.com/AFSB114/UrbanTracker/tree/dev)
+
+---
+
 ## 🛠️ Tecnologías Utilizadas
 
 - ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)  
@@ -81,12 +87,4 @@ Asegúrate de tener instaladas las siguientes herramientas:
 - ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 - ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 - ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
----
-
-### 🧪 Pasos para Ejecutar Localmente
-
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/your_username/UrbanTracker.git
-   cd UrbanTracker
+  
