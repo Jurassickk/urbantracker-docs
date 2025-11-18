@@ -1,20 +1,17 @@
 [1] Config.pm:328> INFO - This is Biber 2.21
-[2] Config.pm:331> INFO - Logfile is 'build/main_apa7.blg'
-[854] biber-MSWIN64:342> INFO - === 
-[1047] Biber.pm:421> INFO - Reading 'build/main_apa7.bcf'
-[2031] Biber.pm:1002> INFO - Found 8 citekeys in bib section 0
-[2291] Biber.pm:4487> INFO - Processing section 0
-[2414] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography/references.bib' for section 0
-[2703] bibtex.pm:1713> INFO - LaTeX decoding ...
-[2842] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography/references.bib'
-[3372] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3374] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3375] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[3535] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3536] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3537] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[3625] bbl.pm:676> INFO - Writing 'build/main_apa7.bbl' with encoding 'UTF-8'
-[3677] bbl.pm:779> INFO - Output to build/main_apa7.bbl
-[3678] Biber.pm:132> WARN - I didn't find a database entry for 'ortiz2022smolcomm' (section 0)
-[3679] Biber.pm:132> WARN - I didn't find a database entry for 'juric2021predictivo' (section 0)
-[3680] Biber.pm:134> INFO - WARNINGS: 2
+[3] Config.pm:331> INFO - Logfile is 'build/main_apa7.blg'
+[749] biber-MSWIN64:342> INFO - === 
+[953] Biber.pm:421> INFO - Reading 'build/main_apa7.bcf'
+[2052] Biber.pm:1002> INFO - Found 8 citekeys in bib section 0
+[2352] Biber.pm:4487> INFO - Processing section 0
+[2466] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography/references.bib' for section 0
+[2789] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3003] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography/references.bib'
+[3695] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3696] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3699] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[3915] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3919] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3922] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[4023] bbl.pm:676> INFO - Writing 'build/main_apa7.bbl' with encoding 'UTF-8'
+[4099] bbl.pm:779> INFO - Output to build/main_apa7.bbl

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.6)  18 NOV 2025 10:28
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.6)  18 NOV 2025 12:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1969,7 +1969,7 @@ File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 ) (includes/preamble_acm.tex)
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 30.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 32.
 
 \c@theorem=\count380
 
@@ -1992,77 +1992,77 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `main_acm.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 30.
+(Font)              scaled to size 7.0pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 7.26596pt on input line 30.
+(Font)              scaled to size 7.26596pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 5.18997pt on input line 30.
+(Font)              scaled to size 5.18997pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.2666pt on input line 30.
+(Font)              scaled to size 7.2666pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 5.19043pt on input line 30.
+(Font)              scaled to size 5.19043pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.26521pt on input line 30.
+(Font)              scaled to size 7.26521pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 5.18944pt on input line 30.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+(Font)              scaled to size 5.18944pt on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
 
 
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
 
 
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 30.
+(Font)              scaled to size 9.0pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 7.47354pt on input line 30.
+(Font)              scaled to size 7.47354pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 5.60515pt on input line 30.
+(Font)              scaled to size 5.60515pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 9.34277pt on input line 30.
+(Font)              scaled to size 9.34277pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.47421pt on input line 30.
+(Font)              scaled to size 7.47421pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 5.60565pt on input line 30.
+(Font)              scaled to size 5.60565pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 9.34099pt on input line 30.
+(Font)              scaled to size 9.34099pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.47278pt on input line 30.
+(Font)              scaled to size 7.47278pt on input line 32.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 5.60458pt on input line 30.
-LaTeX Info: Redefining \microtypecontext on input line 30.
-Package microtype Info: Applying patch `item' on input line 30.
-Package microtype Info: Applying patch `toc' on input line 30.
-Package microtype Info: Applying patch `eqnum' on input line 30.
-Package microtype Info: Applying patch `footnote' on input line 30.
-Package microtype Info: Applying patch `verbatim' on input line 30.
-LaTeX Info: Redefining \microtypesetup on input line 30.
+(Font)              scaled to size 5.60458pt on input line 32.
+LaTeX Info: Redefining \microtypecontext on input line 32.
+Package microtype Info: Applying patch `item' on input line 32.
+Package microtype Info: Applying patch `toc' on input line 32.
+Package microtype Info: Applying patch `eqnum' on input line 32.
+Package microtype Info: Applying patch `footnote' on input line 32.
+Package microtype Info: Applying patch `verbatim' on input line 32.
+LaTeX Info: Redefining \microtypesetup on input line 32.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -2072,7 +2072,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinLibertine' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 32.
 
 (C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out)
 (C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out)
@@ -2118,8 +2118,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
 slations-basic-dictionary-spanish.trsl
@@ -2127,32 +2127,32 @@ File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `spanish'. on input line 30.
+or `spanish'. on input line 32.
 \c@lstlisting=\count381
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 31.
+(Font)              scaled to size 17.28pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 31.
+(Font)              scaled to size 17.28pt on input line 33.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinBiolinum' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 31.
+(Font)              scaled to size 17.28pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 31.
+(Font)              scaled to size 12.0pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 31.
+(Font)              scaled to size 10.0pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 10.37994pt on input line 31.
+(Font)              scaled to size 10.37994pt on input line 33.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusMath-Regular.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 10.38086pt on input line 31.
+(Font)              scaled to size 10.38086pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 10.37888pt on input line 31.
+(Font)              scaled to size 10.37888pt on input line 33.
 
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -2165,9 +2165,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 31.
+(Font)              scaled to size 9.0pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 31.
+(Font)              scaled to size 10.95pt on input line 33.
 
 (sections/00_abstract.tex) (sections/01_introduccion.tex)
 (sections/02_relacionados.tex
@@ -2188,10 +2188,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Package natbib Warning: Citation `ortiz2022smolcomm' on page 2 undefined on inp
-ut line 4.
-
-
 Overfull \hbox (4.75153pt too wide) in paragraph at lines 4--5
 []\TU/LinLibertine(0)/m/n/9 El \TU/LinLibertine(0)/b/n/9 backend \TU/LinLiberti
 ne(0)/m/n/9 se construyó en \TU/LinLibertine(0)/b/n/9 Java \TU/LinLibertine(0)/
@@ -2204,12 +2200,7 @@ LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 1.
-[2.2]
-
-Package natbib Warning: Citation `juric2021predictivo' on page 3 undefined on i
-nput line 8.
-
-) (sections/06_discusion.tex) (sections/07_conclusiones.tex)
+[2.2]) (sections/06_discusion.tex) (sections/07_conclusiones.tex)
 (sections/A1_apendices.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2225,21 +2216,21 @@ cumentar las ramas de backend (Spring
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
 (Font)              scaled to size 7.0pt on input line 46.
 LaTeX Info: Redefining \tempurl on input line 65.
-LaTeX Info: Redefining \tempurl on input line 83.
-LaTeX Info: Redefining \tempurl on input line 99.
+LaTeX Info: Redefining \tempurl on input line 96.
 
 
 [3.3]
-LaTeX Info: Redefining \tempurl on input line 115.
-LaTeX Info: Redefining \tempurl on input line 130.
+LaTeX Info: Redefining \tempurl on input line 112.
+LaTeX Info: Redefining \tempurl on input line 139.
+LaTeX Info: Redefining \tempurl on input line 154.
 
-Underfull \hbox (badness 2662) in paragraph at lines 123--133
+Underfull \hbox (badness 2662) in paragraph at lines 147--157
 \TU/LinLibertine(0)/m/n/7 tos sobre protocolo MQTT. In \TU/LinLibertine(0)/m/it
 /7 Jornadas Argentinas de Informática (JAIIO)\TU/LinLibertine(0)/m/n/7 .
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 123--133
+Underfull \hbox (badness 1097) in paragraph at lines 147--157
 \TU/LinLibertine(0)/m/n/7 UNLP.   []$[][][][][] [] [] [] [][][][][][] [] [][][]
 [] [] [][][] [] [][] [] [][][][][][][][][] [] [][][][][][] [] [][][][][] [] [][
 ][][][][] [] [][][][][][][][][] []
@@ -2247,11 +2238,10 @@ Underfull \hbox (badness 1097) in paragraph at lines 123--133
 
 )
 
-Package natbib Warning: There were undefined citations.
 
 
 
-
+Overfull \vbox (1.34698pt too high) has occurred while \output is active []
 
 
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pdfdoc.d
@@ -2273,13 +2263,13 @@ Package rerunfilecheck Info: File `main_acm.out' has not changed.
 (rerunfilecheck)             Checksum: 14BC52E524E81A2D1B760F1B51BEF713;2105.
  ) 
 Here is how much of TeX's memory you used:
- 41633 strings out of 403245
- 843460 string characters out of 5460760
+ 41639 strings out of 403245
+ 843616 string characters out of 5460760
  1384173 words of memory out of 5000000
- 69491 multiletter control sequences out of 15000+600000
+ 69497 multiletter control sequences out of 15000+600000
  633560 words of font info for 137 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
  105i,12n,131p,1832b,32987s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.xdv
- (4 pages, 230484 bytes).
+ (4 pages, 236176 bytes).

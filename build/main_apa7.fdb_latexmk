@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber build/main_apa7"] 1763480116.96321 "build/main_apa7.bcf" "build/main_apa7.bbl" "build/main_apa7" 1763480196.87107 0
-  "bibliography/references.bib" 1763478641 4223 2a4cffa9a03b7c97013f06b59cf4821f ""
-  "build/main_apa7.bcf" 1763480192 134600 a05781253270990608531f939686d15b "xelatex"
+["biber build/main_apa7"] 1763487250.40083 "build/main_apa7.bcf" "build/main_apa7.bbl" "build/main_apa7" 1763487339.40259 0
+  "bibliography/references.bib" 1763482107 4850 2b06bbd606545035f10b7506802d9833 ""
+  "build/main_apa7.bcf" 1763487334 134600 a05781253270990608531f939686d15b "xelatex"
   (generated)
   "build/main_apa7.bbl"
   "build/main_apa7.blg"
   (rewritten before read)
-["xdvipdfmx"] 1763480195.11446 "build/main_apa7.xdv" "build/main_apa7.pdf" "build/main_apa7" 1763480196.93726 0
-  "build/main_apa7.xdv" 1763480192 206728 4a0773e7a546a3a51c38a03e8a5b2456 "xelatex"
+["xdvipdfmx"] 1763487337.63485 "build/main_apa7.xdv" "build/main_apa7.pdf" "build/main_apa7" 1763487339.50906 0
+  "build/main_apa7.xdv" 1763487334 213172 0f30faf47a6d52ba7573894593db9ee6 "xelatex"
   (generated)
   "build/main_apa7.pdf"
   (rewritten before read)
-["xelatex"] 1763480174.00231 "main_apa7.tex" "build/main_apa7.xdv" "main_apa7" 1763480196.87241 0
+["xelatex"] 1763487313.33785 "main_apa7.tex" "build/main_apa7.xdv" "main_apa7" 1763487339.40806 0
   "C:/Users/choso/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1759805584 27042572 fe70047aee9cc0ae1525e189870d7a05 ""
   "C:/Users/choso/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136790254 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/choso/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr12.tfm" 1256929440 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
@@ -204,13 +204,13 @@
   "C:/Users/choso/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/choso/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/choso/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "build/main_apa7.aux" 1763480192 3247 c5c3de9f8a52ba12b958eca4f263ea6c "xelatex"
-  "build/main_apa7.bbl" 1763480130 23637 c52b2161f5a3c4fd1ed4a7df90532402 "biber build/main_apa7"
-  "build/main_apa7.out" 1763480192 1242 53f6c0e8ffffbaf8e6b2114dcee924e5 "xelatex"
-  "build/main_apa7.run.xml" 1763480192 2442 31f193e8afeb02e558f8318341b00aef "xelatex"
+  "build/main_apa7.aux" 1763487333 3501 f9eb6517384e2fc44cc64cf451fa03a8 "xelatex"
+  "build/main_apa7.bbl" 1763487267 30289 e6f9a5e68d09b6db4e7d0cded83970f9 "biber build/main_apa7"
+  "build/main_apa7.out" 1763487334 1242 53f6c0e8ffffbaf8e6b2114dcee924e5 "xelatex"
+  "build/main_apa7.run.xml" 1763487334 2442 31f193e8afeb02e558f8318341b00aef "xelatex"
   "includes/preamble_apa7.tex" 1763475287 167 9dc229ec09603f7c360024b06d3d1ae7 ""
   "includes/preamble_common.tex" 1763475287 1346 07518923b9f4f85072fe97d52092a43e ""
-  "main_apa7.tex" 1763479329 1027 15f5174292e978c0cd2e87bb68c3439d ""
+  "main_apa7.tex" 1763486782 1112 6ded71daf18af10c6c3d55e3673455e1 ""
   "sections/00_abstract.tex" 1763478709 908 a48bf0ada9273b06a61c442a56f1aafd ""
   "sections/01_introduccion.tex" 1763478732 1533 168c96e1d0000076b69900201899b24d ""
   "sections/02_relacionados.tex" 1763478760 3343 5a929daaddca7cb05d87226755e2ffef ""

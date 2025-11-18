@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.6)  18 NOV 2025 10:36
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.6)  18 NOV 2025 12:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1383,22 +1383,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main_apa7.bbl' found.
- (C:\Users\choso\Downloads\urbantracker-docs\build\main_apa7.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                juric2021predictivo
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ortiz2022smolcomm
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (C:\Users\choso\Downloads\urbantracker-docs\build\main_apa7.bbl)
 Package biblatex Info: Reference section=0 on input line 16.
 Package biblatex Info: Reference segment=0 on input line 16.
 
@@ -1418,11 +1403,6 @@ Underfull \vbox (badness 4752) has occurred while \output is active []
 
 [5]) (sections/04_implementacion.tex
 
-LaTeX Warning: Citation 'ortiz2022smolcomm' on page 6 undefined on input line 4
-.
-
-
-
 [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1430,12 +1410,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [7]) (sections/05_resultados.tex
 
-[8]
-
-LaTeX Warning: Citation 'juric2021predictivo' on page 9 undefined on input line
- 8.
-
-) (sections/06_discusion.tex) (sections/07_conclusiones.tex)
+[8]) (sections/06_discusion.tex) (sections/07_conclusiones.tex)
 (sections/A1_apendices.tex
 
 [9]
@@ -1485,12 +1460,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 28.
 
-AED endfloat: Processing end Figures and Tables
 
 [13
 
 
-] (C:\Users\choso\Downloads\urbantracker-docs\build\main_apa7.aux
+] AED endfloat: Processing end Figures and Tables
+
+[14] (C:\Users\choso\Downloads\urbantracker-docs\build\main_apa7.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1506,13 +1482,13 @@ Package logreq Info: Writing requests to 'main_apa7.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43263 strings out of 403245
- 909778 string characters out of 5460760
- 1879407 words of memory out of 5000000
- 71206 multiletter control sequences out of 15000+600000
+ 43274 strings out of 403245
+ 910262 string characters out of 5460760
+ 1879575 words of memory out of 5000000
+ 71217 multiletter control sequences out of 15000+600000
  652035 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,11n,105p,1849b,5023s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,105p,1849b,5610s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on C:\Users\choso\Downloads\urbantracker-docs\build\main_apa7.xd
-v (13 pages, 206728 bytes).
+v (14 pages, 213172 bytes).

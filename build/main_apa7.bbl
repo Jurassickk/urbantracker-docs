@@ -101,6 +101,47 @@
       \verb http://riaa.uaem.mx/handle/20.500.12055/2837
       \endverb
     \endentry
+    \entry{juric2021predictivo}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=154fa72953ac4edae7dadf48221c8808}{%
+           family={Juric},
+           familyi={J\bibinitperiod},
+           given={Marko},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4cc8bc89896c5d1318d955518277748}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Petra},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{fullhash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{fullhashraw}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{bibnamehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authorbibnamehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authornamehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authorfullhash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authorfullhashraw}{b77743e24ddd111e39064d89ca5460fa}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Science}
+      \field{number}{2}
+      \field{title}{Predictive Analytics for Public Transportation Arrival Times}
+      \field{volume}{55}
+      \field{year}{2021}
+      \field{pages}{234\bibrangedash 248}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1287/trsc.2020.0987
+      \endverb
+    \endentry
     \entry{karne2022iot}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=6713b8bd5d345bc6626d8e0a86e219a5}{%
@@ -191,6 +232,45 @@
       \endverb
       \verb{url}
       \verb https://repository.ukdw.ac.id/9179/
+      \endverb
+    \endentry
+    \entry{ortiz2022smolcomm}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=282b7c0d9dd660f6e7f7c95c27bb82ec}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f66561db6a6d0072bb012ff940053a9}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{fullhash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{fullhashraw}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{bibnamehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authorbibnamehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authornamehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authorfullhash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authorfullhashraw}{56f8de18a53e5dbadf0260928db2e64e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE International Conference on Mobile Computing}
+      \field{title}{Small Scale Communication Protocols for Real-time Vehicle Monitoring}
+      \field{year}{2022}
+      \field{pages}{67\bibrangedash 74}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MobileCom.2022.9789123
       \endverb
     \endentry
     \entry{shukla2025oauth}{article}{}{}
@@ -364,6 +444,47 @@
       \verb http://riaa.uaem.mx/handle/20.500.12055/2837
       \endverb
     \endentry
+    \entry{juric2021predictivo}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=154fa72953ac4edae7dadf48221c8808}{%
+           family={Juric},
+           familyi={J\bibinitperiod},
+           given={Marko},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4cc8bc89896c5d1318d955518277748}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Petra},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{fullhash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{fullhashraw}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{bibnamehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authorbibnamehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authornamehash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authorfullhash}{b77743e24ddd111e39064d89ca5460fa}
+      \strng{authorfullhashraw}{b77743e24ddd111e39064d89ca5460fa}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Science}
+      \field{number}{2}
+      \field{title}{Predictive Analytics for Public Transportation Arrival Times}
+      \field{volume}{55}
+      \field{year}{2021}
+      \field{pages}{234\bibrangedash 248}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1287/trsc.2020.0987
+      \endverb
+    \endentry
     \entry{karne2022iot}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=6713b8bd5d345bc6626d8e0a86e219a5}{%
@@ -456,6 +577,45 @@
       \verb https://repository.ukdw.ac.id/9179/
       \endverb
     \endentry
+    \entry{ortiz2022smolcomm}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=282b7c0d9dd660f6e7f7c95c27bb82ec}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f66561db6a6d0072bb012ff940053a9}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{fullhash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{fullhashraw}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{bibnamehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authorbibnamehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authornamehash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authorfullhash}{56f8de18a53e5dbadf0260928db2e64e}
+      \strng{authorfullhashraw}{56f8de18a53e5dbadf0260928db2e64e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE International Conference on Mobile Computing}
+      \field{title}{Small Scale Communication Protocols for Real-time Vehicle Monitoring}
+      \field{year}{2022}
+      \field{pages}{67\bibrangedash 74}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MobileCom.2022.9789123
+      \endverb
+    \endentry
     \entry{shukla2025oauth}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=668a9cd833166983ae4c32c87a276970}{%
@@ -544,8 +704,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{juric2021predictivo}
-  \missing{ortiz2022smolcomm}
 \endrefsection
 \endinput
 

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{6}
+\begin{thebibliography}{8}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -69,6 +69,19 @@
 \shownote{Universidad Autónoma del Estado de Morelos}.
 
 
+\bibitem[Juric and Novak(2021)]%
+        {juric2021predictivo}
+\bibfield{author}{\bibinfo{person}{Marko Juric} {and} \bibinfo{person}{Petra
+  Novak}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Predictive Analytics for Public Transportation
+  Arrival Times}.
+\newblock \bibinfo{journal}{\emph{Transportation Science}}
+  \bibinfo{volume}{55}, \bibinfo{number}{2} (\bibinfo{year}{2021}),
+  \bibinfo{pages}{234--248}.
+\newblock
+\href{https://doi.org/10.1287/trsc.2020.0987}{doi:\nolinkurl{10.1287/trsc.2020.0987}}
+
+
 \bibitem[Karne et~al\mbox{.}(2022)]%
         {karne2022iot}
 \bibfield{author}{\bibinfo{person}{R. Karne}, \bibinfo{person}{E. Nithin},
@@ -99,6 +112,17 @@
 \url{https://repository.ukdw.ac.id/9179/}
 \showURL{%
 \tempurl}
+
+
+\bibitem[Ortiz and Gomez(2022)]%
+        {ortiz2022smolcomm}
+\bibfield{author}{\bibinfo{person}{Francisco Ortiz} {and}
+  \bibinfo{person}{Carlos Gomez}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Small Scale Communication Protocols for Real-time
+  Vehicle Monitoring}. In \bibinfo{booktitle}{\emph{IEEE International
+  Conference on Mobile Computing}}. \bibinfo{pages}{67--74}.
+\newblock
+\href{https://doi.org/10.1109/MobileCom.2022.9789123}{doi:\nolinkurl{10.1109/MobileCom.2022.9789123}}
 
 
 \bibitem[Shukla(2025)]%
