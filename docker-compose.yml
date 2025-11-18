@@ -1,0 +1,26 @@
+services:
+  latex:
+    image: texlive-latex:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: latex-compiler
+    volumes:
+      # Montar el directorio actual al directorio de trabajo en el contenedor
+      - .:/latex
+      # Volumen para mantener los paquetes de MiKTeX entre ejecuciones
+      - miktex-data:/var/lib/miktex
+    environment:
+      # Configurar UID/GID para evitar problemas de permisos al montar volúmenes
+      - MIKTEX_UID=1000
+      - MIKTEX_GID=1000
+    working_dir: /latex
+    tty: true
+    command:
+      - bash
+      - -lc
+      - bash tools/build.sh
+
+volumes:
+  miktex-data:
+    driver: local

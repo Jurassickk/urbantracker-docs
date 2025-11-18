@@ -1,0 +1,43 @@
+\section{Implementación del software}
+Describimos arquitectura, decisiones tecnológicas y \textit{pipelines}. Documentamos prácticas aplicadas: formateo, \textit{linting}, pruebas unitarias/integración, análisis estático (SAST), \textit{continuous delivery} y monitoreo. 
+
+\subsection{Arquitectura del sistema}
+Arquitectura: (1) Adquisición de datos: la app del conductor obtiene coordenadas con el GPS del dispositivo móvil y publica JSON al bróker; (2) Backend: bróker MQTT (Mosquitto), almacenamiento y API de apoyo; (3) Presentación: apps web con mapas interactivos.
+
+\subsection{Fragmento de código}
+Ejemplo de implementación de una función con tipado estático:
+
+\ifminted
+\begin{minted}[linenos]{python}
+def suma(a: int, b: int) -> int:
+    """Suma dos numeros enteros.
+    
+    Args:
+        a: Primer operando
+        b: Segundo operando
+        
+    Returns:
+        La suma de a y b
+    """
+    return a + b
+\end{minted}
+\else
+\begin{lstlisting}[language=Python]
+def suma(a: int, b: int) -> int:
+    """Suma dos numeros enteros.
+    
+    Args:
+        a: Primer operando
+        b: Segundo operando
+        
+    Returns:
+        La suma de a y b
+    """
+    return a + b
+\end{lstlisting}
+\fi
+
+\subsection{Comparación de tecnologías}
+La selección de tecnologías se basó en criterios objetivos. La \ref{tab:frameworks} presenta una comparación detallada de los frameworks evaluados.
+
+\input{tables/frameworks_comparison.tex}

@@ -1,0 +1,45 @@
+\documentclass[sigconf,nonacm]{acmart}
+
+\input{includes/preamble_common}
+\input{includes/preamble_acm}
+
+\AtBeginDocument{\providecommand\BibTeX{{\sc Bib}\TeX}}
+
+\title[Plantilla multi-formato]{Plantilla multi-formato para investigación aplicada en buenas prácticas de desarrollo de software}
+
+\author{Autor Uno}
+\affiliation{%
+  \institution{Afiliación 1}
+  \city{Ciudad}
+  \country{País}}
+\email{autor1@ejemplo.edu}
+
+\author{Autor Dos}
+\affiliation{%
+  \institution{Afiliación 2}
+  \city{Ciudad}
+  \country{País}}
+\email{autor2@ejemplo.edu}
+
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\keywords{buenas prácticas, ingeniería de software, investigación aplicada, reproducibilidad}
+
+\begin{document}
+\maketitle
+
+\input{sections/01_introduccion}
+\input{sections/02_relacionados}
+\input{sections/03_metodologia}
+\input{sections/04_implementacion}
+\input{sections/05_resultados}
+\input{sections/06_discusion}
+\input{sections/07_conclusiones}
+\input{sections/A1_apendices}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography/references}
+
+\end{document}
