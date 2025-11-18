@@ -1,16 +1,11 @@
 \section{Marco teórico y trabajos relacionados}
-Aportes clave seleccionados del thesaurus y su relación con UrbanTracker:
+En el análisis se revela un consentimiento sobre la cualidad de MQTT, apoyado frecuentemente por brokers como Mosquitto, para proyectos que exigen comunicación ligera y en tiempo real. La selección de MQTT en UrbanTracker está justificada por tres pilares que responden directamente a los requisitos del proyecto:
 
-• DESARROLLO DE UN SISTEMA DE LOCALIZACIÓN BASADO EN GPS E IOT: UN ESTUDIO DE CASO EN QUITO (2025). Fuente: Google Sschoolar. https://www.investigacionistct.ec/ojs/index.php/investigacion_tecnologica/article/view/165
+\subsection{Rastreo y Monitoreo en Tiempo Real}
+La funcionalidad central de UrbanTracker es el rastreo vehicular. Los estudios demuestran que el modelo Publicación/Suscripción de MQTT, donde el dispositivo GPS (o el móvil del conductor en nuestro caso) envía la ubicación al broker y este la distribuye a los suscriptores (aplicación de usuario), es el modelo más eficiente. Proyectos de seguimiento de mascotas, seguimiento de camiones y contenedores, y rastreo de vehículos recolectores de basura confirman que MQTT es el núcleo de comunicación para la gestión de datos de geolocalización en tiempo real, garantizando la promesa de una visualización inmediata para el usuario final.
 
-• SISTEMA DE GEOLOCALIZACION DE VEHICULOS RECOLECTORES DE BASURA APLICANDO INTERNET DE LAS COSAS (2025). Fuente: Google Sschoolar. https://repositorio.upea.bo/jspui/handle/123456789/89
+\subsection{Eficiencia, Recursos Limitados y Escalabilidad}
+UrbanTracker se diferencia al utilizar dispositivos móviles existentes, los cuales demandan una comunicación que no agote la batería ni los datos. Múltiples proyectos IoT, como los sistemas de monitoreo de frigoríficos, acuarios o invernaderos, señalan que el protocolo MQTT es la opción más sólida debido a su bajo consumo de recursos y su carácter "ligero", ideal para dispositivos con restricciones de hardware y redes con poca estabilidad. En el contexto empresarial, se ha comprobado que MQTT ofrece menor latencia y mejor rendimiento que HTTP al manejar un gran volumen de eventos, asegurando que la arquitectura de UrbanTracker sea inherentemente escalable para el crecimiento futuro del sistema.
 
-• Aplicación web para el control de desviaciones de rutas en el transporte público mediante IOT (2025). Fuente: Google Sschoolar. https://www.dspace.espol.edu.ec/handle/123456789/65811
-
-• Aplicación del protocolo MQTT y recolección de datos para aplicaciones IoT (2025). Fuente: Google Sschoolar. https://repositorio.unitec.edu/items/2b823853-4bb8-4fd7-887a-d93f122933c5
-
-• Arquitectura orientada a eventos sobre protocolo MQTT (2025). Fuente: Google Sschoolar. https://sedici.unlp.edu.ar/handle/10915/130301
-
-En conjunto, estos trabajos recomiendan una arquitectura de tres capas con GPS en el vehículo, un pub/sub —preferentemente MQTT— y cliente web para visualización. UrbanTracker adopta este enfoque y lo aplica a un contexto local.
-
-MARCO DE REFERENCIA — MQTT: Según «Arquitectura orientada a eventos sobre protocolo MQTT» (SEDICI–UNLP, 2025), el paradigma publicación/suscripción de MQTT reduce latencia y uso de ancho de banda en telemetría vehicular.
+\subsection{Seguridad}
+Se exige proteger los datos de acceso y ubicación mediante cifrado. Un estudio específico sobre seguridad de MQTT en IoT confirma que, si bien el protocolo es eficiente, requiere la implementación de esquemas de cifrado para mitigar el riesgo de intercepción.

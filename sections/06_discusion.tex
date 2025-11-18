@@ -1,6 +1,24 @@
 \section{Discusión}
-MQTT habilitó flujos ligeros y de baja latencia. Frente a HTTP, el enfoque pub/sub reduce la sobrecarga y escala mejor con múltiples vehículos y usuarios.
+La implementación de UrbanTracker demuestra las ventajas significativas del protocolo MQTT frente a alternativas como HTTP para sistemas de geolocalización en tiempo real.
 
-MARCO DE REFERENCIA — MQTT vs alternativas: Según «Arquitectura orientada a eventos sobre protocolo MQTT» (SEDICI–UNLP, 2025), la arquitectura orientada a eventos con bróker ofrece ventajas de desempeño para actualización continua.
+\subsection{MQTT vs HTTP para Comunicación en Tiempo Real}
+Los resultados obtenidos confirman que MQTT habilita flujos ligeros y de baja latencia. Frente al modelo Request/Response de HTTP, el enfoque publicación/suscripción reduce la sobrecarga y escala mejor con múltiples vehículos y usuarios. Esto es particularmente importante en el contexto de transporte público donde se requieren actualizaciones constantes de posición con el mínimo consumo de recursos.
 
-Usar dispositivos móviles como punto de conexión IoT disminuyendo el costo, pero se requiere políticas de uso y reconexión.
+\subsection{Ventajas de la Arquitectura Propuesta}
+La arquitectura distribuida de UrbanTracker presenta varios beneficios clave:
+
+\begin{itemize}
+\item \textbf{Eficiencia en el uso de recursos}: El protocolo MQTT es significativamente más ligero que HTTP para el manejo de eventos frecuentes
+\item \textbf{Baja latencia}: Las actualizaciones de geolocalización llegan prácticamente en tiempo real a los usuarios
+\item \textbf{Escalabilidad}: El modelo pub/sub permite manejar fácilmente el crecimiento del número de vehículos y usuarios
+\item \textbf{Costo-efectividad}: El uso de dispositivos móviles como sensores elimina la necesidad de hardware especializado costoso
+\end{itemize}
+
+\subsection{Desafíos y Consideraciones}
+Si bien la implementación demuestra éxito, se identifican áreas que requieren atención:
+
+\begin{itemize}
+\item \textbf{Seguridad}: Es necesario reforzar las medidas de cifrado y autenticación para proteger los datos de ubicación
+\item \textbf{Gestión de dispositivos}: Se requieren políticas claras de uso y reconexión para los dispositivos móviles de los conductores
+\item \textbf{Administración}: Los administradores necesitan herramientas adicionales para el monitoreo del sistema completo
+\end{itemize}

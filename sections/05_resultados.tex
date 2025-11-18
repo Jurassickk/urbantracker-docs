@@ -1,12 +1,18 @@
 \section{Evaluación y resultados}
-Se implementó:
+La implementación de MQTT garantiza los resultados funcionales críticos de UrbanTracker, especialmente su diferenciación competitiva:
 
- (a) consulta de rutas y trazado;
+\subsection{Garantía del Tiempo Real y Eficiencia}
+El uso de MQTT en la capa de transporte asegura que el requisito (Visualización en tiempo real) se cumpla con una performance de una baja latencia. Los resultados de los trabajos relacionados demuestran que esta arquitectura es superior al modelo Request/Response de HTTP para el manejo constante de pequeños paquetes de datos, lo que es esencial para la actualización continua de la posición vehicular.
 
-(b) visualización en tiempo real de los vehículos activos;
+\subsection{Solución de Bajo Costo y Adaptabilidad}
+Al validar que MQTT es la tecnología preferida para dispositivos con recursos limitados, se respalda la decisión de utilizar el dispositivo móvil del conductor como publicador de datos o como sensor de ubicación. Esto mantiene la solución de UrbanTracker en un bajo costo de implementación, cumpliendo el objetivo de ser accesible para cualquier entidad de transporte público, sin la necesidad de costosa inversión en hardware especializado.
 
-(c) inicio/fin de recorrido desde la app del conductor;
+\subsection{Funcionalidades Implementadas}
+El sistema UrbanTracker permite:
 
- (d) administración de rutas, conductores y vehículos desde panel del administrador web.
-
-MARCO DE REFERENCIA — Gestión y monitoreo web/móvil: Según «Aplicación web para el control de desviaciones de rutas en el transporte mediante IOT» (ESPOL, 2025), la visualización cartográfica en tiempo real mejora la toma de decisiones operativas y la experiencia del usuario.
+\begin{itemize}
+\item Monitoreo en tiempo real de vehículos de transporte público
+\item Visualización de rutas y ubicaciones actualizadas
+\item Gestión eficiente de la comunicación entre conductores y usuarios
+\item Plataforma accesible para entidades de transporte público
+\end{itemize}

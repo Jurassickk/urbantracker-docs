@@ -1,34 +1,50 @@
-\documentclass[sigconf,nonacm]{acmart}
+\documentclass[sigconf]{acmart}
 
 \input{includes/preamble_common}
 \input{includes/preamble_acm}
 
-\AtBeginDocument{\providecommand\BibTeX{{\sc Bib}\TeX}}
+\title{Geolocalización de rutas de transporte en tiempo real mediante MQTT: Diseño e implementación de UrbanTracker}
 
-\title[Plantilla multi-formato]{Plantilla multi-formato para investigación aplicada en buenas prácticas de desarrollo de software}
-
-\author{Autor Uno}
+\author{Diego Fernando Cuellar Hernandez}
 \affiliation{%
-  \institution{Afiliación 1}
-  \city{Ciudad}
-  \country{País}}
-\email{autor1@ejemplo.edu}
+  \institution{Servicio Nacional de Aprendizaje - SENA}
+  \city{Neiva-Huila}
+  \country{Colombia}
+}
+\email{cuellardiego310@gmail.com}
+\orcid{0009-0008-2546-3454}
 
-\author{Autor Dos}
+\author{Jésus Ariel González Bonilla}
 \affiliation{%
-  \institution{Afiliación 2}
-  \city{Ciudad}
-  \country{País}}
+  \institution{Servicio Nacional de Aprendizaje - SENA}
+  \city{Neiva-Huila}
+  \country{Colombia}
+}
 \email{autor2@ejemplo.edu}
+\orcid{0000-0001-6272-8695}
 
+\begin{document}
+
+% ACM requires the abstract to appear BEFORE \maketitle
 \begin{abstract}
 \input{sections/00_abstract}
 \end{abstract}
 
-\keywords{buenas prácticas, ingeniería de software, investigación aplicada, reproducibilidad}
-
-\begin{document}
 \maketitle
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002978.10003029.10011703</concept_id>
+<concept_desc>Security and privacy~Usability in security and privacy</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy~Usability in security and privacy}
+
+\keywords{Transporte público, Geolocalización, MQTT, IoT, Comunicación en tiempo real, Rutas}
 
 \input{sections/01_introduccion}
 \input{sections/02_relacionados}
@@ -39,6 +55,9 @@
 \input{sections/07_conclusiones}
 \input{sections/A1_apendices}
 
+% Print full bibliography (BibTeX/natbib workflow used by acmart)
+% Include all entries even if not cited in text:
+\nocite{*}
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{bibliography/references}
 

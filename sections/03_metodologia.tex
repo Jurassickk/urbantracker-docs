@@ -1,10 +1,11 @@
 \section{Metodología de investigación aplicada}
-Arquitectura: (1) Adquisición de datos: la app del conductor obtiene coordenadas con el GPS del dispositivo móvil y publica JSON al bróker; (2) Backend: bróker MQTT (Mosquitto), almacenamiento y API de apoyo; (3) Presentación: apps web con mapas interactivos.
+La metodología de este análisis se basó en una revisión bibliográfica de los 15 trabajos de caso para validar la decisión arquitectónica en el contexto de UrbanTracker. El proceso incluyó:
 
-Comunicación: tópicos del tipo /ruta/vehículo que permiten separar productores y consumidores. Para la web se habilita MQTT sobre WebSocket.
+\subsection{Identificación de Requisitos Críticos}
+Se definieron los requisitos de tiempo real, envío de ubicación desde el móvil y seguridad como dependientes del protocolo de comunicación.
 
-Seguridad: autenticación por roles, JWT.
+\subsection{Mapeo de Evidencia}
+Se compararon los beneficios probados de MQTT (ligereza, publicación/suscripción, bajo consumo) con estos requisitos, encontrando una correlación directa y consistente en todos los estudios.
 
-MARCO DE REFERENCIA — Diseño IoT para rastreo vehicular: Según «DESARROLLO DE UN SISTEMA DE LOCALIZACIÓN BASADO EN GPS E IOT: UN ESTUDIO DE CASO EN QUITO» (ISTCT, 2025), un dispositivo con GPS y conectividad GSM/4G envía datos a la nube para visualización en tiempo real.
-
-MARCO DE REFERENCIA — Uso de smartphone como nodo IoT: Según «SISTEMA DE GEOLOCALIZACION DE VEHICULOS RECOLECTORES DE BASURA APLICANDO INTERNET DE LAS COSAS» (UPEA, 2025), es viable sustituir hardware dedicado por dispositivos móviles con GPS para reducir costos de implementación.
+\subsection{Arquitectura del Sistema}
+La implementación de UrbanTracker está diseñada como una arquitectura distribuida que conecta la aplicación móvil del conductor (el Publicador), un Broker MQTT (como Mosquitto) en la nube, y la plataforma web/móvil del usuario/administrador (el Suscriptor). El protocolo MQTT gestiona el flujo de datos GPS en tiempo real a través de tópicos específicos, asegurando que la información llegue de manera inmediata a la interfaz gráfica.
