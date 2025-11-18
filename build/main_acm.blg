@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: build/main_acm.aux
+The top-level auxiliary file: main_acm.aux
 Reallocating 'name_of_file' (item size: 1) to 21 items.
 The style file: ACM-Reference-Format.bst
 Reallocating 'name_of_file' (item size: 1) to 24 items.
@@ -8,66 +8,61 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: bibliography/references.bib
+Warning--I didn't find a database entry for "ortiz2022smolcomm"
+Warning--I didn't find a database entry for "juric2021predictivo"
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Warning--empty publisher in bass2015devops
-Warning--empty address in bass2015devops
-Warning--page numbers missing in both pages and numpages fields in bass2015devops
-Warning--empty address in beck2003testdriven
-Warning--can't use both volume and number fields in chen2015devops
-Warning--empty publisher in chen2015devops
-Warning--empty address in chen2015devops
-Warning--no number and no volume in dora2021metrics
-Warning--page numbers missing in both pages and numpages fields in dora2021metrics
-Warning--no number and no volume in forsgren2018accelerate
-Warning--page numbers missing in both pages and numpages fields in forsgren2018accelerate
-Warning--empty publisher in fowler2006continuous
-Warning--empty address in fowler2006continuous
-Warning--page numbers missing in both pages and numpages fields in fowler2006continuous
-Warning--empty address in martin2008clean
-You've used 8 entries,
+Warning--no number and no volume in aguirre2020mqtt
+Warning--page numbers missing in both pages and numpages fields in aguirre2020mqtt
+Warning--no number and no volume in cervantes2022arquitectura
+Warning--page numbers missing in both pages and numpages fields in cervantes2022arquitectura
+Warning--page numbers missing in both pages and numpages fields in karne2022iot
+Warning--empty publisher in villagra2021mqtt
+Warning--empty address in villagra2021mqtt
+Warning--page numbers missing in both pages and numpages fields in villagra2021mqtt
+You've used 6 entries,
             6273 wiz_defined-function locations,
-            1564 strings with 19157 characters,
-and the built_in function-call counts, 7713 in all, are:
-= -- 960
-> -- 178
+            1561 strings with 19776 characters,
+and the built_in function-call counts, 6562 in all, are:
+= -- 981
+> -- 152
 < -- 0
-+ -- 54
-- -- 72
-* -- 472
-:= -- 725
-add.period$ -- 40
-call.type$ -- 8
-change.case$ -- 44
-chr.to.int$ -- 8
-cite$ -- 23
-duplicate$ -- 745
-empty$ -- 530
-format.name$ -- 84
-if$ -- 1883
++ -- 47
+- -- 51
+* -- 421
+:= -- 562
+add.period$ -- 32
+call.type$ -- 6
+change.case$ -- 37
+chr.to.int$ -- 6
+cite$ -- 14
+duplicate$ -- 572
+empty$ -- 415
+format.name$ -- 63
+if$ -- 1709
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 31
-newline$ -- 112
-num.names$ -- 56
-pop$ -- 325
+missing$ -- 25
+newline$ -- 114
+num.names$ -- 42
+pop$ -- 237
 preamble$ -- 1
-purify$ -- 108
+purify$ -- 85
 quote$ -- 0
-skip$ -- 254
+skip$ -- 182
 stack$ -- 0
-substring$ -- 508
-swap$ -- 52
+substring$ -- 434
+swap$ -- 41
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 168
-warning$ -- 15
-while$ -- 58
+type$ -- 110
+warning$ -- 8
+while$ -- 36
 width$ -- 0
-write$ -- 196
-(There were 15 warnings)
+write$ -- 176
+(There were 10 warnings)

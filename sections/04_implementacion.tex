@@ -1,43 +1,8 @@
 \section{Implementación del software}
-Describimos arquitectura, decisiones tecnológicas y \textit{pipelines}. Documentamos prácticas aplicadas: formateo, \textit{linting}, pruebas unitarias/integración, análisis estático (SAST), \textit{continuous delivery} y monitoreo. 
+\textbf{Diseño del sistema:} UrbanTracker se concibió con una arquitectura multicapa, separando claramente los componentes de frontend (aplicaciones de usuario) y backend (servidor central). En el \textbf{frontend}, se desarrollaron tres interfaces principales: (1) una aplicación web para los usuarios del transporte (público general) donde pueden consultar las rutas disponibles y ver en un mapa la ubicación en tiempo real de los autobuses; (2) una aplicación móvil nativa (Android) para los conductores, encargada de capturar las coordenadas GPS del vehículo y enviarlas al sistema; y (3) una interfaz web para administradores, accesible desde navegadores, que permite gestionar rutas, vehículos y conductores, además de monitorear la flota en un panel de control. Las aplicaciones web se implementaron usando \textbf{React} (Javascript/TypeScript), mientras que la aplicación móvil se desarrolló con \textbf{React Native} dada su capacidad multiplataforma y la facilidad de compartir lógica con el web.
 
-\subsection{Arquitectura del sistema}
-Arquitectura: (1) Adquisición de datos: la app del conductor obtiene coordenadas con el GPS del dispositivo móvil y publica JSON al bróker; (2) Backend: bróker MQTT (Mosquitto), almacenamiento y API de apoyo; (3) Presentación: apps web con mapas interactivos.
+El \textbf{backend} se construyó en \textbf{Java} utilizando el framework \textbf{Spring Boot}, siguiendo una arquitectura modular con servicios RESTful para las funciones CRUD (crear, leer, actualizar, eliminar) y utilizando WebSockets (vía Socket.IO) y MQTT para la mensajería en tiempo real. En particular, se adoptó un modelo de publicación/suscripción (pub/sub) para el envío de ubicaciones: la aplicación móvil del conductor publica periódicamente mensajes con su posición GPS en un tópico específico, y los clientes suscritos (aplicación de usuario, panel admin) reciben esas actualizaciones al instante. Esta elección de diseño está alineada con otras soluciones de IoT y comunicación en sistemas distribuidos, donde un broker intermedia el flujo de mensajes para desacoplar emisores y receptores. Por ejemplo, Ortiz \emph{et al.} (2022) documentan un módulo de comunicaciones autónomo desarrollado en Spring Boot que utiliza \textbf{MQTT} (broker Mosquitto) del lado del dispositivo y una base de datos en memoria \textbf{Redis} en el servidor bajo un modelo pub/sub, logrando una comunicación bidireccional eficiente entre máquinas y sistema central\cite{ortiz2022smolcomm}. Inspirados por ese enfoque, UrbanTracker emplea MQTT como opción ligera para el envío de datos GPS, apoyándose en un broker local que distribuye los mensajes de ubicación a los clientes suscritos en tiempo real. Alternativamente, el sistema puede operar vía \textbf{WebSockets} puros en entornos donde un broker MQTT no esté disponible, usando Socket.IO en el backend de Node.js (un microservicio complementario) para canalizar las posiciones a los usuarios. Ambas modalidades aseguran mínimos tiempos de latencia en la actualización de coordenadas.
 
-\subsection{Fragmento de código}
-Ejemplo de implementación de una función con tipado estático:
+\textbf{Base de datos:} Se utilizó PostgreSQL para almacenar la información persistente del sistema. El esquema de datos incluye tablas para \emph{rutas} (definidas por nombre, lista de paradas, etc.), \emph{vehículos} (identificación, modelo, estado, asignación a ruta), \emph{conductores} (perfil de usuario, credenciales) y \emph{registros de recorrido} (asociando conductores con vehículos y rutas en un intervalo temporal, incluyendo sus trazas de posición). Adicionalmente, se almacenan logs básicos de actividad para auditoría (por ejemplo, cambios realizados por administradores). La elección de un SGBD SQL robusto obedece a la necesidad de consultas relacionales eficientes (e.g., listar conductores asignados a cierta ruta, obtener historial de posiciones de un vehículo, etc.) y garantizar la integridad referencial entre entidades. Todas las transacciones relevantes son expuestas a través de una API REST, con control de acceso mediante autenticación JWT (JSON Web Tokens) para las operaciones de conductor y administrador. Asimismo, se implementaron roles de usuario bien definidos (público, conductor autenticado, administrador) para restringir acciones según privilegios, en concordancia con las mejores prácticas de seguridad (p. ej., uso de HTTPS y hash seguro de contraseñas, tal como se estipuló en los requisitos no funcionales de seguridad).
 
-\ifminted
-\begin{minted}[linenos]{python}
-def suma(a: int, b: int) -> int:
-    """Suma dos numeros enteros.
-    
-    Args:
-        a: Primer operando
-        b: Segundo operando
-        
-    Returns:
-        La suma de a y b
-    """
-    return a + b
-\end{minted}
-\else
-\begin{lstlisting}[language=Python]
-def suma(a: int, b: int) -> int:
-    """Suma dos numeros enteros.
-    
-    Args:
-        a: Primer operando
-        b: Segundo operando
-        
-    Returns:
-        La suma de a y b
-    """
-    return a + b
-\end{lstlisting}
-\fi
-
-\subsection{Comparación de tecnologías}
-La selección de tecnologías se basó en criterios objetivos. La \ref{tab:frameworks} presenta una comparación detallada de los frameworks evaluados.
-
-\input{tables/frameworks_comparison.tex}
+\textbf{Integración de mapas:} Para la visualización geográfica se integró la API de \textbf{Mapbox}, tanto en la web de usuario (mostrando marcadores de autobuses en tiempo real sobre el mapa) como en la aplicación móvil (por ejemplo, para mostrar al conductor su ruta asignada y eventualmente permitirle ver paradas). La API se consumió mediante librerías especializadas. Esta integración permite ofrecer una interfaz familiar al usuario y aprovechar funciones avanzadas como el cálculo de rutas o la visualización del tráfico en tiempo real, aunque en esta fase inicial se usó principalmente para la representación estática de la ubicación de los vehículos.

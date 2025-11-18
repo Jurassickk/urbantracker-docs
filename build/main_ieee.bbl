@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,5 +16,242 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{karne2022iot}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=6713b8bd5d345bc6626d8e0a86e219a5}{%
+           family={Karne},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=049040cb7b8bfdd9d4aba5911c007634}{%
+           family={Nithin},
+           familyi={N\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=27a40b2acd9f42e734e5197a8a3782cc}{%
+           family={Saigoutham},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2a64b2bd126977af59a71b7e93cd7f68}{%
+           family={Rahul},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8eff647338e146552457e2ea5e3a9447}
+      \strng{fullhash}{c7163375acc54f5b0b610ae4ccf2f573}
+      \strng{fullhashraw}{c7163375acc54f5b0b610ae4ccf2f573}
+      \strng{bibnamehash}{c7163375acc54f5b0b610ae4ccf2f573}
+      \strng{authorbibnamehash}{c7163375acc54f5b0b610ae4ccf2f573}
+      \strng{authornamehash}{8eff647338e146552457e2ea5e3a9447}
+      \strng{authorfullhash}{c7163375acc54f5b0b610ae4ccf2f573}
+      \strng{authorfullhashraw}{c7163375acc54f5b0b610ae4ccf2f573}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Food and Nutritional Sciences}
+      \field{number}{12}
+      \field{title}{An Internet of Things (IoT) enabled tracking system with scalability for monitoring public buses}
+      \field{volume}{11}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/375746355
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/375746355
+      \endverb
+    \endentry
+    \entry{cervantes2022arquitectura}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ac899108e05774a6dc6a0d0a2b5aa8da}{%
+           family={Cervantes\bibnamedelima Salazar},
+           familyi={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={C.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{fullhash}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{fullhashraw}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{bibnamehash}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{authorbibnamehash}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{authornamehash}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{authorfullhash}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \strng{authorfullhashraw}{ac899108e05774a6dc6a0d0a2b5aa8da}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{RIAA}
+      \field{note}{Universidad Autónoma del Estado de Morelos}
+      \field{title}{Diseño de una arquitectura escalable distribuida para procesamiento de datos de geolocalización}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb http://riaa.uaem.mx/handle/20.500.12055/2837
+      \endverb
+      \verb{url}
+      \verb http://riaa.uaem.mx/handle/20.500.12055/2837
+      \endverb
+    \endentry
+    \entry{nugraha2023api}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e3cf56946c8e3188f9c5d307a788cc11}{%
+           family={Nugraha},
+           familyi={N\bibinitperiod},
+           given={K.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{fullhash}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{fullhashraw}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{bibnamehash}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{authorbibnamehash}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{authornamehash}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{authorfullhash}{e3cf56946c8e3188f9c5d307a788cc11}
+      \strng{authorfullhashraw}{e3cf56946c8e3188f9c5d307a788cc11}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal on Advanced Science, Engineering and Information Technology}
+      \field{number}{3}
+      \field{title}{Real-time bus arrival time estimation API using WebSocket in microservices architecture}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{1018\bibrangedash 1024}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb https://repository.ukdw.ac.id/9179/
+      \endverb
+      \verb{url}
+      \verb https://repository.ukdw.ac.id/9179/
+      \endverb
+    \endentry
+    \entry{villagra2021mqtt}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=7ea020c9ddea99560d52d1ef27855db6}{%
+           family={Villagra},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=54c30b6011b6c6682f2dbe8669991194}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4725981997516b4030a6b3a0e3535e3c}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {UNLP}%
+      }
+      \strng{namehash}{4d9dfae6db30f090d0b68fa1f619d001}
+      \strng{fullhash}{bb94882e981c1de056609982acd8cc46}
+      \strng{fullhashraw}{bb94882e981c1de056609982acd8cc46}
+      \strng{bibnamehash}{bb94882e981c1de056609982acd8cc46}
+      \strng{authorbibnamehash}{bb94882e981c1de056609982acd8cc46}
+      \strng{authornamehash}{4d9dfae6db30f090d0b68fa1f619d001}
+      \strng{authorfullhash}{bb94882e981c1de056609982acd8cc46}
+      \strng{authorfullhashraw}{bb94882e981c1de056609982acd8cc46}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Jornadas Argentinas de Informática (JAIIO)}
+      \field{title}{Arquitectura orientada a eventos sobre protocolo MQTT}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://sedici.unlp.edu.ar/bitstream/handle/10915/130301/Documento_completo.pdf?sequence=1&isAllowed=y
+      \endverb
+      \verb{url}
+      \verb https://sedici.unlp.edu.ar/bitstream/handle/10915/130301/Documento_completo.pdf?sequence=1&isAllowed=y
+      \endverb
+    \endentry
+    \entry{shukla2025oauth}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=668a9cd833166983ae4c32c87a276970}{%
+           family={Shukla},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{668a9cd833166983ae4c32c87a276970}
+      \strng{fullhash}{668a9cd833166983ae4c32c87a276970}
+      \strng{fullhashraw}{668a9cd833166983ae4c32c87a276970}
+      \strng{bibnamehash}{668a9cd833166983ae4c32c87a276970}
+      \strng{authorbibnamehash}{668a9cd833166983ae4c32c87a276970}
+      \strng{authornamehash}{668a9cd833166983ae4c32c87a276970}
+      \strng{authorfullhash}{668a9cd833166983ae4c32c87a276970}
+      \strng{authorfullhashraw}{668a9cd833166983ae4c32c87a276970}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multidisciplinary Global Education Journal}
+      \field{number}{2}
+      \field{title}{Applying OAuth2 and JWT protocols in securing distributed API gateways: Best practices and case review}
+      \field{volume}{3}
+      \field{year}{2025}
+      \field{pages}{10\bibrangedash 18}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb https://www.allmultidisciplinaryjournal.com/uploads/archives/20250604165126_MGE-2025-3-210.1.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.allmultidisciplinaryjournal.com/uploads/archives/20250604165126_MGE-2025-3-210.1.pdf
+      \endverb
+    \endentry
+    \entry{aguirre2020mqtt}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=919270eb58aaf18dd78d40c446bb50a3}{%
+           family={Aguirre},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f8220a07427054a8ccca04ed0df25c48}{%
+           family={Aranda},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a5cf83a3291f809daf664caaa62c4211}{%
+           family={Balich},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0947b0f3c396a9ff8337e9dce50a798}
+      \strng{fullhash}{4c9f549deeccb0b66798f8362a9930ae}
+      \strng{fullhashraw}{4c9f549deeccb0b66798f8362a9930ae}
+      \strng{bibnamehash}{4c9f549deeccb0b66798f8362a9930ae}
+      \strng{authorbibnamehash}{4c9f549deeccb0b66798f8362a9930ae}
+      \strng{authornamehash}{d0947b0f3c396a9ff8337e9dce50a798}
+      \strng{authorfullhash}{4c9f549deeccb0b66798f8362a9930ae}
+      \strng{authorfullhashraw}{4c9f549deeccb0b66798f8362a9930ae}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{INNOVA - Revista Argentina de Ciencia y Tecnología}
+      \field{note}{Universidad Nacional de Tres de Febrero}
+      \field{title}{Seguridad en el envío de mensajes mediante protocolo MQTT en IoT}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.revistas.untref.edu.ar/index.php/innova/article/view/1000/826
+      \endverb
+      \verb{url}
+      \verb https://www.revistas.untref.edu.ar/index.php/innova/article/view/1000/826
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{juric2021predictivo}
+  \missing{ortiz2022smolcomm}
+\endrefsection
 \endinput
 

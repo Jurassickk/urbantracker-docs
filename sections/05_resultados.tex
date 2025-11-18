@@ -1,12 +1,8 @@
 \section{Evaluación y resultados}
-Se implementó:
+UrbanTracker demuestra que es posible combinar tecnologías modernas y accesibles para un rastreo vehicular efectivo. El uso de React Native en el móvil y Spring Boot en el servidor, comunicados por MQTT, permitió lograr actualizaciones geográficas con latencias bajas (cercanas a los cientos de ms) y comunicación fluida entre componentes. Según \cite{villagra2021mqtt}, arquitecturas orientadas a eventos con MQTT mantienen bajos costos de recurso y alta escalabilidad, lo que se valida en la práctica para el alcance de este proyecto.
 
- (a) consulta de rutas y trazado;
+El empleo de React Native redujo el esfuerzo de desarrollo multiplataforma, y la arquitectura modular facilita la escalabilidad futura: aunque actualmente es un monolito, el diseño está preparado para dividirse en microservicios sin refactorizaciones masivas. Esto concuerda con estudios de casos donde arquitecturas distribuidas soportan grandes volúmenes de datos de geolocalización en tiempo real.
 
-(b) visualización en tiempo real de los vehículos activos;
+Además, se integró seguridad básica mediante JWT, siguiendo las prácticas recomendadas para autenticación en APIs distribuidas. En general, el sistema alcanzó flexibilidad para distintos casos de uso: usuarios finales obtienen información en vivo de transporte, mientras administradores disponen de herramientas de gestión.
 
-(c) inicio/fin de recorrido desde la app del conductor;
-
- (d) administración de rutas, conductores y vehículos desde panel del administrador web.
-
-MARCO DE REFERENCIA — Gestión y monitoreo web/móvil: Según «Aplicación web para el control de desviaciones de rutas en el transporte mediante IOT» (ESPOL, 2025), la visualización cartográfica en tiempo real mejora la toma de decisiones operativas y la experiencia del usuario.
+Como pasos futuros se recomienda completar el desarrollo de pruebas unitarias e interfaces, así como explorar la incorporación de análisis predictivo (por ejemplo, estimaciones de llegada al estilo de \cite{juric2021predictivo}) y mejoras de privacidad. No obstante, los resultados obtenidos evidencian que UrbanTracker cumple los objetivos iniciales: optimizar la experiencia del usuario y la operación del servicio público de transporte mediante tecnología de geolocalización en tiempo real.
