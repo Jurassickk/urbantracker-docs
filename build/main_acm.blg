@@ -1,19 +1,17 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: build/main_acm.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
+The top-level auxiliary file: main_acm.aux
 The style file: ACM-Reference-Format.bst
-Reallocating 'name_of_file' (item size: 1) to 24 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bibliography/references.bib
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'glb_str_end' (item size: 4) to 20 items.
-Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
-Reallocating 'global_strs' (item size: 1) to 4000000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty publisher in bass2015devops
 Warning--empty address in bass2015devops
 Warning--page numbers missing in both pages and numpages fields in bass2015devops
@@ -31,7 +29,7 @@ Warning--page numbers missing in both pages and numpages fields in fowler2006con
 Warning--empty address in martin2008clean
 You've used 8 entries,
             6273 wiz_defined-function locations,
-            1564 strings with 19157 characters,
+            1564 strings with 19145 characters,
 and the built_in function-call counts, 7713 in all, are:
 = -- 960
 > -- 178

@@ -1,11 +1,17 @@
-\section{Metodología de investigación aplicada}
-La metodología de este análisis se basó en una revisión bibliográfica de los 15 trabajos de caso para validar la decisión arquitectónica en el contexto de UrbanTracker. El proceso incluyó:
+\section{Metodología}
 
-\subsection{Identificación de Requisitos Críticos}
-Se definieron los requisitos de tiempo real, envío de ubicación desde el móvil y seguridad como dependientes del protocolo de comunicación.
+La metodología de este análisis se basó en una revisión bibliográfica de los 15 trabajos de caso [1-15] para validar la decisión arquitectónica en el contexto de UrbanTracker. El proceso incluyó:
 
-\subsection{Mapeo de Evidencia}
-Se compararon los beneficios probados de MQTT (ligereza, publicación/suscripción, bajo consumo) con estos requisitos, encontrando una correlación directa y consistente en todos los estudios.
+Identificación de Requisitos Críticos: Se definieron los requisitos de tiempo real, envío de ubicación desde el móvil y seguridad como dependientes del protocolo de comunicación.
 
-\subsection{Arquitectura del Sistema}
+Mapeo de Evidencia: Se compararon los beneficios probados de MQTT (ligereza, publicación/suscripción, bajo consumo) con estos requisitos, encontrando una correlación directa y consistente en todos los estudios.
+
 La implementación de UrbanTracker está diseñada como una arquitectura distribuida que conecta la aplicación móvil del conductor (el Publicador), un Broker MQTT (como Mosquitto) en la nube, y la plataforma web/móvil del usuario/administrador (el Suscriptor). El protocolo MQTT gestiona el flujo de datos GPS en tiempo real a través de tópicos específicos, asegurando que la información llegue de manera inmediata a la interfaz gráfica.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./graphics/Imagen-13.jpg}
+\caption{Imagen correspondiente al artículo [13]}
+\end{figure}
+
+Esta metodología asegura una evaluación rigurosa y basada en evidencia, permitiendo una comparación objetiva entre diferentes protocolos de comunicación IoT y su aplicabilidad en sistemas de transporte urbano.

@@ -1,11 +1,26 @@
 \section{Discusión}
+
 La implementación de UrbanTracker demuestra las ventajas significativas del protocolo MQTT frente a alternativas como HTTP para sistemas de geolocalización en tiempo real.
 
 \subsection{MQTT vs HTTP para Comunicación en Tiempo Real}
+
 Los resultados obtenidos confirman que MQTT habilita flujos ligeros y de baja latencia. Frente al modelo Request/Response de HTTP, el enfoque publicación/suscripción reduce la sobrecarga y escala mejor con múltiples vehículos y usuarios. Esto es particularmente importante en el contexto de transporte público donde se requieren actualizaciones constantes de posición con el mínimo consumo de recursos.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./graphics/Imagen-14.jpg}
+\caption{Imagen correspondiente al artículo [14]}
+\end{figure}
+
 \subsection{Ventajas de la Arquitectura Propuesta}
+
 La arquitectura distribuida de UrbanTracker presenta varios beneficios clave:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./graphics/Imagen-11.jpg}
+\caption{Imagen correspondiente al artículo [11]}
+\end{figure}
 
 \begin{itemize}
 \item \textbf{Eficiencia en el uso de recursos}: El protocolo MQTT es significativamente más ligero que HTTP para el manejo de eventos frecuentes
@@ -15,6 +30,7 @@ La arquitectura distribuida de UrbanTracker presenta varios beneficios clave:
 \end{itemize}
 
 \subsection{Desafíos y Consideraciones}
+
 Si bien la implementación demuestra éxito, se identifican áreas que requieren atención:
 
 \begin{itemize}
@@ -22,3 +38,5 @@ Si bien la implementación demuestra éxito, se identifican áreas que requieren
 \item \textbf{Gestión de dispositivos}: Se requieren políticas claras de uso y reconexión para los dispositivos móviles de los conductores
 \item \textbf{Administración}: Los administradores necesitan herramientas adicionales para el monitoreo del sistema completo
 \end{itemize}
+
+Además, la comparación con otros protocolos resalta la superioridad de MQTT en entornos de IoT urbanos, donde la conectividad intermitente y los recursos limitados son comunes.

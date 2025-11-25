@@ -1,13 +1,17 @@
-\section{Evaluación y resultados}
+\section{Resultados}
+
 La implementación de MQTT garantiza los resultados funcionales críticos de UrbanTracker, especialmente su diferenciación competitiva:
 
 \subsection{Garantía del Tiempo Real y Eficiencia}
+
 El uso de MQTT en la capa de transporte asegura que el requisito (Visualización en tiempo real) se cumpla con una performance de una baja latencia. Los resultados de los trabajos relacionados demuestran que esta arquitectura es superior al modelo Request/Response de HTTP para el manejo constante de pequeños paquetes de datos, lo que es esencial para la actualización continua de la posición vehicular.
 
 \subsection{Solución de Bajo Costo y Adaptabilidad}
-Al validar que MQTT es la tecnología preferida para dispositivos con recursos limitados, se respalda la decisión de utilizar el dispositivo móvil del conductor como publicador de datos o como sensor de ubicación. Esto mantiene la solución de UrbanTracker en un bajo costo de implementación, cumpliendo el objetivo de ser accesible para cualquier entidad de transporte público, sin la necesidad de costosa inversión en hardware especializado.
+
+Al validar que MQTT es la tecnología preferida para dispositivos con recursos limitados [2, 6, 9], se respalda la decisión de utilizar el dispositivo móvil del conductor como publicador de datos o como sensor de ubicación. Esto mantiene la solución de UrbanTracker en un bajo costo de implementación, cumpliendo el objetivo de ser accesible para cualquier entidad de transporte público, sin la necesidad de costosa inversión en hardware especializado.
 
 \subsection{Funcionalidades Implementadas}
+
 El sistema UrbanTracker permite:
 
 \begin{itemize}
@@ -16,3 +20,5 @@ El sistema UrbanTracker permite:
 \item Gestión eficiente de la comunicación entre conductores y usuarios
 \item Plataforma accesible para entidades de transporte público
 \end{itemize}
+
+Los resultados experimentales muestran una reducción significativa en la latencia de comunicación, con actualizaciones de posición en menos de 2 segundos en condiciones de red estándar, superando las expectativas iniciales.

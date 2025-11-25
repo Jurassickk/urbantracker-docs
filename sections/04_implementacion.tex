@@ -1,7 +1,15 @@
-\section{Implementación del software}
-La aplicación del Conductor (el Publicador) captura las coordenadas o datos de ubicación GPS a través del móvil y las envía a través de un tópico específico al Broker (Mosquitto) central. El Broker concentra los mensajes de una manera eficiente, distribuyendo la información de la posición a todos sus suscriptores (los usuarios) que estén en ese momento consultando una ruta o a la administración, logrando una buena implementación de la comunicación en tiempo real.
+\section{Implementación}
+
+La aplicación del Conductor (el Publicador) captura las coordenadas o datos de ubicación GPS a través del móvil y las enviará a través de un tópico específico al Broker (Mosquitto) central. El Broker concentra los mensajes de una manera eficiente, distribuyendo la información de la posición a todos sus suscriptores (los usuarios) que estén en ese momento consultando una ruta o a la administración, logrando una buena implementación de la comunicación en tiempo real.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./graphics/Imagen-10.jpg}
+\caption{Imagen correspondiente al artículo [10]}
+\end{figure}
 
 \subsection{Componentes del Sistema}
+
 El sistema UrbanTracker está compuesto por tres componentes principales:
 
 \begin{enumerate}
@@ -11,7 +19,11 @@ El sistema UrbanTracker está compuesto por tres componentes principales:
 \end{enumerate}
 
 \subsection{Garantía del Tiempo Real y Eficiencia}
+
 El uso de MQTT en la capa de transporte asegura que el requisito de visualización en tiempo real se cumpla con una performance de baja latencia. Los resultados de los trabajos relacionados demuestran que esta arquitectura es superior al modelo Request/Response de HTTP para el manejo constante de pequeños paquetes de datos, lo que es esencial para la actualización continua de la posición vehicular.
 
 \subsection{Solución de Bajo Costo y Adaptabilidad}
+
 Al validar que MQTT es la tecnología preferida para dispositivos con recursos limitados, se respalda la decisión de utilizar el dispositivo móvil del conductor como publicador de datos o como sensor de ubicación. Esto mantiene la solución de UrbanTracker en un bajo costo de implementación, cumpliendo el objetivo de ser accesible para cualquier entidad de transporte público, sin la necesidad de costosa inversión en hardware especializado.
+
+Además, la implementación incluye medidas de optimización para minimizar el uso de batería y datos móviles, asegurando la sostenibilidad a largo plazo del sistema.
