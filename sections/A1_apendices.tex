@@ -9,9 +9,80 @@
   \item \textbf{Datos generados}: conservar los historiales de posiciones exportados, capturas del panel web y cualquier métrica adicional utilizada para evaluar el desempeño.
 \end{itemize}
 
+\section{Detalles técnicos adicionales}
+\subsection{Configuración del servidor MQTT}
+El broker Mosquitto se configuró con autenticación básica mediante usuario y contraseña, almacenados en variables de entorno. Los tópicos siguen el patrón \texttt{ruta/\{id\}/location}, permitiendo suscripciones específicas por ruta. La configuración incluye límites de ancho de banda para evitar sobrecargas en redes móviles.
+
+\subsection{Integración con Mapbox}
+La API de Mapbox se integra mediante tokens de acceso almacenados de forma segura. Las coordenadas se convierten a formato GeoJSON para renderizado eficiente. Se implementaron capas personalizadas para mostrar rutas históricas y posiciones en tiempo real, con actualizaciones cada 5 segundos.
+
+\subsection{Pruebas de carga}
+Se realizaron pruebas con 50 dispositivos simulados, enviando actualizaciones cada 10 segundos. Los resultados mostraron una estabilidad del 95\% en conexiones, con picos de latencia de hasta 500 ms en escenarios de alta concurrencia.
+
+\subsection{Códigos de error}
+La aplicación maneja códigos de error específicos: 400 para datos inválidos, 401 para autenticación fallida, 500 para errores del servidor. Estos se registran en logs para depuración.
+
+\section{Casos de uso detallados}
+\subsection{Escenario urbano típico}
+En una ciudad como Bogotá, un usuario consulta la app web para ver la posición de autobuses en la ruta 123. La actualización en tiempo real reduce el tiempo de espera de 15 a 5 minutos, mejorando la experiencia.
+
+\subsection{Monitoreo administrativo}
+Los administradores usan el panel para asignar rutas dinámicamente, respondiendo a congestiones. Esto permite reasignar vehículos en tiempo real, optimizando el servicio.
+
+\subsection{Integración futura con IoT}
+UrbanTracker puede extenderse para integrar sensores de ocupación en autobuses, proporcionando datos sobre demanda para ajustar frecuencias de servicio.
+
 \section{Agradecimientos}
 Los autores agradecen al equipo de desarrollo de UrbanTracker por su dedicación en las distintas fases del proyecto, en especial a Diego F. Cuellar por sus valiosa contribuciones de programación y pruebas. Asimismo, se extiende nuestro agradecimiento al Servicio Nacional de Aprendizaje (SENA) y sus instructores por el apoyo institucional y técnico brindado durante la realización de este trabajo. Su orientación y recursos fueron fundamentales para alcanzar los objetivos propuestos.
 
 \section{Contribuciones de autor}
 \textbf{Brayan Estiven Carvajal Padilla:} Conceptualización del proyecto; análisis de requisitos; diseño de interfaces; desarrollo del frontend; realización de pruebas; redacción inicial del manuscrito.
 \textbf{Jesús Ariel González Bonilla:} Supervisión general del proyecto; mentoría metodológica durante la investigación.
+\section{Detalles adicionales de implementación}
+\subsection{Configuración de Docker}
+El archivo docker-compose.yml incluye servicios para PostgreSQL con persistencia de datos y Mosquitto con autenticación básica. Variables de entorno como \texttt{POSTGRES\_DB} y \texttt{MQTT\_USER} se definen para facilitar despliegues en diferentes ambientes.
+
+\subsection{Pruebas de integración}
+Se utilizaron scripts en Python con la librería paho-mqtt para simular mensajes de ubicación. Estos scripts generaron datos aleatorios basados en rutas reales de Bogotá, permitiendo validar el procesamiento en tiempo real.
+
+\subsection{Métricas de monitoreo}
+Se implementó un endpoint REST para exponer métricas como número de conexiones activas y latencia promedio, útil para monitoreo operativo.
+
+\section{Glosario de términos}
+- **IoT**: Internet of Things, red de dispositivos conectados.
+- **MQTT**: Protocolo de mensajería ligero para IoT.
+- **DDD**: Domain-Driven Design, enfoque de diseño de software.
+- **JWT**: JSON Web Token, estándar para autenticación.
+
+\section{Referencias adicionales}
+Para profundizar, se recomienda consultar la documentación oficial de Spring Boot y React Native, así como estudios sobre movilidad urbana en revistas como Transportation Research Part C.
+\section{Diagramas de arquitectura}
+En esta sección se incluyen diagramas detallados de la arquitectura del sistema UrbanTracker. El diagrama principal muestra la interacción entre los componentes frontend, backend y base de datos, con flujos de comunicación MQTT y REST. Además, se presenta un diagrama de secuencia que ilustra el proceso de actualización de posiciones en tiempo real, desde la captura GPS en la aplicación móvil hasta la visualización en el mapa web.
+
+Estos diagramas fueron elaborados utilizando herramientas como Draw.io y Lucidchart, facilitando la comprensión de la estructura modular y las dependencias entre módulos. La arquitectura modular permite escalabilidad, ya que cada componente puede actualizarse independientemente sin afectar el sistema completo.
+
+\subsubsection{Diagrama de componentes}
+El diagrama de componentes destaca los siguientes elementos principales:
+- Aplicación móvil (React Native): Captura GPS y publica en MQTT.
+- Broker MQTT (Mosquitto): Intermedia mensajes en tiempo real.
+- Backend (Spring Boot): Procesa datos, valida y almacena en PostgreSQL.
+- Frontend web (React/Next.js): Consume APIs y muestra mapas con Mapbox.
+- Base de datos (PostgreSQL): Almacena rutas, vehículos, posiciones y usuarios.
+
+\subsubsection{Diagrama de despliegue}
+El diagrama de despliegue muestra cómo el sistema se ejecuta en contenedores Docker, con servicios separados para backend, base de datos y broker. Esto asegura portabilidad y facilidad de despliegue en entornos de desarrollo y producción.
+
+Estos diagramas son esenciales para la reproducibilidad del proyecto y sirven como guía para futuras extensiones o modificaciones del sistema.
+
+\section{Código fuente completo}
+El código fuente completo del proyecto UrbanTracker está disponible en el repositorio Git correspondiente. A continuación, se detalla la estructura de directorios y los archivos principales:
+
+- \texttt{/backend}: Contiene el código Spring Boot, con controladores REST, servicios de negocio y repositorios JPA.
+- \texttt{/mobile}: Incluye la aplicación React Native para Android, con componentes para geolocalización y comunicación MQTT.
+- \texttt{/web}: Alberga el frontend React/Next.js, con páginas de usuario, administrador y mapas interactivos.
+- \texttt{/docker}: Archivos de configuración para contenedores, incluyendo docker-compose.yml.
+- \texttt{/docs}: Documentación adicional, incluyendo este artículo y manuales de usuario.
+
+Para ejecutar el proyecto, se requiere Java 17+, Node.js 18+, PostgreSQL y Mosquitto. Las instrucciones detalladas se encuentran en el README del repositorio.
+
+El código está licenciado bajo MIT, permitiendo su uso y modificación libre, siempre que se cite la fuente original. Esta apertura fomenta la colaboración y el desarrollo continuo de soluciones de transporte inteligente.

@@ -1,7 +1,7 @@
-PWD C:\Users\choso\Downloads\urbantracker-docs
+PWD c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs
 INPUT C:\Users\choso\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
 INPUT main_acm.tex
-OUTPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.log
+OUTPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.log
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\acmart\acmart.cls
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\acmart\acmart.cls
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\xkeyval\xkeyval.sty
@@ -110,7 +110,7 @@ INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\oberdiek\ifdraft.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\oberdiek\ifdraft.sty
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.log
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.log
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
@@ -280,10 +280,10 @@ INPUT includes\preamble_acm.tex
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\preprint\balance.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\preprint\balance.sty
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
-OUTPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
+OUTPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -303,13 +303,13 @@ INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-OUTPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+OUTPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\translations\dicts\translations-basic-dictionary-spanish.trsl
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\translations\dicts\translations-basic-dictionary-spanish.trsl
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\translations\dicts\translations-basic-dictionary-spanish.trsl
@@ -331,6 +331,7 @@ INPUT .\sections\01_introduccion.tex
 INPUT .\sections\01_introduccion.tex
 INPUT .\sections\01_introduccion.tex
 INPUT sections\01_introduccion.tex
+OUTPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.xdv
 INPUT .\sections\02_relacionados.tex
 INPUT .\sections\02_relacionados.tex
 INPUT .\sections\02_relacionados.tex
@@ -341,12 +342,14 @@ INPUT .\sections\03_metodologia.tex
 INPUT .\sections\03_metodologia.tex
 INPUT .\sections\03_metodologia.tex
 INPUT sections\03_metodologia.tex
-OUTPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.xdv
 INPUT .\sections\04_implementacion.tex
 INPUT .\sections\04_implementacion.tex
 INPUT .\sections\04_implementacion.tex
 INPUT .\sections\04_implementacion.tex
 INPUT sections\04_implementacion.tex
+INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT .\sections\05_resultados.tex
 INPUT .\sections\05_resultados.tex
 INPUT .\sections\05_resultados.tex
@@ -357,6 +360,11 @@ INPUT .\sections\06_discusion.tex
 INPUT .\sections\06_discusion.tex
 INPUT .\sections\06_discusion.tex
 INPUT sections\06_discusion.tex
+INPUT .\sections\11_futuro.tex
+INPUT .\sections\11_futuro.tex
+INPUT .\sections\11_futuro.tex
+INPUT .\sections\11_futuro.tex
+INPUT sections\11_futuro.tex
 INPUT .\sections\07_conclusiones.tex
 INPUT .\sections\07_conclusiones.tex
 INPUT .\sections\07_conclusiones.tex
@@ -367,15 +375,15 @@ INPUT .\sections\A1_apendices.tex
 INPUT .\sections\A1_apendices.tex
 INPUT .\sections\A1_apendices.tex
 INPUT sections\A1_apendices.tex
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.bbl
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.bbl
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.bbl
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.bbl
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.bbl
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.bbl
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-pdfdoc.def
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-pdfdoc.def
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-pdfdoc.def
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-utf32be.def
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-utf32be.def
 INPUT C:\Users\choso\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-utf32be.def
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
-INPUT C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out
+INPUT c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out

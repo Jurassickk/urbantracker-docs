@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.6)  18 NOV 2025 12:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.10.6)  25 NOV 2025 17:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1984,11 +1984,11 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
-(C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
-LaTeX Info: Redefining \. on input line 17.
-LaTeX Info: Redefining \% on input line 17.
+(c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 17.
+(babel)             Reported on input line 11.
 )
 \openout1 = `main_acm.aux'.
 
@@ -2074,8 +2074,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package hyperref Info: Link coloring OFF on input line 32.
 
-(C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out)
-(C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.out)
+(c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out)
+(c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.out)
 \@outlinefile=\write4
 \openout4 = `main_acm.out'.
 
@@ -2169,57 +2169,138 @@ LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
 (Font)              scaled to size 10.95pt on input line 33.
 
-(sections/00_abstract.tex) (sections/01_introduccion.tex)
-(sections/02_relacionados.tex
-Underfull \vbox (badness 1448) has occurred while \output is active []
-
-
-
-) (sections/03_metodologia.tex
+(sections/00_abstract.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+) (sections/01_introduccion.tex
 
 [1.1
 
-]) (sections/04_implementacion.tex
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 
-Overfull \hbox (4.75153pt too wide) in paragraph at lines 4--5
-[]\TU/LinLibertine(0)/m/n/9 El \TU/LinLibertine(0)/b/n/9 backend \TU/LinLiberti
-ne(0)/m/n/9 se construyó en \TU/LinLibertine(0)/b/n/9 Java \TU/LinLibertine(0)/
-m/n/9 utilizando el framework \TU/LinLibertine(0)/b/n/9 Spring
- []
+
+LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 24.
+LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 24.
+[2.2]) (sections/02_relacionados.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+
+[3.3]) (sections/03_metodologia.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+
+[4.4]) (sections/04_implementacion.tex
+
+LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 6.
+
+
+[5.5]
+(C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `inconsolata' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 15.
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 15.
+
+
+LaTeX Font Warning: Font shape `TU/inconsolata(0)/m/it' undefined
+(Font)              using `TU/inconsolata(0)/m/n' instead on input line 25.
+
+
 
 ) (sections/05_resultados.tex
 
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1.
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1.
-[2.2]) (sections/06_discusion.tex) (sections/07_conclusiones.tex)
-(sections/A1_apendices.tex
+[6.6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+) (sections/06_discusion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+
+[7.7]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[8.8]) (sections/11_futuro.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+) (sections/07_conclusiones.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[9.9]) (sections/A1_apendices.tex
 Overfull \hbox (12.89496pt too wide) in paragraph at lines 4--5
 []\TU/LinLibertine(0)/b/n/9 Repositorio y commits\TU/LinLibertine(0)/m/n/9 : do
 cumentar las ramas de backend (Spring
  []
 
-) (C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Overfull \hbox (2.16978pt too wide) in paragraph at lines 30--31
+\TU/LinLibertine(0)/m/n/9 mente, respondiendo a congestiones. Esto permite reas
+ignar vehícu-
+ []
+
+
+
+[10.10]
+Overfull \hbox (7.21751pt too wide) in paragraph at lines 43--44
+[]\TU/LinLibertine(0)/m/n/9 El archivo docker-compose.yml incluye servicios par
+a PostgreSQL
+ []
+
+
+Overfull \hbox (15.40204pt too wide) in paragraph at lines 52--56
+\TU/LinLibertine(0)/m/n/9 **MQTT**: Protocolo de mensajería ligero para IoT. - 
+**DDD**: Domain-
+ []
+
+
+Overfull \hbox (1.86952pt too wide) in paragraph at lines 65--71
+ \TU/LinBiolinum(0)/m/it/9 I.0.1. Diagrama de componentes.[] \TU/LinLibertine(0
+)/m/n/9 El diagrama de componentes des-
+ []
+
+
+
+) (c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.bbl
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
 (Font)              scaled to size 7.0pt on input line 46.
 LaTeX Info: Redefining \tempurl on input line 65.
 LaTeX Info: Redefining \tempurl on input line 96.
-
-
-[3.3]
 LaTeX Info: Redefining \tempurl on input line 112.
 LaTeX Info: Redefining \tempurl on input line 139.
 LaTeX Info: Redefining \tempurl on input line 154.
@@ -2239,9 +2320,8 @@ Underfull \hbox (badness 1097) in paragraph at lines 147--157
 )
 
 
-
-
-Overfull \vbox (1.34698pt too high) has occurred while \output is active []
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pdfdoc.d
@@ -2251,25 +2331,30 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 (C:\Users\choso\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf32be.
 def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
-) [4.4] (C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.aux
-LaTeX Info: Redefining \. on input line 17.
-LaTeX Info: Redefining \% on input line 17.
+) [11.11]
+(c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\build\main_acm.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
 )
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `main_acm.out' has not changed.
-(rerunfilecheck)             Checksum: 14BC52E524E81A2D1B760F1B51BEF713;2105.
+(rerunfilecheck)             Checksum: 7190B0AFA85C9099C65C80E10A83BA31;7569.
  ) 
 Here is how much of TeX's memory you used:
- 41639 strings out of 403245
- 843616 string characters out of 5460760
- 1384173 words of memory out of 5000000
- 69497 multiletter control sequences out of 15000+600000
- 633560 words of font info for 137 fonts, out of 8000000 for 9000
+ 41827 strings out of 403245
+ 847320 string characters out of 5460760
+ 1587459 words of memory out of 5000000
+ 69672 multiletter control sequences out of 15000+600000
+ 633722 words of font info for 143 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 105i,12n,131p,1832b,32987s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,12n,131p,2051b,32979s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on C:\Users\choso\Downloads\urbantracker-docs\build\main_acm.xdv
- (4 pages, 236176 bytes).
+Output written on c:\Users\choso\Downloads\Nueva carpeta\urbantracker-docs\buil
+d\main_acm.xdv (11 pages, 767600 bytes).
