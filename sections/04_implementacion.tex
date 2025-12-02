@@ -14,8 +14,8 @@ El sistema UrbanTracker está compuesto por tres componentes principales:
 
 \begin{enumerate}
 \item \textbf{Aplicación del Conductor (Publicador)}: Captura datos GPS del dispositivo móvil y publica la información al broker MQTT.
-\item \textbf{Broker MQTT (Mosquitto)}: Centraliza y distribuye los mensajes de geolocalización de manera eficiente.
-\item \textbf{Plataforma Web/Móvil (Suscriptores)}: Visualiza en tiempo real las posiciones de los vehículos para usuarios y administradores.
+\item \textbf{Broker MQTT (Mosquitto)}: Centraliza y distribuye los mensajes de geolocalización de manera eficiente y rapidamente.
+\item \textbf{Plataforma Web/Móvil (Suscriptores)}: Hace la funcionalidad de visualización de la información en tiempo real las posiciones de los vehículos para que los usuarios los pueda consultar y los administradores puedan gestionar el sistema.
 \end{enumerate}
 
 \subsection{Garantía del Tiempo Real y Eficiencia}
@@ -24,6 +24,6 @@ El uso de MQTT en la capa de transporte asegura que el requisito de visualizaci�
 
 \subsection{Solución de Bajo Costo y Adaptabilidad}
 
-Al validar que MQTT es la tecnología preferida para dispositivos con recursos limitados, se respalda la decisión de utilizar el dispositivo móvil del conductor como publicador de datos o como sensor de ubicación. Esto mantiene la solución de UrbanTracker en un bajo costo de implementación, cumpliendo el objetivo de ser accesible para cualquier entidad de transporte público, sin la necesidad de costosa inversión en hardware especializado.
+Al validar que MQTT es la tecnología preferida para dispositivos con recursos limitados, se respalda la decisión de utilizar el dispositivo móvil del conductor como publicador de datos o como sensor de ubicación. Esto mantiene la solución de UrbanTracker en un bajo costo de implementación, cumpliendo el objetivo de ser accesible para cualquier entidad de transporte público o urbano, sin la necesidad de alguna costosa inversión en hardware especializado.
 
 Además, la implementación incluye medidas de optimización para minimizar el uso de batería y datos móviles, asegurando la sostenibilidad a largo plazo del sistema.
