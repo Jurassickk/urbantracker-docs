@@ -1,6 +1,8 @@
 \section{Implementación}
 
-La aplicación del Conductor (el Publicador) captura las coordenadas o datos de ubicación GPS a través del móvil y las enviará a través de un tópico específico al Broker (Mosquitto) central. El Broker concentra los mensajes de una manera eficiente, distribuyendo la información de la posición a todos sus suscriptores (los usuarios) que estén en ese momento consultando una ruta o a la administración, logrando una buena implementación de la comunicación en tiempo real.
+La implementación de UrbanTracker se basa en una arquitectura distribuida que integra MQTT para la comunicación eficiente de datos GPS. La aplicación móvil del conductor actúa como publicador, capturando coordenadas de ubicación mediante el GPS del dispositivo. Estas coordenadas se envían al broker MQTT (Mosquitto) a través de un tópico específico, como "urbantracker/vehicle/{id}/location", donde {id} identifica al vehículo. El broker, alojado en la nube, recibe y gestiona estos mensajes de manera centralizada, distribuyéndolos a los suscriptores interesados, que incluyen aplicaciones web y móviles de usuarios finales y plataformas de administración.
+
+El funcionamiento de MQTT en este contexto se basa en su modelo Pub/Sub: los publicadores envían mensajes sin conocer a los receptores, y los suscriptores se registran en tópicos relevantes. Por ejemplo, un usuario consultando una ruta específica se suscribe al tópico correspondiente, recibiendo actualizaciones en tiempo real sin polling constante. Los niveles de QoS (0: al menos una vez, 1: exactamente una vez, 2: asegurada) garantizan la entrega de mensajes incluso en redes inestables, almacenando temporalmente datos si la conexión se interrumpe. Esta implementación asegura una comunicación ágil y de baja latencia, esencial para la visualización continua de posiciones vehiculares.
 
 \begin{figure}[h]
 \centering
@@ -10,12 +12,14 @@ La aplicación del Conductor (el Publicador) captura las coordenadas o datos de 
 
 \subsection{Componentes del Sistema}
 
-El sistema UrbanTracker está compuesto por tres componentes principales:
+El sistema UrbanTracker se estructura en tres componentes principales interconectados mediante MQTT, cada uno diseñado para optimizar la geolocalización y gestión de rutas en transporte público:
 
 \begin{enumerate}
-\item \textbf{Aplicación del Conductor (Publicador)}: Captura datos GPS del dispositivo móvil y publica la información al broker MQTT.
-\item \textbf{Broker MQTT (Mosquitto)}: Centraliza y distribuye los mensajes de geolocalización de manera eficiente y rapidamente.
-\item \textbf{Plataforma Web/Móvil (Suscriptores)}: Hace la funcionalidad de visualización de la información en tiempo real las posiciones de los vehículos para que los usuarios los pueda consultar y los administradores puedan gestionar el sistema.
+\item \textbf{Aplicación del Conductor (Publicador)}: Desarrollada para dispositivos móviles Android/iOS, esta aplicación accede al GPS nativo para capturar coordenadas de latitud, longitud y timestamp. Utiliza bibliotecas MQTT para publicar mensajes ligeros al broker, con intervalos configurables (ej. cada 10-30 segundos) para balancear precisión y consumo de batería. Incluye autenticación básica para asegurar que solo conductores autorizados publiquen datos.
+
+\item \textbf{Broker MQTT (Mosquitto)}: Implementado con Mosquitto, un broker de código abierto, actúa como el núcleo de la comunicación. Gestiona conexiones persistentes, autentica publicadores y suscriptores, y distribuye mensajes a través de tópicos jerárquicos. Su arquitectura ligera permite manejar miles de conexiones simultáneas con bajo uso de recursos, soportando QoS para garantizar entrega en redes inestables. En la nube, asegura escalabilidad y disponibilidad alta.
+
+\item \textbf{Plataforma Web/Móvil (Suscriptores)}: Incluye una interfaz web responsiva y aplicaciones móviles que permiten a usuarios suscribirse a tópicos específicos (ej. rutas de autobuses). Recibe actualizaciones en tiempo real para visualizar posiciones en mapas interactivos, estimar tiempos de llegada y gestionar rutas. Para administradores, ofrece dashboards para monitoreo de flotas, alertas de desviaciones y análisis de rendimiento, facilitando decisiones operativas.
 \end{enumerate}
 
 \subsection{Garantía del Tiempo Real y Eficiencia}

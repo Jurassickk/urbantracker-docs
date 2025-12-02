@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.11)  2 DEC 2025 03:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.11)  2 DEC 2025 03:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1151,87 +1151,101 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 8.0pt on input line 31.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.0pt on input line 31.
-Excluding 'CCSXML' comment. (./sections/01_introduccion.tex) (./sections/02_rel
-acionados.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Excluding 'CCSXML' comment. (./sections/01_introduccion.tex
+<./graphics/Imagen-11.jpg, id=102, 443.40656pt x 130.23656pt>
+File: ./graphics/Imagen-11.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-11.jpg>
+Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 15.
+(pdftex.def)             Requested size: 405.03754pt x 118.9745pt.
 
-[1.1{/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/tex
-live/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/opt/texlive/
-texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}
+Overfull \hbox (163.89005pt too wide) in paragraph at lines 15--16
+ [][] 
+ []
+
+
+Class acmart Warning: A possible image without description on input line 17.
+
+) (./sections/02_relacionados.tex [1.1{/opt/texlive/texdir/texmf-var/fonts/map/
+pdftex/updmap/pdftex.map}{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libert
+ine/lbtn_25tcsq.enc}{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/l
+btn_76gpa5.enc}
 
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/opt
 /texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/opt/texl
-ive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}]
-<./graphics/Imagen-8.jpg, id=118, 443.40656pt x 155.83218pt>
+ive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc} <./graphics/Im
+agen-11.jpg>]
+<./graphics/Imagen-8.jpg, id=116, 443.40656pt x 155.83218pt>
 File: ./graphics/Imagen-8.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-8.jpg>
-Package pdftex.def Info: ./graphics/Imagen-8.jpg  used on input line 21.
+Package pdftex.def Info: ./graphics/Imagen-8.jpg  used on input line 25.
 (pdftex.def)             Requested size: 253.14749pt x 88.96793pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 21--22
+Overfull \hbox (12.0pt too wide) in paragraph at lines 25--26
  [][] 
  []
 
 
-Class acmart Warning: A possible image without description on input line 23.
+Class acmart Warning: A possible image without description on input line 27.
 
-<./graphics/Imagen-6.jpg, id=119, 303.1325pt x 208.78pt>
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 45.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 45.
+[2.2 <./graphics/Imagen-8.jpg>]
+<./graphics/Imagen-6.jpg, id=123, 303.1325pt x 208.78pt>
 File: ./graphics/Imagen-6.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-6.jpg>
-Package pdftex.def Info: ./graphics/Imagen-6.jpg  used on input line 39.
+Package pdftex.def Info: ./graphics/Imagen-6.jpg  used on input line 51.
 (pdftex.def)             Requested size: 253.14749pt x 174.35455pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 39--40
+Overfull \hbox (12.0pt too wide) in paragraph at lines 51--52
  [][] 
  []
 
 
-Class acmart Warning: A possible image without description on input line 41.
+Class acmart Warning: A possible image without description on input line 53.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 57.
 ) (./sections/03_metodologia.tex
-<./graphics/Imagen-13.jpg, id=120, 443.40656pt x 115.93312pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[3.3 <./graphics/Imagen-6.jpg>]
+<./graphics/Imagen-13.jpg, id=129, 443.40656pt x 115.93312pt>
 File: ./graphics/Imagen-13.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-13.jpg>
-Package pdftex.def Info: ./graphics/Imagen-13.jpg  used on input line 13.
+Package pdftex.def Info: ./graphics/Imagen-13.jpg  used on input line 17.
 (pdftex.def)             Requested size: 253.14749pt x 66.18869pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 13--14
+Overfull \hbox (12.0pt too wide) in paragraph at lines 17--18
  [][] 
  []
 
 
-Class acmart Warning: A possible image without description on input line 15.
+Class acmart Warning: A possible image without description on input line 19.
+
+) (./sections/04_implementacion.tex
+<./graphics/Imagen-10.jpg, id=130, 443.40656pt x 155.07938pt>
+File: ./graphics/Imagen-10.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-10.jpg>
+Package pdftex.def Info: ./graphics/Imagen-10.jpg  used on input line 9.
+(pdftex.def)             Requested size: 253.14749pt x 88.53813pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 9--10
+ [][] 
+ []
+
+
+Class acmart Warning: A possible image without description on input line 11.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./sections/04_implementacion.tex
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1.
-[2.2 <./graphics/Imagen-8.jpg> <./graphics/Imagen-6.jpg>]
-<./graphics/Imagen-10.jpg, id=128, 443.40656pt x 155.07938pt>
-File: ./graphics/Imagen-10.jpg Graphic file (type jpg)
-<use ./graphics/Imagen-10.jpg>
-Package pdftex.def Info: ./graphics/Imagen-10.jpg  used on input line 7.
-(pdftex.def)             Requested size: 253.14749pt x 88.53813pt.
+) (./sections/05_resultados.tex [4.4 <./graphics/Imagen-13.jpg> <./graphics/Ima
+gen-10.jpg>]) (./sections/06_discusion.tex
+Underfull \vbox (badness 8151) has occurred while \output is active []
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 7--8
- [][] 
- []
-
-
-Class acmart Warning: A possible image without description on input line 9.
-
-) (./sections/05_resultados.tex) (./sections/06_discusion.tex
-Underfull \vbox (badness 4531) has occurred while \output is active []
-
-[3.3 <./graphics/Imagen-13.jpg> <./graphics/Imagen-10.jpg>]
-<./graphics/Imagen-14.jpg, id=138, 443.40656pt x 232.61906pt>
+<./graphics/Imagen-14.jpg, id=140, 443.40656pt x 232.61906pt>
 File: ./graphics/Imagen-14.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-14.jpg>
 Package pdftex.def Info: ./graphics/Imagen-14.jpg  used on input line 11.
@@ -1244,7 +1258,6 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 11--12
 
 Class acmart Warning: A possible image without description on input line 13.
 
-<./graphics/Imagen-11.jpg, id=139, 443.40656pt x 130.23656pt>
 File: ./graphics/Imagen-11.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-11.jpg>
 Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 21.
@@ -1257,8 +1270,8 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 21--22
 
 Class acmart Warning: A possible image without description on input line 23.
 
-) (./sections/07_conclusiones.tex) (./sections/A1_apendices.tex [4.4 <./graphic
-s/Imagen-14.jpg> <./graphics/Imagen-11.jpg>]
+[5.5 <./graphics/Imagen-14.jpg>]) (./sections/07_conclusiones.tex) (./sections/
+A1_apendices.tex
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 8.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/inconsolata/t1zi4.fd
@@ -1308,15 +1321,15 @@ Overfull \hbox (8.65132pt too wide) in paragraph at lines 60--61
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (9.72153pt too wide) in paragraph at lines 68--69
 [][]$\T1/LinuxLibertineT-TLF/m/n/9 (-20) https : / / docta . ucm . es / entitie
 s / publication / 217a1df1 -[] 4203 -[] 44dd -[] 9f4b -[]
  []
 
 ) (build/main_acm.bbl
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+[6.6{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}]
 LaTeX Info: Redefining \tempurl on input line 111.
 )
 
@@ -1335,15 +1348,13 @@ rtant steps when creating your papers will ensure that the widest possible audi
 ence can ingest your work..
 
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
+Overfull \vbox (1.11176pt too high) has occurred while \output is active []
 
 (/opt/texlive/texdir/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (/opt/texlive/texdir/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [5.5{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}]
-(build/main_acm.aux
+) [7.7] (build/main_acm.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -1352,16 +1363,16 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `main_acm.out' has not changed.
-(rerunfilecheck)             Checksum: 52ACFD210B44A2C5C060BFB669901925;4933.
+(rerunfilecheck)             Checksum: A852E1EEEE5424DE89A41D7BA00F15A2;4779.
  ) 
 Here is how much of TeX's memory you used:
- 30610 strings out of 467538
- 567028 string characters out of 5421635
- 1032685 words of memory out of 5000000
- 58526 multiletter control sequences out of 15000+600000
- 772523 words of font info for 325 fonts, out of 8000000 for 9000
+ 30645 strings out of 467538
+ 567820 string characters out of 5421635
+ 1026999 words of memory out of 5000000
+ 58534 multiletter control sequences out of 15000+600000
+ 779673 words of font info for 341 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,12n,131p,1116b,1304s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,131p,1116b,1371s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi
 4r.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/libertine/LinBiolinum
 T.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
@@ -1369,10 +1380,10 @@ B.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/libertine/LinLibertine
 T.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/libertine/LinLibertine
 TB.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/libertine/LinLibertin
 eTI.pfb>
-Output written on build/main_acm.pdf (5 pages, 515141 bytes).
+Output written on build/main_acm.pdf (7 pages, 524290 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 74479 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 78567 words of extra memory for PDF output out of 89155 (max. 10000000)
 

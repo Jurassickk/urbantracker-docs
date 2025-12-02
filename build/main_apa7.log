@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.11)  2 DEC 2025 03:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.11)  2 DEC 2025 03:46
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -496,34 +496,39 @@ Package microtype Info: Loading generic protrusion settings for font family
 (./sections/00_abstract.tex) (./sections/01_introduccion.tex [1
 
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
-/texdir/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]) (./sections/02_r
-elacionados.tex [2]
-<./graphics/Imagen-8.jpg, id=108, 443.40656pt x 155.83218pt>
+/texdir/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+<./graphics/Imagen-11.jpg, id=99, 443.40656pt x 130.23656pt>
+File: ./graphics/Imagen-11.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-11.jpg>
+Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 15.
+(pdftex.def)             Requested size: 276.00105pt x 81.07173pt.
+) (./sections/02_relacionados.tex [2 <./graphics/Imagen-11.jpg>] [3]
+<./graphics/Imagen-8.jpg, id=111, 443.40656pt x 155.83218pt>
 File: ./graphics/Imagen-8.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-8.jpg>
-Package pdftex.def Info: ./graphics/Imagen-8.jpg  used on input line 21.
+Package pdftex.def Info: ./graphics/Imagen-8.jpg  used on input line 25.
 (pdftex.def)             Requested size: 172.5pt x 60.6245pt.
-[3 <./graphics/Imagen-8.jpg>]
-<./graphics/Imagen-6.jpg, id=115, 303.1325pt x 208.78pt>
+[4 <./graphics/Imagen-8.jpg>]
+<./graphics/Imagen-6.jpg, id=117, 303.1325pt x 208.78pt>
 File: ./graphics/Imagen-6.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-6.jpg>
-Package pdftex.def Info: ./graphics/Imagen-6.jpg  used on input line 39.
+Package pdftex.def Info: ./graphics/Imagen-6.jpg  used on input line 51.
 (pdftex.def)             Requested size: 172.5pt x 118.8083pt.
-) (./sections/03_metodologia.tex [4 <./graphics/Imagen-6.jpg>]
-<./graphics/Imagen-13.jpg, id=121, 443.40656pt x 115.93312pt>
+[5 <./graphics/Imagen-6.jpg>]) (./sections/03_metodologia.tex [6]
+<./graphics/Imagen-13.jpg, id=128, 443.40656pt x 115.93312pt>
 File: ./graphics/Imagen-13.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-13.jpg>
-Package pdftex.def Info: ./graphics/Imagen-13.jpg  used on input line 13.
+Package pdftex.def Info: ./graphics/Imagen-13.jpg  used on input line 17.
 (pdftex.def)             Requested size: 172.5pt x 45.10228pt.
-) (./sections/04_implementacion.tex
-<./graphics/Imagen-10.jpg, id=122, 443.40656pt x 155.07938pt>
+) (./sections/04_implementacion.tex [7 <./graphics/Imagen-13.jpg>]
+<./graphics/Imagen-10.jpg, id=135, 443.40656pt x 155.07938pt>
 File: ./graphics/Imagen-10.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-10.jpg>
-Package pdftex.def Info: ./graphics/Imagen-10.jpg  used on input line 7.
+Package pdftex.def Info: ./graphics/Imagen-10.jpg  used on input line 9.
 (pdftex.def)             Requested size: 172.5pt x 60.33162pt.
-[5 <./graphics/Imagen-13.jpg> <./graphics/Imagen-10.jpg>]) (./sections/05_resul
-tados.tex [6]) (./sections/06_discusion.tex
-<./graphics/Imagen-14.jpg, id=137, 443.40656pt x 232.61906pt>
+[8 <./graphics/Imagen-10.jpg>]) (./sections/05_resultados.tex [9]) (./sections/
+06_discusion.tex
+<./graphics/Imagen-14.jpg, id=149, 443.40656pt x 232.61906pt>
 File: ./graphics/Imagen-14.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-14.jpg>
 Package pdftex.def Info: ./graphics/Imagen-14.jpg  used on input line 11.
@@ -531,7 +536,6 @@ Package pdftex.def Info: ./graphics/Imagen-14.jpg  used on input line 11.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./graphics/Imagen-11.jpg, id=138, 443.40656pt x 130.23656pt>
 File: ./graphics/Imagen-11.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-11.jpg>
 Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 21.
@@ -539,8 +543,8 @@ Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 21.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7]) (./sections/07_conclusiones.tex [8 <./graphics/Imagen-14.jpg> <./graphics/
-Imagen-11.jpg>]) (./sections/A1_apendices.tex [9]
+[10]) (./sections/07_conclusiones.tex [11 <./graphics/Imagen-14.jpg>]) (./secti
+ons/A1_apendices.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -551,7 +555,7 @@ Overfull \hbox (174.82721pt too wide) in paragraph at lines 16--17
  core / bitstreams / b5dc2ea7-[]c3b0-[]4b9a-[]837e-[]10f0b3e31fa7 /
  []
 
-
+[12]
 Overfull \hbox (10.11694pt too wide) in paragraph at lines 24--25
 [][]$\T1/cmtt/m/n/10 https : / / www . revistas . untref . edu . ar / index . p
 hp / innova / article / view /
@@ -581,7 +585,7 @@ Overfull \hbox (70.90259pt too wide) in paragraph at lines 48--49
 7a7d-[]7991-[]4570-[]869f-[]64879a542dae$[] 
  []
 
-[10]
+
 Overfull \hbox (153.83234pt too wide) in paragraph at lines 56--57
 [][]$\T1/cmtt/m/n/10 https : / / repositorio . upct . es / server / api / core 
 / bitstreams / ec0c5bcb-[]cd52-[]4a00-[]ae4b-[]38d6d4b13384 /
@@ -599,7 +603,7 @@ Overfull \hbox (81.13759pt too wide) in paragraph at lines 68--69
 7a1df1-[]4203-[]44dd-[]9f4b-[]aaff0de0bd94$[] 
  []
 
-) [11] (build/main_apa7.aux
+) [13] [14] (build/main_apa7.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -608,30 +612,31 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `main_apa7.out' has not changed.
-(rerunfilecheck)             Checksum: 7E4A22FE3AA66740A0E89DFF1E68DBF2;4336.
+(rerunfilecheck)             Checksum: 909A5B6D07C5414DB26B19AE4C45695B;4205.
  ) 
 Here is how much of TeX's memory you used:
- 22189 strings out of 467538
- 429216 string characters out of 5421635
- 866843 words of memory out of 5000000
- 50669 multiletter control sequences out of 15000+600000
- 643295 words of font info for 147 fonts, out of 8000000 for 9000
+ 22209 strings out of 467538
+ 429441 string characters out of 5421635
+ 868843 words of memory out of 5000000
+ 50677 multiletter control sequences out of 15000+600000
+ 644305 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,6n,83p,1135b,1259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,6n,83p,1135b,1240s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></op
 t/texlive/texdir/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></opt/texl
 ive/texdir/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></opt/texlive/te
 xdir/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/texlive/texdir/t
-exmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></opt/texlive/texdir/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb></opt/texlive/texdir/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1200.pfb></opt/texlive/texdir/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1728.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/pu
-blic/cm-super/sftt1000.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/c
-m-super/sftt1200.pfb>
-Output written on build/main_apa7.pdf (11 pages, 367309 bytes).
+exmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></opt/texlive/texdir/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0900.pfb></opt/texlive/texdir/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1000.pfb></opt/texlive/texdir/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1200.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm1728.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/c
+m-super/sftt1000.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/cm-supe
+r/sftt1200.pfb>
+Output written on build/main_apa7.pdf (14 pages, 382704 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 31951 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 33991 words of extra memory for PDF output out of 35830 (max. 10000000)
 

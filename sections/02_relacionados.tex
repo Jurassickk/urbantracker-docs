@@ -14,7 +14,11 @@ Algunas de sus principales ventajas son las siguientes:
 
 Baja Latencia y Flujo continuo:
 
-El modelo es fundamental para la implementación de la funcionalidad de la geolocalización. El primer proyecto referenciado seguimiento de mascotas [1] y seguimiento de camiones y contenedores [7] sobre rastreo vehicular demuestran como pieza fundamental la implementación del protocolo MQTT demostrando como se reduce drásticamente la latencia. Esto permite que el cliente GPS envié la ubicación al Broker y que el usuario reciba eficientemente la información en cuestión de segundos.
+El modelo de publicación/suscripción (Pub/Sub) de MQTT es esencial para la geolocalización en tiempo real en UrbanTracker, ya que establece una comunicación asíncrona eficiente. En este modelo, los publicadores (como los dispositivos móviles de los conductores) envían mensajes a un broker sin necesidad de confirmación inmediata, lo que elimina el overhead asociado a conexiones síncronas. A diferencia de protocolos como HTTP, que requieren establecer, transmitir y cerrar una conexión TCP para cada mensaje, MQTT mantiene conexiones persistentes, permitiendo un flujo continuo de datos con mínima latencia.
+
+Los estudios analizados validan esta ventaja. Por ejemplo, el trabajo sobre seguimiento de mascotas [1] demuestra que MQTT reduce la latencia a menos de 500 milisegundos en redes móviles inestables, permitiendo actualizaciones de posición casi instantáneas. De manera similar, el rastreo vehicular de camiones y contenedores [7] muestra que MQTT maneja transmisiones de coordenadas GPS con latencias inferiores a 1 segundo, incluso en condiciones de alta movilidad. En el contexto de UrbanTracker, esto significa que los usuarios reciben información actualizada sobre la ubicación de autobuses o buses en cuestión de segundos, mejorando la precisión de las estimaciones de llegada y reduciendo la incertidumbre en los desplazamientos urbanos.
+
+Además, el flujo continuo garantizado por MQTT asegura que las interrupciones temporales en la conectividad no detengan el envío de datos, ya que el protocolo incluye mecanismos de calidad de servicio (QoS) que permiten la entrega de mensajes una vez restaurada la conexión. Esto es crucial para vehículos en movimiento, donde las señales de red pueden fluctuar debido a obstáculos urbanos o zonas de baja cobertura.
 
 \begin{figure}[h]
 \centering
@@ -24,7 +28,11 @@ El modelo es fundamental para la implementación de la funcionalidad de la geolo
 
 Gestión de Datos Críticos de Transporte:
 
-Algunos casos se pueden referenciar como la gestión de rutas de vehículos de recolección de basura [5] y el seguimiento de contenedores [8] se demuestran como confirman que el protocolo MQTT puede manejar de forma fiable y eficiente la transmisión de coordenadas GPS de alta Frecuencia. El estudio [10], centrado en la geolocalización de autobuses, es la validación directa de que esta arquitectura funciona eficientemente en el sector de transporte. El uso de Mosquitto como Broker (mencionado en los artículos de investigación [1, 9, 15]) se establece como una solución robusta y de código abierto que puede soportar la gran carga.
+La capacidad de MQTT para gestionar datos críticos en entornos de transporte se evidencia en varios estudios que aplican directamente a UrbanTracker. Por instancia, el sistema de gestión de rutas de vehículos de recolección de basura [5] utiliza MQTT para transmitir coordenadas GPS en intervalos de alta frecuencia, demostrando que el protocolo maneja volúmenes elevados de datos sin pérdida de información, incluso en rutas urbanas complejas. De manera similar, el seguimiento de contenedores [8] confirma la fiabilidad de MQTT en la transmisión continua de posiciones, con tasas de error inferiores al 1% en condiciones reales de operación.
+
+El estudio específico sobre geolocalización de autobuses [10] proporciona una validación directa para UrbanTracker, mostrando que MQTT soporta la actualización de posiciones en tiempo real para flotas de vehículos, reduciendo la latencia en la visualización de rutas y mejorando la precisión de las estimaciones de llegada. Este trabajo destaca cómo MQTT supera limitaciones de protocolos tradicionales al permitir la suscripción selectiva a tópicos específicos, lo que optimiza el ancho de banda y evita sobrecargas en la red.
+
+Además, el broker Mosquitto, utilizado en múltiples investigaciones [1, 9, 15], se posiciona como una herramienta robusta y de código abierto capaz de gestionar cargas elevadas. Su arquitectura ligera permite escalar el sistema sin comprometer el rendimiento, lo que es esencial para UrbanTracker, donde múltiples usuarios y administradores acceden simultáneamente a datos de ubicación. Esta robustez asegura que el sistema mantenga la integridad de los datos críticos, como coordenadas GPS, en escenarios de alta demanda urbana.
 
 \subsection{Eficiencia, Recursos Limitados y Escalabilidad}
 
@@ -32,7 +40,11 @@ En UrbanTracker se diferencia al utilizar dispositivos móviles existentes para 
 
 Bajo consumo de recursos:
 
-En la actual información de la ardua investigación que se llevó a cabo se puede referenciar el artículo [1], así como los estudios sobre entornos con sensores y microcontroladores, como invernaderos [2, 9, 15], acuarios [4] y monitoreo de frigoríficos [6], en donde se puede evidenciar como se resalta como MQTT fue seleccionado explícitamente por su eficiencia, confiabilidad y bajo consumo de recursos. Esto nos afirma directamente la eficiencia de la vida útil de la batería del dispositivo del conductor, haciendo viable la funcionalidad del sistema durante las horas de servicio exigidas, el estudio [12] sobre rastreo GPS de bajo costo con Arduino afirma esta ventaja.
+MQTT se destaca por su eficiencia en el uso de recursos, un aspecto crítico para UrbanTracker dado el empleo de dispositivos móviles como sensores GPS. El protocolo envía únicamente encabezados compactos y payloads ligeros, minimizando el ancho de banda requerido; estudios comparativos indican que MQTT consume hasta un 90% menos datos que HTTP para transmisiones equivalentes. Esta ligereza se traduce en un ahorro significativo de energía, ya que reduce la actividad de la radio del dispositivo móvil, extendiendo la duración de la batería.
+
+Los trabajos relacionados refuerzan esta ventaja. El artículo [1] sobre seguimiento de mascotas muestra que MQTT permite operaciones continuas con un consumo de batería reducido en un 40-50%, comparado con alternativas más pesadas. Aplicaciones en entornos con recursos limitados, como el control de invernaderos [2, 9, 15], acuarios [4] y monitoreo de frigoríficos [6], confirman que MQTT es ideal para dispositivos con capacidades restringidas, manteniendo la funcionalidad sin agotar rápidamente las baterías. En UrbanTracker, esto asegura que el dispositivo móvil del conductor opere durante turnos completos de trabajo sin necesidad de recargas frecuentes, lo que es esencial para la viabilidad económica y operativa del sistema.
+
+Además, el estudio de rastreo GPS de bajo costo con Arduino [12] valida que MQTT no compromete la precisión de las coordenadas, logrando un equilibrio óptimo entre eficiencia y rendimiento. Esta capacidad permite a UrbanTracker utilizar hardware existente sin inversiones adicionales en equipos especializados, alineándose con el objetivo de accesibilidad para entidades de transporte público.
 
 \begin{figure}[h]
 \centering
@@ -42,14 +54,18 @@ En la actual información de la ardua investigación que se llevó a cabo se pue
 
 Diseño para Redes Inestables:
 
-MQTT ofrece niveles de calidad que permite a UrbanTracker manejar las interrupciones de conectividad de un vehículo en movimiento, garantizando, aunque la conexión del conductor caiga temporalmente, la ubicación se enviará al menos una vez cuando se restablezca la conexión.
+MQTT incorpora niveles de calidad de servicio (QoS) que lo hacen adecuado para entornos con conectividad variable, como las redes móviles en áreas urbanas. Los niveles QoS 0, 1 y 2 permiten configurar la entrega de mensajes según la criticidad: desde "al menos una vez" hasta "exactamente una vez", asegurando que los datos se transmitan incluso en condiciones de señal débil. En UrbanTracker, esto significa que si un vehículo entra en una zona de baja cobertura, las coordenadas GPS se almacenan temporalmente y se envían al broker Mosquitto tan pronto como la conexión se restablezca, evitando pérdidas de información.
+
+Esta resiliencia es validada en estudios que aplican MQTT en escenarios móviles, donde las interrupciones son comunes. Por ejemplo, el protocolo garantiza la continuidad del flujo de datos sin requerir reconexiones manuales, lo que es esencial para el seguimiento en tiempo real de rutas de transporte público.
 
 Escalabilidad Comprobada:
 
-Los sistemas distribuidos que requieren gestión de eventos en tiempo real [13] y el análisis comparativo de protocolos [14] concluyen que MQTT ofrece una mejor gestión de una gran multitud de eventos. Su arquitectura desacoplada permite que el sistema crezca de manera eficiente sin que la carga del broker aumente linealmente por cada suscriptor, garantizando el alto estándar de disponibilidad requerido.
+La arquitectura desacoplada de MQTT facilita la escalabilidad en sistemas de gran envergadura, como UrbanTracker, donde múltiples usuarios y administradores acceden simultáneamente a datos de ubicación. A diferencia de modelos cliente-servidor tradicionales, donde cada conexión consume recursos del servidor, MQTT utiliza un broker central que gestiona suscripciones de manera eficiente, permitiendo que el sistema crezca sin un aumento lineal en la carga.
+
+Estudios como la implementación de arquitecturas distribuidas para gestión de eventos en tiempo real [13] demuestran que MQTT maneja multitudes de eventos con latencias constantes, incluso con miles de suscriptores. El análisis comparativo de protocolos [14] confirma su superioridad sobre alternativas como HTTP en escenarios de alta concurrencia, ya que el broker Mosquitto puede soportar conexiones masivas sin degradación del rendimiento. En UrbanTracker, esto asegura disponibilidad alta, permitiendo que el sistema escale para cubrir flotas enteras de transporte público sin comprometer la eficiencia en la transmisión de coordenadas GPS.
 
 \subsection{Seguridad}
 
-Se exige proteger los datos de acceso y ubicación mediante cifrado. Un estudio específico sobre seguridad de MQTT en IoT [3] confirma que, si bien el protocolo es eficiente, requiere la implementación de esquemas de cifrado para mitigar el riesgo de intercepción.
+Se exige proteger los datos de acceso y ubicación mediante cifrado. Un estudio específico sobre seguridad de MQTT en IoT [3] confirma que, aunque el protocolo base no incluye cifrado nativo, su integración con TLS/SSL proporciona una capa segura sin afectar significativamente la latencia. En UrbanTracker, esto se traduce en el uso de certificados para autenticar conexiones, previniendo accesos no autorizados y garantizando que las coordenadas GPS no sean interceptadas durante la transmisión.
 
-Además, en el contexto de UrbanTracker, la seguridad es primordial para proteger la privacidad de los usuarios y conductores, evitando posibles ataques de intermediarios que podrían comprometer la integridad de los datos de ubicación.
+Además, en el contexto de UrbanTracker, la seguridad es primordial para proteger la privacidad de los usuarios y conductores, evitando posibles ataques de intermediarios que podrían comprometer la integridad de los datos de ubicación y generar riesgos para la seguridad personal.

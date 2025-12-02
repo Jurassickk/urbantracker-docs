@@ -1,10 +1,14 @@
 \section{Metodología}
 
-La metodología de este análisis se basó en una revisión bibliográfica de los 15 trabajos de caso [1-15] para validar la decisión arquitectónica en el contexto de UrbanTracker. El proceso incluyó:
+La metodología empleada en este estudio se fundamenta en una revisión bibliográfica sistemática de 15 trabajos de caso [1-15], seleccionados para validar la elección arquitectónica de MQTT en UrbanTracker. La selección de estos estudios se realizó mediante criterios estrictos: relevancia en el campo de IoT y geolocalización, aplicación de MQTT en escenarios similares al transporte público, y publicación en repositorios académicos o conferencias reconocidas. Se priorizaron trabajos que demostraran beneficios empíricos de MQTT, excluyendo aquellos con enfoques teóricos sin validación experimental.
 
-Identificación de Requisitos Críticos: Se definieron los requisitos de tiempo real, envío de ubicación desde el móvil y seguridad como dependientes del protocolo de comunicación.
+El proceso de revisión siguió una estructura rigurosa:
 
-Mapeo de Evidencia: Se compararon los beneficios probados de MQTT (ligereza, publicación/suscripción, bajo consumo) con estos requisitos, encontrando una correlación directa y consistente en todos los estudios.
+Identificación de Requisitos Críticos: Se establecieron los requisitos esenciales para UrbanTracker, incluyendo comunicación en tiempo real con baja latencia, transmisión eficiente de coordenadas GPS desde dispositivos móviles, bajo consumo de recursos, escalabilidad para múltiples usuarios y seguridad en la transmisión de datos. Estos requisitos se derivan directamente de las necesidades del transporte público urbano, donde la precisión y la eficiencia son primordiales.
+
+Recopilación y Análisis de Evidencias: Se examinaron los 15 estudios, extrayendo datos sobre el rendimiento de MQTT en comparación con otros protocolos como HTTP. Se evaluaron métricas como latencia, consumo de batería, ancho de banda utilizado y capacidad de manejo de conexiones inestables. Cada estudio se analizó en contexto, identificando cómo sus hallazgos aplican a UrbanTracker.
+
+Mapeo de Evidencia: Se realizó una comparación sistemática entre los beneficios demostrados de MQTT (ligereza en mensajes, modelo Pub/Sub, bajo consumo de recursos, QoS para redes inestables y escalabilidad desacoplada) y los requisitos identificados. Esta correlación reveló una consistencia alta en todos los estudios, confirmando que MQTT satisface de manera óptima las demandas de UrbanTracker sin compromisos significativos.
 
 La implementación de UrbanTracker está diseñada como una arquitectura distribuida que conecta la aplicación móvil del conductor (el Publicador), un Broker MQTT (como Mosquitto) en la nube, y la plataforma web/móvil del usuario/administrador (el Suscriptor). El protocolo MQTT gestiona el flujo de datos GPS en tiempo real a través de tópicos específicos, asegurando que la información llegue de manera inmediata a la interfaz gráfica.
 

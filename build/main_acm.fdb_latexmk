@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/main_acm"] 1764644664.85757 "build/main_acm.aux" "build/main_acm.bbl" "build/main_acm" 1764644677.95186 0
+["bibtex build/main_acm"] 1764647153.30009 "build/main_acm.aux" "build/main_acm.bbl" "build/main_acm" 1764647161.87695 0
   "./bibliography/references.bib" 1764636358.30804 1953 5c45dc35f4afbf115459048bf703244b ""
   "/opt/texlive/texdir/texmf-dist/bibtex/bst/acmart/ACM-Reference-Format.bst" 1748720794 93560 12e0ced1522ea2bfa9b2fb12855c7e9e ""
-  "build/main_acm.aux" 1764644676.19597 5170 ccf2610f55a756c1ad3a18e0efc37d99 "pdflatex"
+  "build/main_acm.aux" 1764647160.50912 5326 23e2e6b8a1fe5a1ac323e25978a06dce "pdflatex"
   (generated)
   "build/main_acm.bbl"
   "build/main_acm.blg"
   (rewritten before read)
-["pdflatex"] 1764644665.18558 "main_acm.tex" "build/main_acm.pdf" "main_acm" 1764644677.97839 0
+["pdflatex"] 1764647153.6153 "main_acm.tex" "build/main_acm.pdf" "main_acm" 1764647161.8911 0
   "/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc" 1558214095 7693 0f2dce6d313c82989ec3a67fc24df2a0 ""
   "/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -197,9 +197,9 @@
   "/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1762867763 5528322 a20cff9bcc550b122fe832e31dc646f6 ""
   "/opt/texlive/texdir/texmf-var/web2c/pdftex/pdflatex.fmt" 1762867831 3634984 8e34fde85b38edfefd16edb95b002016 ""
   "/opt/texlive/texdir/texmf.cnf" 1759376174 555 bd60ff59e4d560b42d96b004436f91d3 ""
-  "build/main_acm.aux" 1764644676.19597 5170 ccf2610f55a756c1ad3a18e0efc37d99 "pdflatex"
-  "build/main_acm.bbl" 1764644664.75621 4737 a79fd693304576777c510659bf78dcca "bibtex build/main_acm"
-  "build/main_acm.out" 1764644676.20498 4933 52acfd210b44a2c5c060bfb669901925 "pdflatex"
+  "build/main_acm.aux" 1764647160.50912 5326 23e2e6b8a1fe5a1ac323e25978a06dce "pdflatex"
+  "build/main_acm.bbl" 1764647153.73369 4737 a79fd693304576777c510659bf78dcca "bibtex build/main_acm"
+  "build/main_acm.out" 1764647160.51802 4779 a852e1eeee5424de89a41d7ba00f15a2 "pdflatex"
   "graphics/Imagen-10.jpg" 1764636358.39067 25372 f7a91a3f47f52fee3091f2d3fa44efda ""
   "graphics/Imagen-11.jpg" 1764636358.3918 13873 e8434df15e2a714f18bee97302d94080 ""
   "graphics/Imagen-13.jpg" 1764636358.3918 9031 2bbf270c137c1c0e7710b976d6e787e3 ""
@@ -210,13 +210,13 @@
   "includes/preamble_common.tex" 1764636358.3918 1346 34206bd4f8f75894da6ced404ca11451 ""
   "main_acm.tex" 1764636358.40919 1706 535154a1bfc0424bb9279b249c471a51 ""
   "sections/00_abstract.tex" 1764636358.41536 1453 ad95ced24947434ed5c9cc09d1e659aa ""
-  "sections/01_introduccion.tex" 1764636358.41536 2009 9a81908ee5647996703c89e9d89b8557 ""
-  "sections/02_relacionados.tex" 1764636358.41536 4972 a5b7fa1f4c4b4c469338c0eed5cda09a ""
-  "sections/03_metodologia.tex" 1764636358.41536 1464 fd7733e54afa9cc563b4fb9c9cd836db ""
-  "sections/04_implementacion.tex" 1764636358.42309 2378 a904921fa0c87f9dc6ec3c75fd1e0801 ""
-  "sections/05_resultados.tex" 1764636358.4251 1760 a1fe2c974d4105676f7873aaecfdf115 ""
+  "sections/01_introduccion.tex" 1764646956.26435 3648 4d09200bfbf87f22bf8639583ee31b65 ""
+  "sections/02_relacionados.tex" 1764646998.97917 10037 59ae4b099603da7e3cd2d6096cdaca04 ""
+  "sections/03_metodologia.tex" 1764647011.35893 2858 2403ca3cb6f61f4b2f159c64be69b850 ""
+  "sections/04_implementacion.tex" 1764647030.82471 4462 86ef3d9c3bb82a5555842e7734d163d6 ""
+  "sections/05_resultados.tex" 1764647042.92806 2884 055666daaa15c13ccc9f1a2c32c35825 ""
   "sections/06_discusion.tex" 1764636358.4251 2459 047f5558e88b481556b63bdaee024d73 ""
-  "sections/07_conclusiones.tex" 1764636358.4251 2625 d3254d5dcc3a4a5f278e80d551060330 ""
+  "sections/07_conclusiones.tex" 1764647066.82309 1604 a6c05d97377b6b149f48368024eb8acc ""
   "sections/A1_apendices.tex" 1764644580.2807 3408 a146d4e9a7dfb5bf5000865bb71580c9 ""
   (generated)
   "build/main_acm.aux"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.11)  2 DEC 2025 03:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.11)  2 DEC 2025 03:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -625,61 +625,72 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(./sections/00_abstract.tex) (./sections/01_introduccion.tex) (./sections/02_re
-lacionados.tex [1{/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.
-map}{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/base/8r.enc}
+(./sections/00_abstract.tex) (./sections/01_introduccion.tex
+<./graphics/Imagen-11.jpg, id=84, 443.40656pt x 130.23656pt>
+File: ./graphics/Imagen-11.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-11.jpg>
+Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 15.
+(pdftex.def)             Requested size: 412.80157pt x 121.25388pt.
 
-
-]
-<./graphics/Imagen-8.jpg, id=99, 443.40656pt x 155.83218pt>
-File: ./graphics/Imagen-8.jpg Graphic file (type jpg)
-<use ./graphics/Imagen-8.jpg>
-Package pdftex.def Info: ./graphics/Imagen-8.jpg  used on input line 21.
-(pdftex.def)             Requested size: 258.0pt x 90.67757pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 21--22
+Overfull \hbox (160.80157pt too wide) in paragraph at lines 15--16
  [][] 
  []
 
-<./graphics/Imagen-6.jpg, id=100, 303.1325pt x 208.78pt>
+) (./sections/02_relacionados.tex [1{/opt/texlive/texdir/texmf-var/fonts/map/pd
+ftex/updmap/pdftex.map}{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/base/8r.
+enc}
+
+
+ <./graphics/Imagen-11.jpg>]
+<./graphics/Imagen-8.jpg, id=96, 443.40656pt x 155.83218pt>
+File: ./graphics/Imagen-8.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-8.jpg>
+Package pdftex.def Info: ./graphics/Imagen-8.jpg  used on input line 25.
+(pdftex.def)             Requested size: 258.0pt x 90.67757pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 25--26
+ [][] 
+ []
+
+[2 <./graphics/Imagen-8.jpg>]
+<./graphics/Imagen-6.jpg, id=103, 303.1325pt x 208.78pt>
 File: ./graphics/Imagen-6.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-6.jpg>
-Package pdftex.def Info: ./graphics/Imagen-6.jpg  used on input line 39.
+Package pdftex.def Info: ./graphics/Imagen-6.jpg  used on input line 51.
 (pdftex.def)             Requested size: 258.0pt x 177.69637pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 39--40
+Overfull \hbox (6.0pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+) (./sections/03_metodologia.tex [3 <./graphics/Imagen-6.jpg>]
+<./graphics/Imagen-13.jpg, id=109, 443.40656pt x 115.93312pt>
+File: ./graphics/Imagen-13.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-13.jpg>
+Package pdftex.def Info: ./graphics/Imagen-13.jpg  used on input line 17.
+(pdftex.def)             Requested size: 258.0pt x 67.4606pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+) (./sections/04_implementacion.tex
+<./graphics/Imagen-10.jpg, id=110, 443.40656pt x 155.07938pt>
+File: ./graphics/Imagen-10.jpg Graphic file (type jpg)
+<use ./graphics/Imagen-10.jpg>
+Package pdftex.def Info: ./graphics/Imagen-10.jpg  used on input line 9.
+(pdftex.def)             Requested size: 258.0pt x 90.2395pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 9--10
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./sections/03_metodologia.tex
-<./graphics/Imagen-13.jpg, id=101, 443.40656pt x 115.93312pt>
-File: ./graphics/Imagen-13.jpg Graphic file (type jpg)
-<use ./graphics/Imagen-13.jpg>
-Package pdftex.def Info: ./graphics/Imagen-13.jpg  used on input line 13.
-(pdftex.def)             Requested size: 258.0pt x 67.4606pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 13--14
- [][] 
- []
-
-[2 <./graphics/Imagen-8.jpg> <./graphics/Imagen-6.jpg>]) (./sections/04_impleme
-ntacion.tex
-<./graphics/Imagen-10.jpg, id=108, 443.40656pt x 155.07938pt>
-File: ./graphics/Imagen-10.jpg Graphic file (type jpg)
-<use ./graphics/Imagen-10.jpg>
-Package pdftex.def Info: ./graphics/Imagen-10.jpg  used on input line 7.
-(pdftex.def)             Requested size: 258.0pt x 90.2395pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 7--8
- [][] 
- []
-
-) (./sections/05_resultados.tex) (./sections/06_discusion.tex [3 <./graphics/Im
-agen-13.jpg> <./graphics/Imagen-10.jpg>]
-<./graphics/Imagen-14.jpg, id=118, 443.40656pt x 232.61906pt>
+[4 <./graphics/Imagen-13.jpg> <./graphics/Imagen-10.jpg>]) (./sections/05_resul
+tados.tex) (./sections/06_discusion.tex
+<./graphics/Imagen-14.jpg, id=120, 443.40656pt x 232.61906pt>
 File: ./graphics/Imagen-14.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-14.jpg>
 Package pdftex.def Info: ./graphics/Imagen-14.jpg  used on input line 11.
@@ -689,7 +700,6 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 11--12
  [][] 
  []
 
-<./graphics/Imagen-11.jpg, id=119, 443.40656pt x 130.23656pt>
 File: ./graphics/Imagen-11.jpg Graphic file (type jpg)
 <use ./graphics/Imagen-11.jpg>
 Package pdftex.def Info: ./graphics/Imagen-11.jpg  used on input line 21.
@@ -699,9 +709,9 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
-) (./sections/07_conclusiones.tex) (./sections/A1_apendices.tex
+[5 <./graphics/Imagen-14.jpg>]) (./sections/07_conclusiones.tex) (./sections/A1
+_apendices.tex
 ** WARNING: Ignoring useless \section in Appendix (line 2).
-[4 <./graphics/Imagen-14.jpg> <./graphics/Imagen-11.jpg>]
 ** WARNING: Ignoring useless \section in Appendix (line 10).
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -750,7 +760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
  / core / bitstreams /
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 [][]$\T1/ptm/m/n/10 (+20) https : / / docta . ucm . es / entities / publication
  /
@@ -768,7 +778,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (build/main_ieee.aux
+[7
+
+] (build/main_ieee.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -777,26 +789,26 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `main_ieee.out' has not changed.
-(rerunfilecheck)             Checksum: DDDEB98A440D2284B0DAC909BB79D703;4051.
+(rerunfilecheck)             Checksum: 23795741D35BD2D5257ADFB713CAD31E;3920.
  ) 
 Here is how much of TeX's memory you used:
- 23230 strings out of 467538
- 449324 string characters out of 5421635
- 899431 words of memory out of 5000000
- 51644 multiletter control sequences out of 15000+600000
- 743575 words of font info for 282 fonts, out of 8000000 for 9000
+ 23261 strings out of 467538
+ 449619 string characters out of 5421635
+ 897431 words of memory out of 5000000
+ 51650 multiletter control sequences out of 15000+600000
+ 745568 words of font info for 297 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,12n,83p,1125b,1235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,12n,83p,1125b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></op
 t/texlive/texdir/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/texlive/te
 xdir/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/texlive/texdir/texmf-dis
 t/fonts/type1/urw/times/utmbi8a.pfb></opt/texlive/texdir/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on build/main_ieee.pdf (5 pages, 219473 bytes).
+Output written on build/main_ieee.pdf (7 pages, 228183 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 44743 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 46783 words of extra memory for PDF output out of 51595 (max. 10000000)
 
