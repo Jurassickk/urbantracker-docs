@@ -2,6 +2,13 @@
 
 Para probar efectividad UrbanTracker en situaciones reales, hicimos experimentos simulando escenarios urbanos típicos. Un caso fue simular ruta bus en Bogotá, con 15 paradas, actualizando cada 30 segundos. Resultados dieron precisión ubicación superior 95\% incluso con conectividad intermitente, gracias a reconexiones automáticas de MQTT.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{graphics/10-img.png}
+\caption{Resultados de escalabilidad: comparación de rendimiento del sistema con diferentes números de vehículos simultáneos}
+\label{fig:escalabilidad-resultados}
+\end{figure}
+
 Otro experimento se enfocó en escalabilidad, simulando 50 vehículos al mismo tiempo. Vimos que backend Spring Boot manejó conexiones eficientemente, memoria estable, respuestas bajo 500 ms. Prueba viabilidad para flotas medianas, con potencial expansión municipal.
 
 Además, evaluamos usabilidad con 20 usuarios finales, pidiendo consultar rutas y ver posiciones en vivo. 85\% dijo intuitiva, destacando rapidez carga y claridad info. Notamos mejoras para accesibilidad discapacitados visuales.

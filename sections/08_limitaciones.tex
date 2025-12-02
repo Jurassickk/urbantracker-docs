@@ -4,6 +4,13 @@ Ahora, siendo completamente honesto, UrbanTracker no es perfecto. Hay varias lim
 
 La más obvia es la dependencia del GPS y la señal móvil. En ciertas zonas de Bogotá - especialmente donde hay edificios súper altos o túneles - la precisión del GPS puede ser problemática. He visto casos donde la app muestra un bus en el piso 15 de un edificio porque el GPS se confundió. Y obviamente, si no hay señal móvil, no hay actualizaciones en tiempo real.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{graphics/8-img.png}
+\caption{Limitaciones técnicas de UrbanTracker: zonas sin cobertura GPS y problemas de precisión en áreas urbanas densas}
+\label{fig:limitaciones-tecnicas}
+\end{figure}
+
 Otra limitación práctica es la batería. Aunque intenté optimizar el consumo, la app sigue consumiendo batería. Algunos conductores se han quejado de que al final del día el celular les queda con poca batería. Es un problema real que necesito resolver.
 
 También tengo que admitir que las pruebas de escalabilidad fueron limitadas. Aunque simulé hasta 500 vehículos, la verdad es que no he probado el sistema con flotas reales de ese tamaño. En mis pruebas caseras con 10 teléfonos, todo funcionaba perfecto. Pero ¿qué pasa cuando tienes 200 conductores usando la app al mismo tiempo? ¿El broker MQTT se va a soportar? Estas son preguntas que realmente necesito responder con pruebas en el mundo real.

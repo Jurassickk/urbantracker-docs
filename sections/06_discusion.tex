@@ -1,6 +1,13 @@
 \section{Discusión}
 
-UrbanTracker muestra un buen rendimiento en escenarios pequeños y medianos, y nuestros experimentos confirman que las arquitecturas con MQTT funcionan bien para rastreo vehicular con actualizaciones frecuentes y comunicación confiable. La mezcla de tecnologías nos permitió crear una solución flexible, adaptable a diferentes necesidades operativas y entornos con conectividad variable. Aunque los resultados nos animan, también revelan áreas que necesitamos mejorar para fortalecer el sistema. Por ejemplo, completar más pruebas unitarias e integración ayudaría a detectar fallos temprano y aumentar la estabilidad antes de llevarlo a producciones más exigentes. Además, añadir análisis predictivo, como modelos para estimar tiempos de llegada o alertas basadas en historial, podría subir mucho el valor funcional.
+UrbanTracker muestra un buen rendimiento en escenarios pequeños y medianos, y nuestros experimentos confirman que las arquitecturas con MQTT funcionan bien para rastreo vehicular con actualizaciones frecuentes y comunicación confiable. La mezcla de tecnologías nos permitió crear una solución flexible, adaptable a diferentes necesidades operativas y entornos con conectividad variable.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{graphics/7-img.png}
+\caption{Análisis comparativo de UrbanTracker vs sistemas tradicionales de rastreo vehicular}
+\label{fig:analisis-comparativo}
+\end{figure} Aunque los resultados nos animan, también revelan áreas que necesitamos mejorar para fortalecer el sistema. Por ejemplo, completar más pruebas unitarias e integración ayudaría a detectar fallos temprano y aumentar la estabilidad antes de llevarlo a producciones más exigentes. Además, añadir análisis predictivo, como modelos para estimar tiempos de llegada o alertas basadas en historial, podría subir mucho el valor funcional.
 
 La arquitectura modular que usamos resultó ser una buena idea, ya que da una base sólida para migrar a microservicios si el sistema crece. Esta modularidad permite escalar cada componente sin afectar al resto, abriendo puertas a evoluciones graduales según necesidades reales. Además, la experiencia nos sugiere que podríamos adaptar la solución a otros contextos urbanos similares, como transporte escolar o flotas corporativas.
 
