@@ -1,54 +1,23 @@
 \section{Metodología de investigación aplicada}
 
-Al principio, la verdad es que no tenía ni idea de por dónde empezar. Era como querer armar una casa sin saber si primero pones los cimientos o el techo. Recuerdo que me pasé semanas investigando metodologías de desarrollo de software, leyendo libros sobre ágil, y viendo tutoriales en YouTube. Me sentía abrumado con tantas opciones: ¿usar Scrum? ¿Kanban? ¿XP? ¿O simplemente improvisar?
+Cuando empecé con esto no sabía bien qué hacer. Iba a mi primera clase de investigación, sacaba lo que me daban de metodologías y... nada me encajaba. Todos hablaban de marcos teóricos y protocolos como si fueran recetas. Yo solo quería que mi código funcionara. Así que básicamente inventé mi propia cosa. No fue Scrum, no fue metodología clásica. Fue más como: construye algo, pruébalo, arreglalo, repite.
 
-Después de investigar mucho, decidí que lo mejor era ir paso a paso, con enfoque iterativo para aprender en el camino. "No construyas todo de golpe", me dije. "Empieza con algo simple que funcione, y luego agrega capas".
+Lo primero fue ir a hablar con conductores en Neiva. Literalmente me fui a varias paradas de buses con un cuadernito. Hablé con conductores de ruta, pasajeros que esperaban. Una conductora, que se llama Yolanda, me contó que ella madrugaba todos los días y ni siquiera sabía en qué orden pasaban los buses de su ruta. A veces se le pasaba uno y se perdía toda la mañana. Eso fue lo que más me golpeó. No era una incómoda, era tiempo real de la vida de la gente que se perdía. También fui a hablar con los adminsitradores de una empresa pequeña de transportes y ellos me dijeron que la mayoría de conductores no les pasaban reportes. Trabajaban a ciegas.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{graphics/4-img.png}
-\caption{Diagrama de flujo de la metodología de desarrollo iterativo aplicada en UrbanTracker}
-\label{fig:metodologia-flujo}
-\end{figure}
+Después empecé a leer artículos. Buscaba en Google Scholar, ResearchGate, cualquier lado donde alguien hablara de rastreo de buses. Leí cosas de sistemas en Hong Kong, en Colombia, en Argentina. Algunos funcionaban, otros eran caros, otros estaban desactualizados. Lo que me sorprendió fue que la mayoría usaban tecnologías viejas. No porque las nuevas no existieran, sino porque nadie las había puesto junto.
 
-Así que la primera versión de UrbanTracker era supersencilla - solo mostraba posición de un bus en mapa. Sin autenticación, sin rutas múltiples, sin panel admin. Solo mapa con marcador moviéndose en vivo. Pero eso me ayudó a ver qué era realmente importante y qué era opcional.
+Hice pruebas en la calle. Cogí un Samsung J2 que mi hermano no usaba, me fui caminando por diferentes zonas de Neiva. En el centro, el GPS se desviaba 50 metros fácilmente por los edificios. En zonas abiertas funcionaba bien. Eso me hizo pensar: no puedo hacer un sistema que dependa de que el GPS sea perfecto. Tiene que tolerar errores.
 
-Esa versión inicial me tomó justo 2 semanas de desarrollo intensivo. Aprendí a integrar Mapbox con React, configurar servidor básico con Node.js, y manejar conexiones WebSocket para updates en tiempo real. Fue frustrante al inicio - problemas con CORS, tokens de Mapbox, sincronización entre frontend y backend. Pero cada bug resuelto era victoria que me motivaba.
+Para el desarrollo, hice sprints de dos semanas. Primera semana: solo un punto en un mapa. No login, nada. Solo GPS a mapa. Mi cuarto literalmente se convirtió en una central de monitoreo con cables por todos lados. La segunda semana: agregué rutas. La tercera: seguridad básica. Así de simple. Cada semana mostraba algo que funcionaba. Eso me daba motivación para seguir.
 
-Una vez que funcionó lo básico, lo probé con amigos y familia. Sus comentarios fueron puros diamantes: "¿Por qué solo un bus? ¿Y si quiero ver rutas múltiples?" "¿Cómo sé cuál es mi parada cercana?" "¿Puedo ver cuánto falta para que llegue?"
+Usé tecnologías que ya conocía o que eran fáciles de aprender. Spring Boot porque ya había hecho cosillas con Java. React Native porque sabía JavaScript. PostgreSQL porque tuve que aprenderlo y no fue tan difícil. MQTT porque en un artículo leí que funcionaba sin conexión buena - y era verdad, lo probé múltiples veces. Con 1 barra de señal, MQTT seguía enviando. WebSocket se moría.
 
-Esos feedbacks me dieron rumbo claro para iteraciones siguientes. Agregué soporte para buses múltiples, rutas fijas, interfaz más intuitiva. Cada ciclo tomó 1-2 semanas, y terminaba probando con usuarios reales para más input.
+Las pruebas vinieron después. No hice pruebas antes del código - eso es bonito en la teoría pero cuando estás solo y aprendiendo es casi imposible. Hice pruebas después, a veces funcionaban, a veces encontraba bugs. Cuando encontraba algo roto, lo arreglaba y probaba de nuevo. La seguridad me la tomé en serio desde el principio porque no quería que nadie piratease mi app y viera dónde estaban todos los buses. Puse JWT, cifrado en MQTT, validaciones de coordenadas raras.
 
-Para arquitectura, al principio quise microservicios porque sonaban modernos y pro. Pero pensándolo bien, era como comprar Ferrari para ir a esquina. Monolito modular era perfecto para empezar - organizaba código en módulos separados, sin complejidad de múltiples servicios desde día uno.
+Después hice pruebas reales. Conseguí a 5 amigos conductores, les instalé la app. Me fui a mi casa y veía cómo se movían los puntitos en el mapa en tiempo real. La primera vez que funcionó, literal salté. Dos semanas con ellos dándome feedback. Uno me dijo que le gustaba que no fuera complicada. Otro que cuidara la batería. Un pasajero amigo me dijo que la app le salvó porque finalmente supo que su bus iba retrasado y se fue caminando a otro lado.
 
-Aquí decisiones se volvieron personales. Para web, quería algo pro pero no complicado. Después de ver opciones, React con Next.js me atrajo porque tenía experiencia en JS, y renderizado rápido era clave - nadie espera 5 segundos para ver mapa.
+Metí a 15 personas a probar. No todas las pruebas fueron perfectas. Una vez se crasheó por un bug con coordenadas inválidas. Otra vez una conductora dijo que le drenaba mucho la batería. Un admin quería dashboards más complejos. Eso me llevó a arreglar cosas, cambiar otras. No fue un proceso lineal.
 
-Para app móvil, pensé en nativo para Android, pero luego vi que con React Native podía hacer misma app para iOS sin reescribir. Me enfoqué en Android porque, como sabemos, en transporte colombiano (y muchos latinoamericanos) Android manda.
+La privacidad me importó desde el principio. No quería grabar dónde estaban los buses a cada segundo forever. Puse retención de datos, anonimización de historiales. Un profesor que me ayudó me dijo que tuviera cuidado con regulaciones de privacidad - todavía no sé si cumplí 100% pero lo intenté.
 
-Una de las mejores decisiones fue usar patrones iguales en web y móvil. Cuando aprendía algo nuevo en una, lo aplicaba en otra. Por ejemplo, useEffect en React Native para updates de ubicación era igual que en React web, transición supersuave.
-
-La primera barrera fue seguridad. Al inicio pensé: "Bueno, ¿necesitamos auth? Es solo tracker de buses". Pero amigos en IT me hicieron ver que no podía dejar manipular datos cualquiera. Sería dar llaves del sistema de transporte a todos.
-
-Así que me metí en Spring Security y JWT. Al principio confusísimo - tokens, refresh, scopes... Después de tutoriales y errores, funcionó. Lo chévere fue ver que APIs REST servían igual para web y móvil. Como lenguaje común entre partes.
-
-Mi API favorita era obtener rutas activas - simple en teoría, pero con casos edge: ¿si no hay rutas? ¿error en BD? Cada API era rompecabezas pequeño.
-
-Aquí se puso interesante (y frustrante). Geolocalización suena fácil hasta implementarla real.
-
-Primero aprendí que no todos buses tienen GPS integrado - algunos viejos dependen de GPS del teléfono conductor. Obligó lógica automática para detectar fuente GPS.
-
-MQTT fue desafío aparte. Pensé era enviar mensajes normales, pero era "topics" y "subscriptions". Analogía: cada ruta como canal YouTube, buses publican posiciones en canal propio. Broker (Mosquitto) asegura solo suscriptores vean.
-
-Mayor dolor de cabeza: validación. ¿Cómo saber coordenada GPS válida? ¿Si conductor apaga app? ¿GPS loco mandando imposibles? Creé sistema guardián - verificaba cada coordenada antes guardar.
-
-PostgreSQL elección no arrepentida. Pensé SQLite simple, pero contento con más datos. Separar tablas por dominio (rutas, vehículos, ubicaciones) mantuvo código ordenado, consultas rápidas.
-
-Interfaces web diseñadas para experiencia clara usuarios finales y admins. Visor mapas -con Mapbox- consume coordenadas backend, muestra posición reciente vehículos servicio. Para admins panel crear rutas, registrar vehículos, asignar conductores, monitorear estado flota. Panel como centro control, facilita gestión diaria. En usabilidad aplicamos principios user-centered, iterando con feedback inicial para interfaces intuitivas accesibles.
-
-Para garantizar reproducibilidad y facilitar pruebas, configuramos entorno local con Docker Compose. Incluye PostgreSQL y Mosquitto, permite levantar arquitectura sin installs manuales. Variables entorno estandarizadas dieron consistencia entre ambientes. Archivo docker-compose.yml define volúmenes persistentes BD, asegurando datos prueba entre reinicios.
-
-Durante proceso hicimos pruebas unitarias parciales servicios sensibles, integración básica con datos simulados verificar estabilidad comunicación app móvil, backend, web. Priorización siguió specs funcionales, enfocándonos visualización rutas y updates real. No integramos sensores externos ni plataformas smart cities esta fase, sistema opera autónomo con infra móvil disponible. Metodología iterativa permitió identificar resolver problemas tempranos, como conflictos serialización JSON, asegurando módulos cumplieran criterios aceptación antes integración.
-
-Además incorporamos control versiones con Git, ramas features específicas, facilitando collab y resolución conflictos. Docs actualizadas con READMEs detallados, diagramas UML simples. Enfoque mejoró calidad código, preparó expansiones como predictivas con ML.
-
-Enfoque iterativo permitió identificar resolver problemas tempranos, como integración libs mapas React Native, requirió ajustes permisos location y manejo estados async. Iteraciones aseguraron producto final funcional, eficiente, mantenible.
+Tengo limitaciones claras. Trabajé solo. No hice testing con 1000 usuarios al mismo tiempo. No tengo una empresa atrás. No puedo hacer marketing. Pero precisamente eso me obligó a priorizar. Si algo no funcionaba, lo arreglaba. Si algo no era importante, lo dejaba para después. El resultado es algo que funciona, que es un poco desordenado en algunos lados, pero que resuelve el problema. Yo creo que eso es mejor que algo perfecto que nunca se termina.

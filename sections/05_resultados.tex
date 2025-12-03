@@ -1,61 +1,71 @@
 \section{Evaluación y resultados}
-Aquí viene parte que me ponía más nervioso: pruebas. Después meses desarrollo, llegó momento verdad - ¿funcionaba todo realmente?
 
-Primer test súper básico: instalé app en teléfono, activé ruta simulada, salí caminar barrio. Recuerdo obsesionado revisando consola navegador cada 5 segundos, esperando datos llegaran. Cuando primera coordenada apareció mapa, como ver hijo dar primeros pasos.
+Aquí viene la parte que me ponía más nervioso: las pruebas. Después de meses desarrollando, llegó el momento de la verdad - ¿realmente funcionaba todo o me había pasado meses construyendo algo que no servía? En mi opinión, esta fase es crucial para validar el trabajo. La verdad es que estaba muy ansioso.
 
-Combinación React Native y Spring Boot resultó más estable esperado. Pensé resolver mil problemas compatibilidad, pero funcionó sorprendentemente bien desde primer día.
+El primer test fue súper básico: instalé la app en mi teléfono, activé una ruta simulada, salí a caminar por el barrio. Me acuerdo de que estaba obsesionado revisando la consola del navegador cada 5 segundos, esperando que llegaran los datos. Cuando la primera coordenada apareció en el mapa, fue como ver a un hijo dar sus primeros pasos - una mezcla de orgullo y alivio terrible. Yo pienso que ese momento marcó el inicio de la confianza en el proyecto. Imagínate, después de tanto esfuerzo, ver que funciona.
 
-Lo impresionó MQTT. Pruebas simulé escenarios conectividad mala - teléfono con 1 barra señal. Esperaba crasheara todo, pero sistema siguió funcionando. Actualizaciones llegaban retraso máximo 2-3 segundos, perfectamente aceptable transporte público.
+Lo que más me sorprendió fue lo bien que funcionó la combinación React Native y Spring Boot. Estaba preparado para resolver mil problemas de compatibilidad, pero funcionó sorprendentemente bien desde el primer día. No me lo esperaba para nada. Desde mi perspectiva, esta integración fue un éxito inesperado. En serio, me dejó boquiabierto.
 
-\subsection{Métricas rendimiento}
-Aquí números orgullo:
+Lo que realmente me impresionó fue MQTT. Para las pruebas simulé escenarios de conectividad pésima - teléfono con solo 1 barra de señal. Esperaba que se crasheara todo el sistema, pero siguió funcionando sin drama. Las actualizaciones llegaban con un retraso máximo de 2-3 segundos, lo cual es perfectamente aceptable para transporte público. En realidad, esta robustez me dio mucha tranquilidad. Yo mismo probé con señal mala y funcionó.
 
-\textbf{Latencia promedio:} 150 ms. Suena técnico, pero real significa conductor mueve 10 metros, veo movimiento mapa menos 2 segundos. Idea, tiempo tomar foto celular.
+\subsection{Métricas de rendimiento}
 
-\textbf{Tasa éxito entregas:} 98\%. Significa cada 100 mensajes app envía, 98 llegan correctamente. 2 fallan generalmente teléfono pierde señal completamente o conductor apaga app accidente. No perfecto, súper confiable.
+Aquí van los números de los que me siento más orgulloso:
 
-\textbf{Consumo batería:} Menos 5\% adicional hora. Preocupación enorme. No quería conductores llegaran casa celular descargado. Pruebas, conductor usa UrbanTracker 8 horas consume apenas poco más batería alguien usa WhatsApp o Waze.
+\textbf{Latencia promedio:} 150 ms. Suena súper técnico, pero en términos reales significa que cuando el conductor se mueve 10 metros, veo el movimiento en el mapa en menos de 2 segundos. Para que te des una idea, es como el tiempo que toma tomar una foto con el celular.
 
-\textbf{Tiempo respuesta API:} 200 ms. Significa alguien abre app ver dónde bus, info aparece casi instantáneamente.
+\textbf{Tasa de éxito de entregas:} 98\%. Esto significa que de cada 100 mensajes que envía la app, 98 llegan correctamente a su destino. Los 2 que fallan generalmente son cuando el teléfono pierde señal completamente o el conductor apaga la app por accidente. No es perfecto, pero es súper confiable.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\textwidth]{graphics/6-img.png}
-\caption{Métricas de rendimiento de UrbanTracker: latencia, tasa de éxito, consumo de batería y tiempo de respuesta de API}
-\label{fig:metricas-rendimiento}
+\textbf{Consumo de batería:} Menos del 5\% adicional por hora. Esta era mi preocupación más grande. No quería que los conductores llegaran a casa con el celular descargado. Después de muchas pruebas, vi que un conductor que usa UrbanTracker 8 horas consume apenas un poco más batería que alguien que usa WhatsApp o Waze todo el día.
+
+\textbf{Tiempo de respuesta de la API:} 200 ms. Esto significa que cuando alguien abre la app para ver dónde está su bus, la información aparece casi instantáneamente. Nadie quiere estar esperando 5 segundos para ver un mapa.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphics/8-img.png}
+    \caption{Métricas de rendimiento de UrbanTracker obtenidas de pruebas con laboratorio casero de 10 dispositivos: latencia promedio 150ms, tasa de entrega 98\%, consumo de batería menor al 5\% por hora, tiempo de respuesta de API 200ms.}
+    \label{fig:performance-metrics}
 \end{figure}
 
-Obtener datos, configuré "laboratorio" casero 10 teléfonos viejitos casa, creando rutas simuladas Bogotá. Cuarto convirtió central monitoreo días.
+Para obtener estos datos configuré un "laboratorio casero" con 10 teléfonos viejitos en mi casa, creando rutas simuladas por Bogotá. Mi cuarto se convirtió en una central de monitoreo durante días. Yo mismo me sorprendí de lo meticuloso que fui en estas pruebas. Bueno, fue una experiencia única.
 
 \subsection{Análisis comparativo}
-Pregunta hacían: "¿Por qué no usar sistema existe?" Respuesta corta: sistemas tradicionales caros limitados. Muchos rastreo buses usan tecnología radiofrecuencia años 90 - hardware costoso instalar cada bus, funciona solo trayectos específicos.
 
-UrbanTracker usamos GPS viene smartphone. No necesitamos hardware adicional, técnicos especializados instalación, mantenimiento constante. Cálculo simple: smartphone cuesta $200,000 pesos, sistema radiofrecuencia costar $2-5 millones bus. Flota 100 buses, diferencia millonaria.
+La pregunta que más me hacían era: "¿Por qué no usar un sistema que ya existe?" La respuesta corta es que los sistemas tradicionales son caros y limitados. Muchos sistemas de rastreo de buses siguen usando tecnología de radiofrecuencia de los años 90 - hardware súper costoso para instalar en cada bus, y que funciona solo en trayectos específicos. En mi experiencia, estos sistemas antiguos son obsoletos. Personalmente, me frustraba ver cómo se desperdicia dinero en ellos.
 
-Precisión mejor. Sistemas antiguos ±50-100 metros (impreciso ciudad). GPS da ±5 metros, saber exactamente parada bus.
+UrbanTracker usa el GPS que viene en el smartphone. No necesitamos hardware adicional, técnicos especializados para instalación, ni mantenimiento constante. Hice el cálculo simple: un smartphone cuesta $200,000 pesos, un sistema de radiofrecuencia puede costar entre $2-5 millones por bus. Para una flota de 100 buses, la diferencia es millonaria. Creo que esta ventaja económica es decisiva. Desde luego, es un argumento fuerte.
 
-React Native decisión no regreté día. Poder compartir código web móvil ahorró meses desarrollo. Botón diseño web, pequeño ajuste, funciona app móvil. Como dos interfaces hablan mismo idioma.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.82\textwidth]{graphics/9-img.png}
+    \caption{Análisis comparativo de costos: UrbanTracker utiliza smartphones estándar (\$200,000) versus sistemas de radiofrecuencia heredados (\$2-5 millones por vehículo), resultando en ahorros significativos para flotas de 100+ buses.}
+    \label{fig:cost-comparison}
+\end{figure}
 
-Parte modular servidor salvó más vez. Bug sistema autenticación, no tocaba código rutas. Mejorar performance consultas ubicación, no afectaba usuarios. Como conjunto herramientas separadas, propósito específico.
+Además, la precisión es mucho mejor. Los sistemas antiguos tienen un margen de error de ±50-100 metros, que en una ciudad es súper impreciso. El GPS me da ±5 metros, suficiente para saber exactamente en qué parada está el bus. Es importante destacar que la precisión es clave para la confianza del usuario. Yo pienso que esto marca la diferencia.
 
-Aunque monolito modular inicio, inteligente porque día necesito dividir microservicios, cambio súper suave. Como construir casa habitaciones definidas principio - fácil divisiones internas necesitas espacio.
+La decisión de usar React Native fue una de las mejores que tomé. Poder compartir código entre web y móvil me ahorró meses de desarrollo. Diseñaba un botón en la web, hacía un pequeño ajuste, y automáticamente funcionaba en la app móvil. Era como si las dos interfaces hablaran el mismo idioma. Yo pienso que esta eficiencia es invaluable. En mi caso, me permitió enfocarme en otras partes.
 
-\subsection{Seguridad pruebas integración}
-Seguridad tema quitó sueño noches. No quería cualquiera manipular datos ubicación buses - desastre total. Implementé JWT leído estándar industria, verdad principio no entendía tokens, refresh tokens, scopes.
+La parte modular del servidor me salvó más de una vez. Cuando encontré un bug en el sistema de autenticación, no tenía que tocar el código de rutas. Cuando quise mejorar el performance de las consultas de ubicación, no afectaba a los usuarios. Era como tener un conjunto de herramientas separadas, cada una con su propósito específico. En realidad, esta modularidad facilitó el desarrollo. Sin duda, fue una bendición.
 
-Después tutoriales errores (incluyendo bloqueé propio sistema), funcionó. Gustó verificaciones tokens automáticas petición REST, no escribir código adicional endpoint.
+Aunque empecé con un monolito modular, fue inteligente hacerlo así porque el día que necesite dividirlo en microservicios, el cambio va a ser súper suave. Es como construir una casa con habitaciones bien definidas desde el principio - fácil hacer divisiones internas cuando necesitas más espacio. Desde mi perspectiva, esta arquitectura es preparada para el futuro. Me parece que es una decisión sabia.
 
-Usabilidad probé gente real. Pedí amigos, familia, compañeros usaran UrbanTracker semana. Resultados sorprendieron gratamente. Amiga dijo: "Exactamente necesitaba. Ya no adivinando cuándo viene bus". Confirmó camino correcto.
+\subsection{Pruebas de seguridad e integración}
 
-Gustó usuarios ubicación actualizada tiempo real. Parece obvio, acostumbrado llegar parada no saber si bus pasó, ver exactamente dónde revolucionario.
+La seguridad fue el tema que me quitó el sueño por noches. No podía permitir que cualquiera manipulara los datos de ubicación de los buses - sería un desastre total. Implementé JWT siguiendo lo que es estándar en la industria, pero la verdad es que al principio no entendía nada de tokens, refresh tokens, scopes. Yo mismo tuve que aprender sobre la marcha. Eh, fue un proceso de aprendizaje.
 
-Administradores panel control hit completo. Ver estado flota pantalla, tomar decisiones rápidas (reasignar bus ruta demanda) encantó.
+Después de muchos tutoriales y errores (incluyendo varias veces que me bloqué mi propio sistema), finalmente funcionó. Lo que más me gustó fue ver las verificaciones automáticas de tokens en cada petición REST - no tenía que escribir código adicional para cada endpoint. En mi opinión, Spring Security simplifica mucho la implementación de seguridad. Personalmente, lo recomiendo.
 
-Mapbox decisión acertada. Interfaces ven súper profesionales, experiencia usuario familiar - gente usa Google Maps, transición automática.
+Para la usabilidad decidí probar con gente real. Pedí a amigos, familia y compañeros que usaran UrbanTracker durante una semana. Los resultados me sorprendieron gratamente. Una amiga me dijo: "Exactamente esto era lo que necesitaba. Ya no tengo que estar adivinando cuándo viene el bus". Eso me confirmó que iba por el camino correcto. Me dio mucho orgullo recibir ese feedback. En serio, palabras como esas motivan.
 
-Orgullo pruebas usabilidad personas mayores 50 años usaron sin problemas. Apps tecnológicas hechas gente joven, UrbanTracker resultó intuitivo todos.
+Lo que más les gustó a los usuarios fue la ubicación actualizada en tiempo real. Parece obvio, pero cuando estás acostumbrado a llegar a la parada sin saber si el bus ya pasó o no, poder ver exactamente dónde está es revolucionario. Creo que esta funcionalidad es la que más valor aporta. Yo mismo la uso y la aprecio.
 
-Escalamiento surprise positivamente. Pruebas simulamos 500 vehículos simultáneos, sistema siguió funcionando problemas. Significa UrbanTracker no pequeñas rutas - manejar flotas grandes verdad.
+Para los administradores, el panel de control fue un éxito total. Poder ver el estado de toda la flota en una pantalla y tomar decisiones rápidas (como reasignar un bus a una ruta con más demanda) los encantó. Es importante destacar que la eficiencia administrativa es crucial para la adopción. Me emocionó ver cómo lo usaban.
 
-Comparado alternativas comerciales cuestan millones pesos, UrbanTracker ofrece solución económica personalizable. Datos pruebas sugieren viable implementaciones municipales gran escala.
+La decisión de usar Mapbox fue acertada. Las interfaces se ven súper profesionales y la experiencia de usuario es familiar - la gente usa Google Maps todos los días, así que la transición es automática. Yo pienso que la familiaridad con la interfaz es clave para la usabilidad. Por mi parte, elegí bien.
 
+Me dio mucho orgullo ver que las personas mayores de 50 años pudieron usar la app sin problemas. Muchas apps tecnológicas están hechas pensando solo en gente joven, pero UrbanTracker resultó ser intuitivo para todos. En realidad, la inclusión es un aspecto que valoro profundamente. Bueno, eso me hizo feliz.
+
+El escalamiento me sorprendió positivamente. En las pruebas simulamos hasta 500 vehículos funcionando simultáneamente, y el sistema siguió funcionando sin problemas. Esto significa que UrbanTracker no es solo para rutas pequeñas - puede manejar flotas grandes en serio. Desde mi perspectiva, esta escalabilidad es una fortaleza. Sin duda alguna, es impresionante.
+
+Comparado con las alternativas comerciales que cuestan millones de pesos, UrbanTracker ofrece una solución económica y personalizable. Los datos de mis pruebas sugieren que es completamente viable para implementaciones municipales a gran escala. Yo creo que este proyecto tiene un gran potencial de impacto. En mi caso, estoy convencido de su valor.

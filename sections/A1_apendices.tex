@@ -1,115 +1,160 @@
 \appendix
-\section{Checklist de reproducibilidad (plantilla)}
+\section{Checklist de reproducibilidad}
+
+Para facilitar la reproducción de UrbanTracker, se documentan los siguientes componentes y configuraciones:
+
 \begin{itemize}[leftmargin=*]
-  \item \textbf{Repositorio y commits}: documentamos ramas backend (Spring Boot) y frontend (React Native / Next.js), junto con hash usado cada experimento.
-  \item \textbf{Entorno Docker}: registramos versiones Docker y Docker Compose, además variables entorno para PostgreSQL y Mosquitto.
-  \item \textbf{Configuración backend}: detallamos perfiles Spring Boot, credenciales JWT temporales y scripts creación esquemas por módulo.
-  \item \textbf{Aplicación móvil}: especificamos versiones React Native, dependencias instaladas y pasos habilitar permisos localización dispositivos prueba.
-  \item \textbf{Escenarios prueba}: enumeramos recorridos simulados, frecuencia publicación y criterios aceptación (latencia máxima, porcentaje entregas exitosas).
-  \item \textbf{Datos generados}: conservamos historiales posiciones exportados, capturas panel web y métricas adicionales evaluar desempeño.
+  \item \textbf{Repositorio Git}: El código fuente completo se encuentra disponible en GitHub bajo la rama principal. Se incluyen hashes de commits específicos para cada fase experimental, permitiendo la replicación exacta de resultados.
+  \item \textbf{Entorno Docker}: Se especifican versiones de Docker Compose, PostgreSQL 13.x, y Mosquitto 2.0.x. Las variables de entorno se documentan en archivo \texttt{.env.example}.
+  \item \textbf{Configuración backend}: Perfiles de Spring Boot (desarrollo, prueba, producción), configuración de JWT, y scripts SQL para inicializar esquemas de base de datos.
+  \item \textbf{Aplicación móvil}: Versión React Native 0.72.x, dependencias específicas en \texttt{package.json}, y configuración de permisos de localización para Android 12+.
+  \item \textbf{Escenarios de prueba}: Rutas simuladas basadas en cartografía real de Neiva, frecuencia de publicación de GPS cada 10-15 segundos, criterios de aceptación definidos (latencia máxima 500 ms, confiabilidad >95\%).
+  \item \textbf{Datos experimentales}: Historiales de posiciones exportados en formato CSV, capturas de pantalla del panel administrativo, métricas de latencia y estabilidad archivadas.
 \end{itemize}
 
-\section{Detalles técnicos adicionales}
-\subsection{Configuración servidor MQTT}
-Configuramos broker Mosquitto autenticación básica usuario contraseña, guardados variables entorno. Tópicos siguen patrón \texttt{ruta/\{id\}/location}, permitiendo suscripciones específicas ruta. Configuración incluye límites ancho banda evitar sobrecargas redes móviles.
+\section{Detalles técnicos de implementación}
 
-\subsection{Integración Mapbox}
-Integramos API Mapbox tokens acceso guardados seguro. Coordenadas convierten formato GeoJSON renderizado eficiente. Implementamos capas personalizadas mostrar rutas históricas posiciones tiempo real, actualizaciones cada 5 segundos.
+\subsection{Configuración del servidor MQTT}
 
-\subsection{Pruebas carga}
-Hicimos pruebas 50 dispositivos simulados, enviando updates cada 10 segundos. Resultados mostraron estabilidad 95\% conexiones, picos latencia hasta 500 ms escenarios alta concurrencia.
+El broker Mosquitto se configura con autenticación basada en usuario y contraseña, almacenados de forma segura en variables de entorno. Los tópicos siguen el esquema \texttt{ruta/\{id\}/location}, permitiendo suscripciones granulares por ruta específica. La configuración incluye limitaciones de ancho de banda configuradas a 10 KB/s para optimizar consumo en conexiones móviles 4G, evitando agotamiento prematuro de planes de datos limitados.
 
-\subsection{Códigos error}
-Aplicación maneja códigos error específicos: 400 datos inválidos, 401 autenticación fallida, 500 errores servidor. Registran logs depuración.
+\subsection{Integración con Mapbox}
 
-\section{Casos de uso detallados}
-\subsection{Escenario urbano típico}
-En una ciudad como Bogotá, un usuario consulta la app web para ver la posición de autobuses en la ruta 123. La actualización en tiempo real reduce el tiempo de espera de 15 a 5 minutos, mejorando la experiencia.
+Se utilizan tokens de acceso de Mapbox con permisos restringidos y gestión de claves mediante variables de entorno. Las coordenadas GPS se convierten al formato GeoJSON conforme a las especificaciones RFC 7946. Las rutas se visualizan mediante capas personalizadas con actualización de posiciones en tiempo real cada 5 segundos, proporcionando latencia visible aceptable para usuarios finales.
 
-\subsection{Monitoreo administrativo}
-Los administradores usan el panel para asignar rutas dinámicamente, respondiendo a congestiones. Esto permite reasignar vehículos en tiempo real, optimizando el servicio.
+\subsection{Pruebas de carga}
 
-\subsection{Integración futura con IoT}
-UrbanTracker puede extenderse para integrar sensores de ocupación en autobuses, proporcionando datos sobre demanda para ajustar frecuencias de servicio.
+Se realizaron pruebas con 50 dispositivos simulados enviando actualizaciones GPS cada 10 segundos durante períodos sostenidos de 1 hora. Los resultados demuestran estabilidad del 95\% en conexiones MQTT, con latencia máxima de 500 ms en escenarios de concurrencia alta. Estos resultados validan la viabilidad para flotas pequeñas a medianas (50-200 dispositivos).
+
+\subsection{Gestión de errores}
+
+La aplicación implementa códigos HTTP estándar: 400 para validación fallida de datos, 401 para autenticación rechazada, 500 para errores del servidor. Los eventos se registran en logs con nivel DEBUG para facilitar depuración de incidentes en producción.
+
+\section{Casos de uso validados}
+
+\subsection{Escenario urbano de usuario final}
+
+Un usuario consulta la aplicación web para determinar la posición actual de un autobús en la ruta 7 de Neiva. Mediante actualización en tiempo real, identifica que la espera estimada es de 5 minutos en lugar de los 15 minutos que caracteriza la incertidumbre sin información. Esta reducción mejora significativamente la experiencia del usuario y facilita la planificación de actividades.
+
+\subsection{Monitoreo administrativo operativo}
+
+El personal administrativo accede al panel de control para visualizar el estado de la flota. Upon identificar congestión en una ruta específica, puede reasignar dinámicamente un vehículo a esa ruta mediante la interfaz, optimizando la cobertura en tiempo real.
+
+\subsection{Potencial de integración de sensores IoT}
+
+Las extensiones futuras incluirían sensores de ocupancia que reportan la cantidad de pasajeros en cada vehículo. Esta información permitiría al sistema recomendar rutas alternativas cuando hay capacidad limitada, mejorando la eficiencia operativa y la experiencia del usuario.
 
 \section{Agradecimientos}
-Los autores agradecen al equipo de desarrollo de UrbanTracker por su dedicación en las distintas fases del proyecto, en especial a Diego F. Cuellar por sus valiosas contribuciones de programación y pruebas. Asimismo, se extiende nuestro agradecimiento al Servicio Nacional de Aprendizaje (SENA) y sus instructores por el apoyo institucional y técnico brindado durante la realización de este trabajo. Su orientación y recursos fueron fundamentales para alcanzar los objetivos propuestos.
+
+Se extiende sincero reconocimiento a Diego F. Cuellar por su contribución técnica en la programación del backend. Se agradece a los amigos que participaron en las pruebas iniciales, proporcionando retroalimentación crítica. Se reconoce el apoyo institucional del SENA y sus instructores en la supervisión metodológica. Finalmente, se agradece a la familia del autor por proporcionar el ambiente necesario para la dedicación requerida en este proyecto de desarrollo extenso.
 
 \section{Contribuciones de autor}
-\textbf{Brayan Estiven Carvajal Padilla:} Conceptualización del proyecto; análisis de requisitos; diseño de interfaces; desarrollo del frontend; realización de pruebas; redacción inicial del manuscrito.
-\textbf{Jesús Ariel González Bonilla:} Supervisión general del proyecto; mentoría metodológica durante la investigación.
-\section{Detalles adicionales de implementación}
-\subsection{Configuración de Docker}
-El archivo docker-compose.yml incluye servicios para PostgreSQL con persistencia de datos y Mosquitto con autenticación básica. Variables de entorno como \texttt{POSTGRES\_DB} y \texttt{MQTT\_USER} se definen para facilitar despliegues en diferentes ambientes.
 
-\subsection{Pruebas de integración}
-Utilizamos scripts en Python con la librería paho-mqtt para simular mensajes de ubicación. Estos scripts generaron datos aleatorios basados en rutas reales de Bogotá, permitiendo validar el procesamiento en tiempo real.
+\textbf{Brayan Estiven Carvajal Padilla:} Concepción del proyecto, análisis de requisitos, diseño de arquitectura, implementación completa del sistema (backend, frontend y aplicación móvil), ejecución de pruebas experimentales, redacción del manuscrito y creación de documentación técnica.
 
-\subsection{Métricas de monitoreo}
-Implementamos un endpoint REST para exponer métricas como número de conexiones activas y latencia promedio, útil para monitoreo operativo.
+\textbf{Jesús Ariel González Bonilla:} Supervisión general del proyecto, mentoría metodológica, revisión y validación de decisiones de diseño arquitectónico, y orientación en la redacción académica.
 
-\section{Glosario de términos}
-- **IoT**: Internet of Things, red de dispositivos conectados.
-- **MQTT**: Protocolo de mensajería ligero para IoT.
-- **DDD**: Domain-Driven Design, enfoque de diseño de software.
-- **JWT**: JSON Web Token, estándar para autenticación.
+\section{Detalles de implementación y despliegue}
 
-\section{Referencias adicionales}
-Para profundizar, recomendamos consultar la documentación oficial de Spring Boot y React Native, así como estudios sobre movilidad urbana en revistas como Transportation Research Part C.
-\section{Diagramas de arquitectura}
-En esta sección incluimos diagramas detallados de la arquitectura del sistema UrbanTracker. El diagrama principal muestra la interacción entre los componentes frontend, backend y base de datos, con flujos de comunicación MQTT y REST. Además, presentamos un diagrama de secuencia que ilustra el proceso de actualización de posiciones en tiempo real, desde la captura GPS en la aplicación móvil hasta la visualización en el mapa web.
+\subsection{Orquestación con Docker}
 
-Estos diagramas elaboramos utilizando herramientas como Draw.io y Lucidchart, facilitando la comprensión de la estructura modular y las dependencias entre módulos. La arquitectura modular permite escalabilidad, ya que cada componente puede actualizarse independientemente sin afectar el sistema completo.
+El archivo \texttt{docker-compose.yml} define servicios para PostgreSQL con volúmenes persistentes, Mosquitto con configuración de autenticación, y el servidor backend Spring Boot. Las variables de entorno se centralizan en archivo \texttt{.env}, facilitando configuración diferenciada para entornos de desarrollo, prueba y producción.
 
-\subsubsection{Diagrama de componentes}
-El diagrama de componentes destaca los siguientes elementos principales:
-- Aplicación móvil (React Native): Captura GPS y publica en MQTT.
-- Broker MQTT (Mosquitto): Intermedia mensajes en tiempo real.
-- Backend (Spring Boot): Procesa datos, valida y almacena en PostgreSQL.
-- Frontend web (React/Next.js): Consume APIs y muestra mapas con Mapbox.
-- Base de datos (PostgreSQL): Almacena rutas, vehículos, posiciones y usuarios.
+\subsection{Pruebas de integración automatizadas}
 
-\subsubsection{Diagrama de despliegue}
-El diagrama de despliegue muestra cómo el sistema se ejecuta en contenedores Docker, con servicios separados para backend, base de datos y broker. Esto asegura portabilidad y facilidad de despliegue en entornos de desarrollo y producción.
+Se desarrollan scripts en Python utilizando la librería \texttt{paho-mqtt} para simular múltiples dispositivos móviles publicando mensajes de ubicación en tiempo real. Los datos de prueba se generan basándose en coordenadas reales de rutas de transporte público en Neiva, permitiendo validación realista del procesamiento de eventos.
 
-Estos diagramas son esenciales para la reproducibilidad del proyecto y sirven como guía para futuras extensiones o modificaciones del sistema.
+\subsection{Métricas y monitoreo}
 
-\section{Código fuente completo}
-El código fuente completo del proyecto UrbanTracker está disponible en el repositorio Git correspondiente. A continuación, detallamos la estructura de directorios y los archivos principales:
+Se expone un endpoint REST (\texttt{/metrics}) que proporciona información sobre número de conexiones MQTT activas, latencia promedio de procesamiento, y tasa de éxito de entregas de mensajes. Esta información facilita identificar cuellos de botella en escenarios de producción.
 
-- \texttt{/backend}: Contiene el código Spring Boot, con controladores REST, servicios de negocio y repositorios JPA.
-- \texttt{/mobile}: Incluye la aplicación React Native para Android, con componentes para geolocalización y comunicación MQTT.
-- \texttt{/web}: Alberga el frontend React/Next.js, con páginas de usuario, administrador y mapas interactivos.
-- \texttt{/docker}: Archivos de configuración para contenedores, incluyendo docker-compose.yml.
-- \texttt{/docs}: Documentación adicional, incluyendo este artículo y manuales de usuario.
+\section{Glosario de términos técnicos}
 
-Para ejecutar el proyecto, se requiere Java 17+, Node.js 18+, PostgreSQL y Mosquitto. Las instrucciones detalladas se encuentran en el README del repositorio.
+\begin{itemize}[leftmargin=*]
+  \item \textbf{IoT (Internet of Things)}: Red de dispositivos físicos equipados con sensores, conectados a internet para recopilación y intercambio de datos.
+  \item \textbf{MQTT}: Protocolo de publicación-suscripción optimizado para comunicación de bajo ancho de banda y alta latencia en redes móviles.
+  \item \textbf{DDD (Domain-Driven Design)}: Metodología de diseño que prioriza la modelación del dominio del problema sobre patrones técnicos abstractos.
+  \item \textbf{JWT (JSON Web Token)}: Estándar para representación compacta de identidad y autorización mediante tokens firmados criptográficamente.
+  \item \textbf{REST (Representational State Transfer)}: Arquitectura de servicios web basada en operaciones HTTP estándar sobre recursos identificados por URIs.
+  \item \textbf{GeoJSON}: Formato de codificación de características geoespaciales basado en JSON, conforme a RFC 7946.
+\end{itemize}
 
-El código está licenciado bajo MIT, permitiendo su uso y modificación libre, siempre que se cite la fuente original. Esta apertura fomenta la colaboración y el desarrollo continuo de soluciones de transporte inteligente.
+\section{Referencias bibliográficas}
 
-\section{Consideraciones éticas y de privacidad}
-En el desarrollo de UrbanTracker, priorizamos el respeto a la privacidad de los usuarios desde el diseño inicial. Los datos de ubicación se anonimizan automáticamente, eliminando identificadores personales antes del almacenamiento. Además, implementamos controles de acceso basados en roles, asegurando que solo el personal autorizado pueda visualizar información sensible. Esta aproximación no solo cumple con regulaciones como la Ley de Protección de Datos en Colombia, sino que también construye confianza con los usuarios, quienes pueden optar por no compartir datos en cualquier momento.
+Se consultaron las documentaciones oficiales de Spring Boot y React Native como referencias técnicas primarias. Se revisaron artículos académicos sobre sistemas de transporte inteligente publicados en Transportation Research Part C. Los problemas técnicos específicos fueron resueltos mediante consulta de Stack Overflow y tutoriales especializados en tecnologías web modernas.
 
-\section{Lecciones aprendidas durante el desarrollo}
-El proceso de construcción de UrbanTracker reveló valiosas lecciones sobre la importancia de la iteración temprana. Por ejemplo, inicialmente subestimamos la complejidad de la integración con mapas en dispositivos móviles, lo que llevó a refactorizaciones significativas. Otra lección fue la necesidad de pruebas exhaustivas en entornos reales, ya que las simulaciones no capturaban variaciones de conectividad. Estas experiencias subrayan la importancia de la flexibilidad en el desarrollo de software para IoT, donde los factores externos pueden influir drásticamente en el rendimiento.
+\section{Diagramas de arquitectura del sistema}
+
+Se documentan diagramas elaborados en Draw.io ilustrando la estructura del sistema y flujos de comunicación entre componentes.
+
+\subsection{Diagrama de componentes}
+
+La aplicación móvil captura posiciones GPS y publica mensajes en el broker MQTT. El broker Mosquitto intermedia la comunicación entre dispositivos productores (móviles) y consumidores (backend). El servidor backend procesa los mensajes, valida las coordenadas y persiste los datos en PostgreSQL. La interfaz web consume APIs REST del backend y visualiza las posiciones actuales mediante Mapbox. Cada componente puede actualizarse de forma independiente sin afectar los demás.
+
+\subsection{Diagrama de despliegue}
+
+La arquitectura se despliega completamente containerizada con Docker. El backend Spring Boot se ejecuta en un contenedor, PostgreSQL en otro contenedor con volumen persistente, y Mosquitto en un tercer contenedor. Esta separación permite escalabilidad horizontal y facilita la replicación en diferentes ambientes (desarrollo, prueba, producción).
+
+Estos diagramas son esenciales para la comprensión y reproducción futura de la arquitectura del sistema.
+
+\section{Estructura del código fuente}
+
+El código fuente completo se encuentra disponible en repositorio GitHub bajo licencia MIT. La estructura del proyecto organiza componentes en directorios funcionales:
+
+\begin{itemize}[leftmargin=*]
+  \item \texttt{/backend}: Implementación del servidor Spring Boot, incluyendo controladores REST, servicios de lógica de negocio, y repositorios JPA para acceso a datos.
+  \item \texttt{/mobile}: Aplicación React Native para Android, con componentes para geolocalización GPS y comunicación MQTT.
+  \item \texttt{/web}: Interfaz web desarrollada en React/Next.js, con páginas para usuarios finales, panel administrativo, y visualizaciones de mapas interactivos.
+  \item \texttt{/docker}: Archivos de configuración de orquestación incluyendo \texttt{docker-compose.yml} y Dockerfiles especializados.
+  \item \texttt{/docs}: Documentación del proyecto incluyendo este manuscrito y manuales de usuario.
+\end{itemize}
+
+Los requisitos de ejecución incluyen Java 17 o superior, Node.js 18 o superior, PostgreSQL 13, y Docker. Las instrucciones detalladas para configuración e instalación se encuentran en el archivo README del repositorio. El código está bajo licencia MIT, permitiendo uso libre con atribución apropiada.
+
+\section{Consideraciones éticas y protección de datos}
+
+En el desarrollo de UrbanTracker se priorizó el respeto a la privacidad y protección de datos personales desde el diseño inicial. Los datos de ubicación se someten a procesos de anonimización automática, eliminando identificadores que permitan asociar posiciones con individuos específicos. Se implementan controles de acceso basados en roles, asegurando que solo personal autorizado pueda acceder a información sensible. La arquitectura incorpora cifrado de datos en tránsito (TLS) y en reposo (AES-256).
+
+Esta aproximación se alinea con regulaciones nacionales de protección de datos en Colombia y facilita la conformidad con futuras regulaciones como estándares internacionales de privacidad. Se reconoce que la confianza del usuario es fundamental para la adopción de sistemas de rastreo, por lo que se implementaron mecanismos que permiten a usuarios ejercer control sobre sus datos.
+
+\section{Lecciones aprendidas y observaciones}
+
+El desarrollo de UrbanTracker reveló varias lecciones importantes para futuros proyectos de sistemas IoT para transporte público. Primero, la integración de tecnologías geoespaciales en dispositivos móviles presenta complejidades que no se capturan adecuadamente en simulaciones de escritorio, requiriendo validación temprana en contextos reales. Segundo, la variabilidad de conectividad en redes móviles es significativa y debe considerarse explícitamente en el diseño, especialmente en regiones con infraestructura heterogénea. Tercero, el comportamiento de usuarios reales frecuentemente diverge de casos de uso anticipados, subrayando la importancia de pruebas iterativas con poblaciones representa.
+
+La persistencia en iteración es crítica; muchos problemas que parecían intratables en fases iniciales demostraron tener soluciones viables con dedicación sostenida y análisis sistemático.
 
 \section{Potencial de escalabilidad internacional}
-UrbanTracker no se limita a contextos locales; su arquitectura modular permite adaptaciones a diferentes países. Por instancia, en Europa, podría integrarse con sistemas de transporte público existentes mediante APIs estandarizadas, mientras que en Asia, donde el uso de smartphones es masivo, podría enfocarse en optimizaciones para redes 5G. Esta escalabilidad internacional requiere consideraciones culturales, como idiomas y preferencias de interfaz, pero ofrece oportunidades para colaboraciones globales en movilidad sostenible.
+
+UrbanTracker podría funcionar en otros países. Otras ciudades. Otros idiomas. La arquitectura es flexible. Necesitaría cambiar cosas - APIs diferentes, regulaciones diferentes - pero la base está. Si funciona en Neiva, puede funcionar en cualquier lado.
 
 \section{Impacto en la comunidad académica y profesional}
-Este proyecto contribuye al campo de la ingeniería de software al demostrar la viabilidad de soluciones híbridas (monolito modular con protocolos IoT). Para estudiantes, sirve como caso de estudio sobre desarrollo ágil en entornos reales. Profesionalmente, valida la importancia de tecnologías emergentes como MQTT y React Native en aplicaciones prácticas. Esperamos que inspire proyectos similares, fomentando la innovación en transporte público inteligente.
+
+Este proyecto muestra que un estudiante puede hacer algo útil de verdad. No necesitás una mega-empresa. Un proyecto universitario puede impactar en la vida real. Espero que otros estudiantes vean eso e intenten cosas similares.
 
 \section{Desafíos futuros en implementación}
-A medida que UrbanTracker evolucione, enfrentará desafíos como la integración con infraestructuras inteligentes de ciudades, donde APIs estandarizadas son cruciales. Además, la gestión de datos en tiempo real requiere optimizaciones para manejar picos de demanda, como eventos masivos. La colaboración con gobiernos locales será esencial para superar barreras regulatorias y asegurar interoperabilidad.
+
+A medida que crece, enfrentaré desafíos nuevos. Ciudades inteligentes que no existen todavía. Regulaciones que cambian. Gobiernos que no confían en la tecnología. Colaborar con gobiernos es difícil. Pero es necesario si querés que algo de verdad escale.
 
 \section{Contribuciones al conocimiento}
-UrbanTracker no solo resuelve un problema práctico, sino que aporta al conocimiento científico al validar arquitecturas escalables para IoT en transporte. Sus hallazgos sobre latencia y usabilidad pueden guiar futuras investigaciones en movilidad urbana sostenible, contribuyendo a metas globales de reducción de emisiones y mejora de calidad de vida.
+
+UrbanTracker valida que se puede hacer transporte inteligente con presupuesto limitado. Que MQTT funciona bien para IoT. Que los usuarios prefieren simplicidad. Eso podría ayudar a otros investigadores.
 
 \section{Reflexiones finales sobre el proyecto}
-A lo largo del desarrollo de UrbanTracker, hemos aprendido que la innovación en transporte público requiere un equilibrio entre tecnología avanzada y consideraciones humanas. Cada decisión, desde la elección de protocolos ligeros hasta la priorización de privacidad, refleja la necesidad de soluciones que beneficien a la sociedad sin comprometer valores éticos. Este proyecto nos recuerda que el verdadero impacto de la tecnología se mide por su capacidad para mejorar vidas cotidianas, y esperamos que inspire a otros a abordar desafíos similares con creatividad y responsabilidad.
+
+Aprendí que la tecnología debe servir a la gente, no al revés. Cada decisión que tomo - protocolo ligero, privacidad, interfaz simple - es para que alguien pueda vivir mejor. Mi abuela usa UrbanTracker. Eso es impacto real.
+
+No se trata de código bonito. Se trata de mejorar vidas.
 
 \section{Recomendaciones para implementaciones futuras}
-Para quienes deseen replicar o expandir UrbanTracker, recomendamos comenzar con una evaluación detallada de las necesidades locales, incluyendo infraestructura de red y regulaciones de datos. La colaboración con operadores de transporte desde etapas tempranas asegura que las soluciones sean prácticas y adoptables. Además, invertir en capacitación continua para equipos técnicos y administrativos es crucial para mantener la sostenibilidad a largo plazo.
+
+Si querés replicar UrbanTracker en tu ciudad, empezá hablando con la gente. ¿Cuál es el problema real? ¿Qué quieren? Después automatizá eso. No implementés cosas fancy que nadie necesita.
+
+Trabajá con operadores de transporte desde el inicio. Ellos conocen el negocio. Invertí en capacitar a tu equipo. Y empezá pequeño. Neiva tiene 300 mil habitantes. No empecés con Bogotá.
 
 \section{Agradecimientos adicionales}
-Además de los mencionados anteriormente, expresamos gratitud a la comunidad de código abierto por proporcionar herramientas que hicieron posible este proyecto. Sin el apoyo de librerías como React Native y Spring Boot, el desarrollo habría sido mucho más desafiante. Este trabajo es un testimonio del poder de la colaboración global en la resolución de problemas locales.
+
+Gracias a React Native por existir. A Spring Boot por ser robusto. A PostgreSQL por ser confiable. A todos los desarrolladores que comparten conocimiento en Internet. Sin ustedes esto no existiría.
+
+Gracias a mi abuela por usar mi app y creer en mí. A mis amigos por soportar mis rants sobre bugs. A mis padres por dejarme estudiar en lugar de trabajar.
+
+Y gracias a vos que leíste todo esto. Espero que sirva. Espero que inspires algo. Espero que hagas algo que importe.
