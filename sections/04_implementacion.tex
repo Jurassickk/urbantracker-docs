@@ -5,25 +5,25 @@ Cuando empecé a diseñar UrbanTracker, quise que fuera como una casa bien organ
 
 En el frontend implementé tres interfaces principales, cada una con su propósito específico. La primera es una app web para el público general - básicamente para que la gente pueda ver dónde está su bus sin perderse con mapas confusos. Busqué que fuera rápida e intuitiva, porque nadie quiere esperar 10 segundos para ver si su bus viene o no. La segunda es una app nativa para Android dirigida a los conductores. Su trabajo es súper simple: capturar las coordenadas GPS y enviarlas sin molestar al conductor mientras maneja. Lo más importante era que no interfiriera con la operación normal. Finalmente, desarrollé un panel web para administradores, accesible desde cualquier navegador, donde pueden manejar rutas, vehículos, conductores y vigilar todo como un centro de control. Yo pienso que tener interfaces diferenciadas mejora la experiencia de cada usuario.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{graphics/3-img.png}
+    \includegraphics[width=0.4\textwidth]{graphics/3-img.png}
     \caption{Interfaz web de UrbanTracker para usuarios finales: visualización intuitiva de rutas, paradas y ubicación en tiempo real de buses.}
     \label{fig:ui-users}
 \end{figure}
 
 Para las interfaces web usé React con JavaScript/TypeScript, lo que me permitió reutilizar componentes y estilos entre la app pública y el panel admin. Para la app móvil aposté por React Native, aprovechando que podía compartir lógica entre plataformas y que se integra súper bien con librerías de geolocalización. Desde mi perspectiva, esta elección fue acertada para mantener consistencia.
 
-\begin{figure}[h!]
+\begin{figure}[t]
     \centering
-    \includegraphics[width=0.85\textwidth]{graphics/4-img.png}
+    \includegraphics[width=0.4\textwidth]{graphics/4-img.png}
     \caption{Interfaz móvil Android para conductores: aplicación minimalista con diseño de fricción cero para captura de GPS sin distracciones mientras conducen.}
     \label{fig:ui-drivers}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[t]
     \centering
-    \includegraphics[width=0.85\textwidth]{graphics/5-img.png}
+    \includegraphics[width=0.4\textwidth]{graphics/5-img.png}
     \caption{Panel de administración web: centro de control para gestionar rutas, vehículos, conductores y monitorear el estado de la flota en tiempo real.}
     \label{fig:ui-admin}
 \end{figure}
@@ -38,41 +38,15 @@ Para el backend decidí usar Java con Spring Boot, y no fue porque me gustara mu
 
 Además de las APIs REST tradicionales para operaciones CRUD, integré dos formas de comunicación en tiempo real: WebSockets usando Socket.IO y MQTT. Para las ubicaciones adopté un modelo pub/sub: la app móvil del conductor publica mensajes con su posición en un tópico específico de su ruta, y los clientes suscritos - la app web de usuarios y el panel admin - reciben automáticamente estas actualizaciones sin lag molesto. Es importante destacar que este modelo es eficiente para sistemas distribuidos.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{graphics/6-img.png}
+    \includegraphics[width=0.4\textwidth]{graphics/6-img.png}
     \caption{Arquitectura de comunicación pub/sub con MQTT: los conductores publican su ubicación en tópicos específicos de ruta, el broker Mosquitto distribuye los mensajes, y los usuarios y administradores reciben actualizaciones en tiempo real.}
     \label{fig:mqtt-pubsub}
 \end{figure}
 
 Esto de pub/sub es común en sistemas IoT, donde un broker intermedia el flujo de mensajes para que emisores y receptores no tengan que conocerse directamente. Vi un ejemplo en el trabajo de Ortiz et al. (2022) que describen un sistema similar basado en Spring Boot y MQTT con Redis como memoria intermedia \cite{ortiz2022smolcomm}. Me inspiré en esa arquitectura y UrbanTracker usa MQTT como canal ligero para datos GPS, con un broker local que distribuye mensajes eficientemente. Si por alguna razón no hay broker MQTT disponible, el sistema puede cambiar a WebSockets puros a través de un microservicio Node.js que usa Socket.IO. Tener ambas opciones garantiza que el sistema funcione en diferentes entornos técnicos. En realidad, esta flexibilidad fue clave para la robustez.
 
-\subsubsection{Código de ejemplo}
-
-Aquí tienes un fragmento del servicio de geolocalización que escribí en Spring Boot:
-
-\begin{lstlisting}[language=Java]
-@Service
-public class LocationService {
-
-    @Autowired
-    private LocationRepository locationRepository;
-
-    @Autowired
-    private MqttClient mqttClient;
-
-    public void processLocationUpdate(String topic, String message) {
-        // Parsear el mensaje JSON
-        LocationUpdate update = parseJson(message);
-        // Validar y guardar en BD
-        locationRepository.save(update);
-        // Publicar a suscriptores
-        mqttClient.publish("location/updates", update.toJson());
-    }
-}
-\end{lstlisting}
-
-Este servicio básicamente recibe actualizaciones MQTT, las procesa y las vuelve a enviar a los clientes conectados. En el fondo es simple, pero fue un dolor de cabeza hacerlo funcionar bien. Yo mismo pasé horas depurándolo.
 
 \subsection{Base de datos}
 
@@ -90,9 +64,9 @@ La parte de mapas fue una de las más emocionantes y frustrantes a la vez. Eleg�
 
 La integración la hice con librerías especializadas que facilitan la comunicación con Mapbox y permiten personalizar estilos, iconos y capas del mapa. En esta primera fase me enfoqué solo en mostrar posición en tiempo real, pero Mapbox me abre la puerta para características avanzadas como cálculo dinámico de rutas, vista del tráfico y generación automática de polígonos en futuras versiones. En realidad, las posibilidades son infinitas.
 
-\begin{figure}[h!]
+\begin{figure}[t]
     \centering
-    \includegraphics[width=0.90\textwidth]{graphics/7-img.png}
+    \includegraphics[width=0.4\textwidth]{graphics/7-img.png}
     \caption{Visualización en tiempo real de buses en el mapa Mapbox: posiciones actualizadas cada 30 segundos, paradas designadas, rutas autorizadas, con precisión de ubicación superior a 95\%.}
     \label{fig:mapbox-visualization}
 \end{figure}
@@ -101,56 +75,6 @@ La integración la hice con librerías especializadas que facilitan la comunicac
 
 Si lo dibujáramos, la arquitectura se ve así: el frontend móvil (React Native) habla con el backend (Spring Boot) vía APIs REST, mientras que las actualizaciones de ubicación van por MQTT al broker Mosquitto. El backend se conecta con PostgreSQL para guardar datos, y las interfaces web (React/Next.js) consumen estas APIs para mostrar información en tiempo real a través de Mapbox. Este diseño desacoplado asegura que sea escalable y mantenible.
 
-\subsubsection{Código adicional de ejemplo}
-
-Aquí tienes un pedazo del código React Native que escribí para capturar ubicación GPS:
-
-\begin{lstlisting}[language=Java]
-import { useEffect, useState } from 'react';
-import { PermissionsAndroid, Platform } from 'react-native';
-import Geolocation from 'react-native-geolocation-service';
-
-const LocationTracker = () => {
-  const [location, setLocation] = useState(null);
-
-  useEffect(() => {
-    const requestLocationPermission = async () => {
-      if (Platform.OS === 'android') {
-        const granted = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-        );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-          startLocationTracking();
-        }
-      } else {
-        startLocationTracking();
-      }
-    };
-
-    const startLocationTracking = () => {
-      Geolocation.watchPosition(
-        (position) => {
-          setLocation(position.coords);
-          // Enviar a MQTT
-          publishLocation(position.coords);
-        },
-        (error) => console.log(error),
-        { enableHighAccuracy: true, distanceFilter: 10 }
-      );
-    };
-
-    requestLocationPermission();
-  }, []);
-
-  return (
-    <View>
-      {location && <Text>Lat: {location.latitude}, Lon: {location.longitude}</Text>}
-    </View>
-  );
-};
-\end{lstlisting}
-
-Este componente básicamente pide permisos de ubicación, inicia el seguimiento GPS y publica coordenadas al broker MQTT cada vez que el dispositivo se mueve más de 10 metros. Los permisos son súper importantes - sin ellos la app no funciona nada. En mi experiencia, manejar permisos en móviles es crucial.
 
 \subsubsection{Descripción detallada del diagrama}
 
