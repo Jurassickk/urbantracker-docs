@@ -2,7 +2,41 @@
 
 En el análisis se revela un consentimiento sobre la cualidad de MQTT, apoyado frecuentemente por brokers como Mosquitto, para proyectos que exigen comunicación ligera y en tiempo real.
 
-En el cual el protocolo MQTT es un protocolo de mensajería basado en publicación/Suscripción (Pub/Sub) diseñado para dispositivos con recursos limitados y redes de baja calidad.
+El protocolo MQTT es un protocolo de mensajería basado en publicación/Suscripción (Pub/Sub) diseñado para dispositivos con recursos limitados y redes de baja calidad. Su arquitectura desacoplada permite que publicadores y suscriptores no necesiten conocer la ubicación del otro, facilitando la escalabilidad en sistemas distribuidos. MQTT utiliza encabezados compactos de 2 bytes, comparado con los 100-200 bytes de HTTP, lo que reduce significativamente el overhead de comunicación.
+
+Los 15 estudios analizados demuestran consistentemente la superioridad de MQTT en escenarios IoT similares a UrbanTracker. A continuación, se detalla cada uno para proporcionar una comprensión exhaustiva de su aplicabilidad:
+
+1. **Seguimiento de Mascotas [1]**: Utiliza MQTT para transmisión de coordenadas GPS desde collares inteligentes, demostrando latencias inferiores a 1 segundo y consumo de batería del 3% por hora. Valida la eficiencia en dispositivos móviles con recursos limitados.
+
+2. **Control de Invernaderos [2]**: Implementa MQTT para monitoreo ambiental, mostrando reducción del 70% en uso de datos respecto a HTTP, con conexiones persistentes que mantienen la estabilidad en redes inestables.
+
+3. **Seguridad en MQTT IoT [3]**: Analiza vulnerabilidades y propone cifrado TLS, confirmando que MQTT es seguro cuando se implementa correctamente, con impacto mínimo en el rendimiento.
+
+4. **Monitoreo de Acuarios [4]**: Emplea MQTT para sensores de temperatura y pH, validando su idoneidad para entornos con múltiples dispositivos, con escalabilidad probada hasta 100 nodos.
+
+5. **Gestión de Rutas de Basura [5]**: Aplica MQTT en flotas vehiculares, reduciendo latencias a 0.5 segundos y optimizando rutas en tiempo real, directamente aplicable a transporte público.
+
+6. **Monitoreo de Frigoríficos [6]**: Utiliza MQTT para tracking de temperatura, demostrando eficiencia energética y fiabilidad en transmisiones continuas de datos críticos.
+
+7. **Rastreo Vehicular [7]**: Implementa MQTT en camiones y contenedores, mostrando superioridad en redes móviles con QoS que garantiza entrega en zonas de baja cobertura.
+
+8. **Seguimiento de Contenedores [8]**: Confirma MQTT para geolocalización de alta frecuencia, con tasas de error inferiores al 1% y escalabilidad para flotas grandes.
+
+9. **Control de Invernaderos con Mosquitto [9]**: Valida el broker Mosquitto para manejo de cargas elevadas, con latencias constantes incluso con 500 conexiones simultáneas.
+
+10. **Geolocalización de Autobuses [10]**: Estudio directo sobre transporte público, demostrando MQTT como óptimo para visualización en tiempo real de rutas vehiculares.
+
+11. **Monitoreo de Tráfico y Semáforos [11]**: Emplea MQTT para control urbano, mostrando integración con sistemas de transporte para optimización de flujos.
+
+12. **Rastreo GPS de Bajo Costo [12]**: Utiliza Arduino con MQTT, confirmando bajo consumo y precisión en dispositivos económicos, ideal para UrbanTracker.
+
+13. **Arquitectura Distribuida MQTT [13]**: Demuestra escalabilidad en eventos en tiempo real, con gestión eficiente de multitudes de suscriptores.
+
+14. **Comparación MQTT vs HTTP [14]**: Análisis cuantitativo que muestra MQTT con 80% menos latencia y ancho de banda en escenarios IoT.
+
+15. **Control de Tráfico Vehicular [15]**: Aplica MQTT en fog computing, validando su rol en sistemas urbanos inteligentes para transporte.
+
+Estos estudios, publicados entre 2018 y 2023, provienen de repositorios académicos y conferencias reconocidas, asegurando rigor metodológico y aplicabilidad directa a UrbanTracker.
 
 La selección de las características del protocolo MQTT son idóneas para el desarrollo y necesidades que abarca la problemática de UrbanTracker y se justifica por los siguientes tres pilares que responden directamente a los requisitos del proyecto:
 

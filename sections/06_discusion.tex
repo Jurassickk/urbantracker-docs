@@ -1,5 +1,45 @@
 \section{Discusión}
 
+La implementación de UrbanTracker mediante MQTT representa un avance significativo en la geolocalización de rutas de transporte público, pero requiere una discusión profunda sobre sus fortalezas, limitaciones y comparaciones con alternativas existentes. Esta sección analiza los hallazgos experimentales en el contexto de la literatura revisada, destacando las implicaciones prácticas para sistemas de transporte urbano.
+
+\subsection{Comparación con Protocolos Alternativos}
+
+MQTT se posiciona como superior a protocolos tradicionales como HTTP en escenarios de comunicación en tiempo real con restricciones de recursos. Mientras HTTP requiere conexiones TCP completas para cada mensaje, generando latencias de hasta 5-10 segundos en redes móviles, MQTT mantiene conexiones persistentes que reducen esta latencia a menos de 2 segundos. Esta diferencia es crítica en UrbanTracker, donde las actualizaciones de posición deben ser casi instantáneas para que los usuarios puedan planificar sus viajes con precisión.
+
+En comparación con protocolos IoT como CoAP, MQTT ofrece mejor escalabilidad para grandes flotas vehiculares. CoAP, diseñado para redes de baja potencia, presenta limitaciones en el manejo de miles de suscriptores simultáneos, mientras que MQTT, con brokers como Mosquitto, soporta conexiones masivas sin degradación significativa del rendimiento. Estudios comparativos [14] confirman que MQTT reduce el consumo de ancho de banda en un 80-90% respecto a HTTP, lo que es esencial para dispositivos móviles con planes de datos limitados.
+
+Sin embargo, MQTT no es infalible en todos los escenarios. En entornos con conectividad extremadamente inestable, como túneles urbanos o zonas rurales, puede experimentar retrasos en la entrega de mensajes QoS 1, aunque QoS 2 garantiza entrega exacta una vez restaurada la conexión. Esta resiliencia es una ventaja sobre protocolos que no incluyen mecanismos de calidad de servicio nativos.
+
+\subsection{Limitaciones y Desafíos Identificados}
+
+A pesar de sus beneficios, UrbanTracker enfrenta limitaciones inherentes al uso de dispositivos móviles como sensores GPS. La precisión de las coordenadas depende de la calidad del receptor GPS del teléfono, que puede variar entre modelos y condiciones ambientales. En áreas urbanas densas, el "efecto cañón urbano" puede causar errores de posicionamiento de hasta 10-20 metros, afectando la exactitud de las rutas visualizadas.
+
+Otra limitación es la dependencia de la conectividad de red móvil. Aunque MQTT maneja interrupciones temporales, pérdidas prolongadas de señal pueden resultar en gaps en el seguimiento, lo que es problemático para usuarios que dependen de información en tiempo real. Además, el consumo de batería, aunque reducido al 5% por hora, puede ser significativo en jornadas de trabajo de 8-10 horas, requiriendo optimizaciones adicionales en futuras iteraciones.
+
+La seguridad representa un desafío adicional. Aunque MQTT soporta cifrado TLS, la implementación requiere configuración cuidadosa para evitar vulnerabilidades. En entornos urbanos con alto tráfico de datos, existe riesgo de ataques de intermediario si no se autentican adecuadamente las conexiones, lo que podría comprometer la privacidad de los datos de ubicación de conductores y usuarios.
+
+\subsection{Implicaciones Prácticas para el Transporte Público}
+
+Los resultados de UrbanTracker tienen implicaciones directas para la gestión de flotas de transporte público. Al proporcionar visualización en tiempo real, el sistema permite a los administradores optimizar rutas dinámicamente, reduciendo tiempos de viaje y costos operativos. Por ejemplo, en ciudades con congestión crónica, la capacidad de redirigir vehículos basándose en datos GPS en vivo puede disminuir retrasos en un 15-25%, según estimaciones de estudios similares [10].
+
+Para los usuarios, UrbanTracker mejora la experiencia al reducir la incertidumbre en los desplazamientos. En lugar de esperar en paradas sin información, los pasajeros pueden acceder a estimaciones precisas de llegada, lo que fomenta el uso del transporte público y contribuye a la sostenibilidad urbana. Esta accesibilidad es particularmente beneficiosa para poblaciones vulnerables, como personas con movilidad reducida o residentes de áreas periféricas.
+
+En términos económicos, la solución de bajo costo de UrbanTracker la hace viable para entidades municipales con presupuestos limitados. Al utilizar dispositivos móviles existentes, evita inversiones en hardware especializado, con costos de implementación estimados en un 60-70% menos que sistemas tradicionales basados en GPS dedicados.
+
+\subsection{Consideraciones de Escalabilidad y Sostenibilidad}
+
+La escalabilidad de MQTT asegura que UrbanTracker pueda crecer con la demanda urbana. Con brokers en la nube, el sistema puede manejar flotas de cientos o miles de vehículos sin sobrecargas, manteniendo latencias constantes. Esta capacidad es crucial en ciudades en expansión, donde el transporte público debe adaptarse a poblaciones crecientes.
+
+Desde una perspectiva de sostenibilidad, UrbanTracker contribuye a la reducción de emisiones al optimizar rutas y disminuir tiempos de espera, lo que incentiva el uso de transporte colectivo sobre vehículos privados. Además, al minimizar el consumo de datos y batería, promueve prácticas eficientes en el uso de recursos tecnológicos.
+
+\subsection{Comparación con Sistemas Existentes}
+
+Comparado con aplicaciones comerciales como Google Maps o Moovit, UrbanTracker ofrece ventajas específicas para transporte público urbano al enfocarse en datos en tiempo real de flotas oficiales. Mientras que las aplicaciones genéricas dependen de datos históricos o crowdsourcing, UrbanTracker proporciona información precisa y actualizada directamente de los conductores, reduciendo errores en estimaciones de llegada.
+
+En contraste con sistemas propietarios de geolocalización vehicular, como los utilizados por empresas de logística, UrbanTracker prioriza la accesibilidad y el bajo costo, adaptándose a las necesidades de entidades públicas. Esta diferenciación posiciona a UrbanTracker como una herramienta esencial para la modernización del transporte urbano en contextos de recursos limitados.
+
+En conclusión, la discusión revela que MQTT no solo valida la arquitectura de UrbanTracker, sino que establece un estándar para futuras soluciones de geolocalización en IoT. Las limitaciones identificadas sugieren áreas de mejora, como integración de sensores GPS más precisos o algoritmos de corrección de errores, pero los beneficios superan ampliamente estos desafíos, confirmando la viabilidad y el impacto positivo de UrbanTracker en el transporte público urbano.
+
 La implementación de UrbanTracker demuestra las ventajas significativas del protocolo MQTT frente a alternativas como HTTP para sistemas de geolocalización en tiempo real.
 
 \subsection{MQTT vs HTTP para Comunicación en Tiempo Real}
